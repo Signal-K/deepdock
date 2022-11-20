@@ -8,10 +8,6 @@ kanban-plugin: board
 
 
 
-## Selected
-
-
-
 ## In Progress
 
 
@@ -22,6 +18,7 @@ kanban-plugin: board
 
 ## Done
 
+- [ ] [[Fix ActivityHeader component for mobile SSG-281 SSF-1]]
 
 
 ## Archive
@@ -32,6 +29,6 @@ kanban-plugin: board
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","list-collapse":[false,false,false,false,false,false]}
+{"kanban-plugin":"board","list-collapse":[false,false,false,false,false]}
 ```
 %%

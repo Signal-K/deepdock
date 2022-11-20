@@ -57,18 +57,21 @@ func tagKanbanTasks(filePath, boardName, sprintTag string, files []string) error
 	}
 	lines := strings.Split(string(input), "\n")
 	taskRe := regexp.MustCompile(`^- \[.\] .+`)
+	prefixRe := regexp.MustCompile(fmt.Sprintf(`%s-\d+`, boardCode))
 	for i, line := range lines {
 		if taskRe.MatchString(line) {
+			// Skip if already tagged with board prefix
+			if prefixRe.MatchString(line) {
+				continue
+			}
 			// Add sprint tag if not present
 			if !strings.Contains(line, "#"+sprintTag) {
 				line += " #" + sprintTag
 			}
-			// Add board tag if not present
-			tag := fmt.Sprintf("%s-%d", boardCode, tagNum)
-			if !strings.Contains(line, tag) {
-				line += " " + tag
-				tagNum++
-			}
+			// Add board tag
+			tag := fmt.Sprintf("#%s-%d", boardCode, tagNum)
+			line += " " + tag
+			tagNum++
 			lines[i] = line
 		}
 	}

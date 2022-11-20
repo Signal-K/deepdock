@@ -1,8 +1,16 @@
+Turns out, I think this was already satisfactory before this sprint started...icons aren't hanging off anywhere.
 
+Sure, the overall component could be better placed and structured, but in the context of this sprint, I think it's fine
+
+#ActivityHeader
+
+![[Pasted image 20250826202350.png]]
 ## Commits mentioning SSG-281
 - [🧺🎨 ↝ [SSG-283 SSG-281 SSG-282 SSM-257]: New telescope section that links in with](https://github.com/Signal-K/client/commit/cec3e56869791b941fea8d85b3ff2f241dd0bf17) by Gizmotronn on 2025-08-19T05:03:56Z
-## Commits mentioning SSG-281
-- [🧺🎨 ↝ [SSG-283 SSG-281 SSG-282 SSM-257]: New telescope section that links in with](https://github.com/Signal-K/client/commit/cec3e56869791b941fea8d85b3ff2f241dd0bf17) by Gizmotronn on 2025-08-19T05:03:56Z
+
+
+## Commits mentioning SSF-1
+- [💰👟 ↝ [SSF-1]: Confirming activity header is sort of alright](https://github.com/Signal-K/client/commit/924d08413aa28b93c005596709743b88b9d72210) by Gizmotronn on 2025-08-26T12:25:18Z
 
 
 ## Commits mentioning SSG-283
