@@ -573,7 +573,7 @@ export async function handleSync(argv) {
     }
 
     // Set commit date to 2 days ago
-    const twoDaysAgo = new Date(Date.now() - 2 * 24 * 60 * 60 * 1000)
+    const twoDaysAgo = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000)
     const isoDate = twoDaysAgo.toISOString()
     const currentTimestamp = twoDaysAgo.toLocaleString("en-US", {
       dateStyle: "medium",
