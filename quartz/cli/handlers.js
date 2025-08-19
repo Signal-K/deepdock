@@ -572,13 +572,26 @@ export async function handleSync(argv) {
       })
     }
 
-    const currentTimestamp = new Date().toLocaleString("en-US", {
+    // Set commit date to 2 days ago
+    const twoDaysAgo = new Date(Date.now() - 2 * 24 * 60 * 60 * 1000)
+    const isoDate = twoDaysAgo.toISOString()
+    const currentTimestamp = twoDaysAgo.toLocaleString("en-US", {
       dateStyle: "medium",
       timeStyle: "short",
     })
     const commitMessage = argv.message ?? `Quartz sync: ${currentTimestamp}`
     spawnSync("git", ["add", "."], { stdio: "inherit" })
-    spawnSync("git", ["commit", "-m", commitMessage], { stdio: "inherit" })
+    spawnSync(
+      "git",
+      [
+        "commit",
+        "-m",
+        commitMessage,
+        "--date",
+        isoDate,
+      ],
+      { stdio: "inherit" }
+    )
 
     if (contentStat.isSymbolicLink()) {
       // put symlink back
