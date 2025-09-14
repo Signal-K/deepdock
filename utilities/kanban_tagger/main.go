@@ -17,6 +17,12 @@ func getBoardCode(boardName string) string {
 	if boardName == "Frontend" {
 		return "SSF"
 	}
+	if boardName == "Backend" {
+		return "SSB"
+	}
+	if boardName == "Planet Hunters Board" {
+		return "SSP"
+	}
 	// Default: SSG (for Sprints, General, etc)
 	return "SSG"
 }
@@ -98,12 +104,14 @@ func tagAllKanbanBoards(boardFiles map[string]string, sprintTag string) {
 // Example usage
 func main() {
 	boardFiles := map[string]string{
-		"Administration": "content/Boards/Administration.md",
-		"Frontend":       "content/Boards/Frontend.md",
-		"Kanban":         "content/Media/Kanban.md",
-		"SSG-218 Kanban": "content/Media/SSG-218 Kanban.md",
-		"SSG-281 Kanban": "content/Sprints/SSG-281 Kanban.md",
+		"Administration":       "content/Boards/Administration.md",
+		"Frontend":             "content/Boards/Frontend.md",
+		"Backend":              "content/Boards/Backend.md",
+		"Kanban":               "content/Media/Kanban.md",
+		"SSG-218 Kanban":       "content/Media/SSG-218 Kanban.md",
+		"SSG-281 Kanban":       "content/Sprints/SSG-281 Kanban.md",
+		"Planet Hunters Board": "content/Boards/Planet Hunters Board.md",
 	}
-	sprintTag := "SSG-281" // Pass this as an argument if needed
+	sprintTag := "SSG-286" // Pass this as an argument if needed
 	tagAllKanbanBoards(boardFiles, sprintTag)
 }

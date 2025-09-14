@@ -23,3 +23,10 @@ For the inspection mission in #SSG-286, here's what I think:
 2. Classification/view anomaly/data buttons
 3. Fetch function from exofop for stellar data
 We should also include the "bonus data" section.
+
+
+## Planet Anomaly Naming Conventions
+[[SSG-287]]
+Exoplanet anomalies are now named using meaningful prefixes like KOI, TIC, or KIC depending on the data source. This reinforces the scientific grounding of classification tasks and helps players differentiate types of celestial bodies.
+
+We may expand this naming scheme to allow filtering or tagging anomalies by source in future viewports.

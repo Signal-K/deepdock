@@ -70,3 +70,14 @@ There may be a second resource (e.g. "minerals") required to *build* the resulti
 Post-classification scenes should visually reinforce Stardust gains. These should be accompanied by animations, popups, or feedback components.
 
 We also intend to reward Stardust for community actions like voting and consensus validation.
+
+[[Extra data - sandbox]]
+
+
+# Planetary classification with real data
+[[SSG-287]]
+Planet types (Terrestrial, Gaseous, Ice) are now classified using real astronomical data from the parent star — including temperature and radius, pulled from TIC or KOI sources. These values are handled via both a Python data ingestion script and a TypeScript frontend classification flow.
+
+The formula matches scientific approximations and enhances the believability of the player's discovery.
+
+Research entries may later allow players to unlock new classification capabilities (e.g. habitability, atmosphere).

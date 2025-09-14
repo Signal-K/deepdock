@@ -20,3 +20,6 @@ Voting contributes toward consensus accuracy and should reward the player with a
 
 These entries should appear in the sidebar or activity feed, and clicking them opens a modal for review.
 
+[[SSG-287]]
+We’ve proposed a new "Awaiting Voting" view in the sidebar. This will list classifications that have not yet reached consensus and allow users to contribute votes.
+This may include Stardust or badge rewards for community vetting. Related to: milestone/achievement design.

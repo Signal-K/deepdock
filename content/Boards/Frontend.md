@@ -18,7 +18,6 @@ kanban-plugin: board
 - [ ] Add toggle back to telescope section to show discoveries/linkeds #SSG-281 #SSF-15
 - [ ] Sidebar to show tool/automaton/structure numbers based on researched values (unlocked by user) #Research #Stardust #Sidebar #SSG-286 #SSF-36
 - [ ] Improve method of identifying weathersatellite/automaton/tool missions #SSG-286 #SSF-45
-- [ ] Classifications can point to other classifications
 - [ ] Mobile-friendly sidebar
 
 
@@ -49,6 +48,7 @@ kanban-plugin: board
 
 - [ ] Component that shows "skill progression" in the research section #SSG-281 #SSF-2
 - [ ] {showDeployment} overlay to be resized #Telescope #Layout #Deploy #SSG-286 #SSF-41
+- [ ] Classifications can point to other classifications
 - [ ] Unlocking of active asteroids #Progress #Unlocking #Missions #ActiveAsteroids #DailyMinorPlanet #Telescope #SSG-286 #SSF-42
 - [ ] Visualiser for planet/weather inspector in satellite viewport #Satellite #Viewports #Generator #SSG-286 #SSF-43
 - [ ] Fix sunspot info text in viewport - is not laid out well on mobile #Sunspots #Layout #Tutorial #Viewport #SSG-281 #SSF-21

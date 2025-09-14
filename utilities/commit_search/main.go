@@ -39,7 +39,7 @@ func extractTagsFromFile(filename string) ([]string, error) {
 
 // Fetch all commits from a repo and branch, filter by tag
 func fetchCommits(repo string, branch string, tag string, debug bool) ([]Commit, error) {
-	url := fmt.Sprintf("https://api.github.com/repos/%s/commits?sha=%s&per_page=100", repo, branch)
+	url := fmt.Sprintf("https://api.github.com/repos/%s/commits?sha=%s&per_page=40", repo, branch)
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, err
@@ -69,11 +69,10 @@ func fetchCommits(repo string, branch string, tag string, debug bool) ([]Commit,
 func main() {
 	// Define repos and branches to search
 	var repos []string
-	var branches []string
+	// var branches []string
 	var debug bool
 	if len(os.Args) == 3 {
 		// If branch and repo are provided as arguments, use only those
-		branches = []string{os.Args[1]}
 		repos = []string{os.Args[2]}
 		fmt.Printf("Filtering to branch: %s, repo: %s\n", os.Args[1], os.Args[2])
 		debug = true
@@ -84,7 +83,6 @@ func main() {
 			"signal-k/manuscript",
 			"signal-k/sytizen",
 		}
-		branches = []string{"main", "master", "dev", "develop"}
 		debug = false
 	}
 
@@ -96,17 +94,8 @@ func main() {
 	}
 
 	tagRe := regexp.MustCompile(`[A-Z]{3}-\d+`)
-	// List of Kanban board files to skip
-	kanbanBoards := map[string]bool{
-		"Administration.md": true,
-		"Frontend.md":       true,
-	}
 	for _, file := range files {
 		base := filepath.Base(file)
-		if kanbanBoards[base] {
-			fmt.Printf("Skipping Kanban board file: %s\n", file)
-			continue
-		}
 		tags := tagRe.FindAllString(base, -1)
 		contentBytes, err := os.ReadFile(file)
 		content := ""
@@ -130,9 +119,24 @@ func main() {
 		for tag := range allTags {
 			var allCommits []Commit
 			for _, repo := range repos {
-				for _, branch := range branches {
+				var repoBranches []string
+				if repo == "signal-k/sytizen" {
+					repoBranches = []string{"main", "SSG-100"}
+				} else {
+					repoBranches = []string{"main", "master", "SSG-281"}
+				}
+				for _, branch := range repoBranches {
 					commits, err := fetchCommits(repo, branch, tag, debug)
-					if err == nil && len(commits) > 0 {
+					if err != nil {
+						// Only skip if 404 (branch not found), otherwise print error
+						if strings.Contains(err.Error(), "status 404") {
+							continue
+						} else {
+							fmt.Printf("Error fetching commits for %s/%s: %v\n", repo, branch, err)
+							continue
+						}
+					}
+					if len(commits) > 0 {
 						allCommits = append(allCommits, commits...)
 					}
 				}

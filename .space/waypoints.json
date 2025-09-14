@@ -1,1 +1,1 @@
-[{"name":"Home","sticker":"ui//home","paths":["/"]},{"sticker":"lucide//dices","name":"Boards","paths":["content/Boards","content/Missions","content/Sprints"]},{"sticker":"lucide//egg-off","name":"Station-98","paths":["Station-98"]}]
+[{"sticker":"lucide//dices","name":"Boards","paths":["content/Boards","content/Missions","content/Sprints","content/Research","content/Meetings","content/Backend","Base.base","content/Components"]},{"sticker":"lucide//egg-off","name":"Station-98","paths":["Station-98"]}]
