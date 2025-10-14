@@ -1,0 +1,21 @@
+---
+sticker: lucide//text-cursor-input
+tags:
+  - Mining
+  - Rover
+  - Automatons
+  - Research
+---
+The first step will be adding a research item so that users can unlock additional features or events when they send their automatons out to locations. 
+
+*  [ ] Allow satellites to find deposits on planets in the #Planet4 project - #DEPOSITS-1
+*  [ ] Allow rovers to find deposits on planets (Mars) in the #AI4Mars project - #DEPOSITS-2
+
+See [[SSG-292]]
+
+Additionally, I think we need to start taking a look at how rovers will work (and the locations they'll "visit"), if Mars will be enough. #SSG-291
+
+When users discover deposits, I need to figure out where to show them - ask Dev?
+
+
+![[Pasted image 20251013203904.png]]

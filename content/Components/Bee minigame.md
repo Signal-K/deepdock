@@ -39,3 +39,9 @@ Then, let's set up tables for where the bees are, countdown timers for the next 
 
 YES!
 ![[Pasted image 20250926155148.png]]
+
+
+# Widgets & add-ons
+Any chance of integrating with the Glyph developer kit?
+
+[[SSG-291]] 
