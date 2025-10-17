@@ -9,7 +9,7 @@ tags:
 The first step will be adding a research item so that users can unlock additional features or events when they send their automatons out to locations. 
 
 *  [ ] Allow satellites to find deposits on planets in the #Planet4 project - #DEPOSITS-1
-*  [ ] Allow rovers to find deposits on planets (Mars) in the #AI4Mars project - #DEPOSITS-2
+* [x] Allow rovers to find deposits on planets (Mars) in the #AI4Mars project - #DEPOSITS-2 ✅ 2025-10-14
 
 See [[SSG-292]]
 
@@ -19,3 +19,11 @@ When users discover deposits, I need to figure out where to show them - ask Dev?
 
 
 ![[Pasted image 20251013203904.png]]
+
+
+#post-sprint (post-SSG-292): perhaps the more "prestige" a user has in an area, the better the #confidence values...
+
+- Plus, a research item for users to be able to send automatons (rovers, specifically) to different planets, not just #Mars
+
+Are we going to suggest that #Mars is some sort of community settlement?
+Allow users to send rovers to other planets and asteroids? New composition configuration there?
