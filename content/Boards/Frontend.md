@@ -6,29 +6,29 @@ kanban-plugin: board
 
 ## Icebox
 
-- [ ] Design classification window for AI4M #classification #AI4Mars #Layout #SSG-281 #SSF-17
+- [x] Design classification window for AI4M #classification #AI4Mars #Layout #SSG-281 #SSF-17 ✅ 2025-10-29
 - [ ] Minigame ideas #SSG-281 #SSF-25
 - [ ] Minigame extension ideas #SSG-281 #SSF-27
 - [ ] Anomaly animation in viewport....later #SSG-281 #SSF-4
 - [ ] [[Update Telescope viewport to show classifications in viewport, and only fetch from linked_anomalies (strucutre page and viewport) linked_anomalies Telescope Viewport SSG-281 SSF-5]]
 - [ ] Planet Generator control unlock... #SSG-281 #SSF-10
 - [ ] Component that shows the progression of your rover on different planets #Rovers #AI4Mars #Automatons #SSG-281 #SSF-11
-- [ ] Progressive battery drain for rovers on routes #Routes #Rovers #SSG-281 #SSF-12
+- [x] Progressive battery drain for rovers on routes #Routes #Rovers #SSG-281 #SSF-12 ✅ 2025-10-29
 - [ ] Add DiskDetective back #SSG-281 #SSF-14
-- [ ] Add toggle back to telescope section to show discoveries/linkeds #SSG-281 #SSF-15
+- [x] Add toggle back to telescope section to show discoveries/linkeds #SSG-281 #SSF-15 ✅ 2025-10-29
 - [ ] Sidebar to show tool/automaton/structure numbers based on researched values (unlocked by user) #Research #Stardust #Sidebar #SSG-286 #SSF-36
-- [ ] Improve method of identifying weathersatellite/automaton/tool missions #SSG-286 #SSF-45
-- [ ] Mobile-friendly sidebar
+- [x] Improve method of identifying weathersatellite/automaton/tool missions #SSG-286 #SSF-45 ✅ 2025-10-29
+- [x] Mobile-friendly sidebar ✅ 2025-10-29
 
 
 ## Selected
 
-- [ ] #AI4Mars : Function to identify if a route has been classified (route markers point to entries in `linked_anomalies`) #SSG-281 #SSF-3
-- [ ] Add notification subscription button to the navbar #SSG-281 #SSF-16
+- [x] #AI4Mars : Function to identify if a route has been classified (route markers point to entries in `linked_anomalies`) #SSG-281 #SSF-3 ✅ 2025-10-29
+- [x] Add notification subscription button to the navbar #SSG-281 #SSF-16 ✅ 2025-10-29
 - [ ] Add an animation to show that we're moving to the classification process #Onboarding #Layout #SSG-281 #SSF-22
 - [ ] Don't show classified anomalies in viewport sections #Viewport #Database #Sections #SSG-281 #SSF-23
-- [ ] Fix sidebar issues on mobile #Sidebar #Mobile #Layout #SSG-286 #SSF-33
-- [ ] "Next step"/mission info & tutorial access in Sidebar #Sidebar #Tutorial #SSG-286 #SSF-37
+- [x] Fix sidebar issues on mobile #Sidebar #Mobile #Layout #SSG-286 #SSF-33 ✅ 2025-10-29
+- [x] "Next step"/mission info & tutorial access in Sidebar #Sidebar #Tutorial #SSG-286 #SSF-37 ✅ 2025-10-29
 - [ ] Ability to open a classification or anomaly in a focused view in the telescope #Telescope #Database #anomalies #anomalyid #classification #SSG-286 #SSF-38
 - [ ] When a planet has been painted, it should have its 3js version in the deploy scenes #SSG-286 #SSF-46
 
