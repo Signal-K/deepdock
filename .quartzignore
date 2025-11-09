@@ -1,0 +1,40 @@
+# Private folders (underscore prefix)
+content/_Inbox/**
+content/_Sprints/**
+content/_Tasks/**
+content/_System/**
+
+# Old unorganized structure (exclude from Quartz)
+content/Sprints/**
+content/Components/**
+content/Backend/**
+content/Viewports/**
+content/Classifications/**
+content/Boards/**
+content/Tags/**
+content/Meetings/**
+content/Ideas/**
+
+# Root-level Station-98 folder (moved to Projects/Station-198)
+Station-98/**
+
+# Root-level Games folder (moved to Meta/Games)
+Games/**
+
+# System files
+.DS_Store
+.obsidian/**
+*.tmp
+**/.DS_Store
+
+# Utility folders at root
+utilities/**
+kanban/**
+
+# Legacy media folder (images being moved to project-specific folders)
+content/Media/**
+
+# Documentation files (not part of published content)
+REORGANIZATION_PLAN.md
+WORKFLOW_GUIDE.md
+QUARTZ_CONFIG.md
