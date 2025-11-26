@@ -4,80 +4,38 @@ date: {{date:YYYY-MM-DD}}
 tags:
   - dashboard
   - daily
-icon: lucide//layout-dashboard
-icon: lucide//layout-dashboard
 ---
 
 # 🎯 Daily Dashboard - {{date:YYYY-MM-DD}}
 
-## 🚀 Quick Actions
+## � Quick Actions
 
 ```button
 name ➕ Create Task
-type prepend template
-action Create-Task
-templater true
+type command
+action Templater: Run Script - create-task
 color blue
 ```
 ^button-create-task
 
 ```button
 name 📋 Organize Daily Notes
-type prepend template
-action Organize-Daily
-templater true
+type command
+action Templater: Run Script - organize-daily
 color green
 ```
 ^button-organize
 
 ```button
 name 🆕 New Sprint
-type prepend template
-action New-Sprint
-templater true
+type command
+action Templater: Run Script - new-sprint
 color purple
 ```
 ^button-new-sprint
 
 ```button
-name 🧠 Analyze Week (AI)
-type prepend template
-action Weekly-Analysis
-templater true
-color orange
-```
-^button-analyze-week
-
-```button
-name 📦 Archive Last Week
-type prepend template
-action Archive-Week
-templater true
-color teal
-```
-^button-archive-week
-
-```button
-name 📅 Archive Daily
-type prepend template
-action Archive-Daily
-templater true
-color yellow
-```
-^button-archive
-
-
-```button
-name � Reset Dashboard
-type prepend template
-action Reset-Dashboard
-templater true
-color red
-```
-^button-reset
-
-```button
-name �📊 View All Projects
+name 📊 View All Projects
 type link
 action obsidian://open?vault=quartz&file=_Tasks/By-Project
 color default

@@ -12,6 +12,9 @@ icon: lucide//layout-dashboard
 
 ## 🚀 Quick Actions
 
+
+
+
 ```button
 name ➕ Create Task
 type prepend template
@@ -66,7 +69,6 @@ color yellow
 ```
 ^button-archive
 
-
 ```button
 name � Reset Dashboard
 type prepend template
@@ -101,7 +103,8 @@ color default
 
 
 ### Ideas & Brainstorming
-
+![[Pasted image 20251126143720.png]]
+@MRKT Space
 
 
 

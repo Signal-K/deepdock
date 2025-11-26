@@ -1,3 +1,6 @@
+---
+sticker: lucide//building-2
+---
 # Bumble Tasks
 
 Project: [[index|Bumble]]
