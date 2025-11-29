@@ -1,6 +1,7 @@
 ---
 icon: lucide//flower-2
 sticker: lucide//copy-plus
+banner: media/Pasted image 20251119093204.png
 ---
 
 # 🌸 Bumble Tasks
@@ -22,9 +23,9 @@ sticker: lucide//copy-plus
 
 ### 🔼 Medium Priority
 
-- [ ] Allow users to harvest nectar using bottles 🔼 🆔 656kp0
-- [ ] Improve shopping interface 🔼 🆔 esmglq
-- [ ] Create orders page in shop 🔼 🆔 lt92iz
+- [x] Allow users to harvest nectar using bottles 🆔 656kp0 🔼 ✅ 2025-11-26
+- [x] Improve shopping interface 🆔 esmglq 🔼 ✅ 2025-11-26
+- [x] Create orders page in shop 🆔 lt92iz 🔼 ✅ 2025-11-26
 
 ### 🔽 Low Priority
 
@@ -91,3 +92,6 @@ SORT file.name ASC
 - [ ] Add a night time texture/gradient or overlay 🔽 🆔 x3w7k6
 - [ ] Allow users to upgrade their water tanks 🔽 🆔 nax6x2
 - [ ] We should have a list of fulfilled orders and show the user their affinity level 🔼 🆔 ar9ynm
+- [ ] Extract/convert seeds 🔽 🆔 2lqie4
+- [x] Start documenting building/construction system 🆔 hh1yl1 ⏫ ✅ 2025-11-28
+- [ ] If there are orders the user hasn't seen, add an unread counter/icon to the shop button 🔽 🆔 oyev3a

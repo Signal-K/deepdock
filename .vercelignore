@@ -1,0 +1,46 @@
+# Development and build artifacts
+node_modules/
+.venv/
+__pycache__/
+public/
+.quartz-cache/
+prof/
+tsconfig.tsbuildinfo
+
+# Obsidian metadata
+.obsidian/
+.makemd/
+.trash/
+
+# Version control
+.git/
+
+# Development files
+*.log
+.DS_Store
+.env.local
+.env.*.local
+
+# Utilities and scripts (not needed for deployment)
+utilities/
+kanban/
+Station-98/
+Games/
+
+# Documentation files (not needed for site)
+DOCUMENTATION_INDEX.md
+MIGRATION_CHECKLIST.md
+MIGRATION_SUMMARY.md
+README_REORGANIZATION.md
+REORGANIZATION_PLAN.md
+SETUP_COMPLETE.md
+STATISTICS.md
+STRUCTURE_VISUALIZATION.md
+VAULT_COMMAND.md
+WORKFLOW_GUIDE.md
+
+# Archive and tags directories
+Tags/
+content/Tags/
+
+# Large media directory in content (images should be in media/ or public/static/)

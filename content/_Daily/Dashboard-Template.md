@@ -5,7 +5,6 @@ tags:
   - dashboard
   - daily
 icon: lucide//layout-dashboard
-icon: lucide//layout-dashboard
 ---
 
 # 🎯 Daily Dashboard - {{date:YYYY-MM-DD}}
@@ -13,76 +12,82 @@ icon: lucide//layout-dashboard
 ## 🚀 Quick Actions
 
 ```button
-name ➕ Create Task
+name ➕ Create
 type prepend template
 action Create-Task
 templater true
-color blue
+class inline
 ```
-^button-create-task
-
 ```button
-name 📋 Organize Daily Notes
+name 📋 Organize
 type prepend template
 action Organize-Daily
 templater true
-color green
+class inline
 ```
-^button-organize
-
 ```button
-name 🆕 New Sprint
+name 🆕 Sprint
 type prepend template
 action New-Sprint
 templater true
-color purple
+class inline
 ```
-^button-new-sprint
-
 ```button
-name 🧠 Analyze Week (AI)
+name 🧠 Analyze
 type prepend template
 action Weekly-Analysis
 templater true
-color orange
+class inline
 ```
-^button-analyze-week
-
 ```button
-name 📦 Archive Last Week
+name 📦 Archive Wk
 type prepend template
 action Archive-Week
 templater true
-color teal
+class inline
 ```
-^button-archive-week
-
 ```button
-name 📅 Archive Daily
+name 📅 Archive
 type prepend template
 action Archive-Daily
 templater true
-color yellow
+class inline
 ```
-^button-archive
 
 
 ```button
-name � Reset Dashboard
+name 🔄 Reset
 type prepend template
 action Reset-Dashboard
 templater true
-color red
+class inline
 ```
-^button-reset
-
 ```button
-name �📊 View All Projects
+name 📊 Projects
 type link
 action obsidian://open?vault=quartz&file=_Tasks/By-Project
-color default
+class inline
 ```
-^button-projects
+
+---
+
+## 📅 Recent Dashboards (Last 7 Days)
+
+```note-gallery
+path: content/_Daily
+query: 'path:content/_Daily/'
+recursive: false
+limit: 7
+sort: desc
+sortBy: mtime
+fontSize: 8pt
+showTitle: true
+breakpoints:
+  default: 4
+  1500: 3
+  1000: 2
+  700: 1
+```
 
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: {{PROJECT}} Dashboard
-project: {{PROJECT}}
+title: "{{PROJECT}} Dashboard"
+project: "{{PROJECT}}"
 tags:
   - dashboard
-  - {{PROJECT_TAG}}
+  - "{{PROJECT_TAG}}"
 ---
 
 # 🎯 {{PROJECT}} Dashboard

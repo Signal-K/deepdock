@@ -1,5 +1,7 @@
 ---
 icon: lucide//rocket
+sticker: lucide//text-selection
+banner: media/Pasted image 20251128081956.png
 ---
 
 # 🚀 Star Sailors Tasks
@@ -79,3 +81,4 @@ SORT file.name ASC
 - [x] Archive planet generator changes in client repo 🆔 z7bhnm 🔽 ✅ 2025-11-24
 - [x] Try out Rhys's first landing page change suggestion 🆔 00o6wr ⏫ ✅ 2025-11-24
 - [ ] Possibly add a mailing list or other way to get in touch with interested users? ⏫ 🆔 0witks
+- [x] Move playable game to a new route for better analytics 🆔 1zb151 ⏫ 📅 2025-11-29 ✅ 2025-11-29

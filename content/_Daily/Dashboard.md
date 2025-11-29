@@ -5,7 +5,6 @@ tags:
   - dashboard
   - daily
 icon: lucide//layout-dashboard
-icon: lucide//layout-dashboard
 ---
 
 # 🎯 Daily Dashboard - {{date:YYYY-MM-DD}}
@@ -13,78 +12,82 @@ icon: lucide//layout-dashboard
 ## 🚀 Quick Actions
 
 
-
-
 ```button
-name ➕ Create Task
+name ➕ Create
 type prepend template
 action Create-Task
 templater true
-color blue
+class inline
 ```
-^button-create-task
-
 ```button
-name 📋 Organize Daily Notes
+name 📋 Organize
 type prepend template
 action Organize-Daily
 templater true
-color green
+class inline
 ```
-^button-organize
-
 ```button
-name 🆕 New Sprint
+name 🆕 Sprint
 type prepend template
 action New-Sprint
 templater true
-color purple
+class inline
 ```
-^button-new-sprint
-
 ```button
-name 🧠 Analyze Week (AI)
+name 🧠 Analyze
 type prepend template
 action Weekly-Analysis
 templater true
-color orange
+class inline
 ```
-^button-analyze-week
-
 ```button
-name 📦 Archive Last Week
+name 📦 Archive Wk
 type prepend template
 action Archive-Week
 templater true
-color teal
+class inline
 ```
-^button-archive-week
-
 ```button
-name 📅 Archive Daily
+name 📅 Archive
 type prepend template
 action Archive-Daily
 templater true
-color yellow
+class inline
 ```
-^button-archive
 
 ```button
-name � Reset Dashboard
+name 🔄 Reset
 type prepend template
 action Reset-Dashboard
 templater true
-color red
+class inline
 ```
-^button-reset
-
 ```button
-name �📊 View All Projects
+name 📊 Projects
 type link
 action obsidian://open?vault=quartz&file=_Tasks/By-Project
-color default
+class inline
 ```
-^button-projects
+
+---
+
+## 📅 Recent Dashboards (Last 7 Days)
+
+```note-gallery
+path: content/_Daily
+query: 'path:content/_Daily/'
+recursive: false
+limit: 7
+sort: desc
+sortBy: mtime
+fontSize: 8pt
+showTitle: true
+breakpoints:
+  default: 4
+  1500: 3
+  1000: 2
+  700: 1
+```
 
 ---
 
@@ -93,9 +96,20 @@ color default
 > **Tip:** Just dump everything here. Click "Organize Daily Notes" button to auto-organize.
 
 ### Quick Thoughts
+An idea I did just have is should we have the playable version of #Star-Sailors web be based on a different link so I can more clearly differentiate between visitors & players?
+This could have been really useful for when we did have that period where we got a little bit of attention...but I think I'm going to do this anyway.
+Was going to check with Rhys first but I genuinely can't think of a downside to this. So....into the task bucket it goes!
+
+(not sure if I've discussed this here yet) -> is the anon user feature harming my growth ability?
+Is the graduation process [to a full account] not working? Or confusing?
+
+I'm also taking a look into some other vercel insights to see if there's anywhere I can improve things, e.g. speed/first load time.
+> Nothing to report, really. So far, seems okayish.
 
 
+Update: I actually am starting to regret deciding to do this new rerouting change because I've spent the last ~90 minutes dealing with the speed/load issues that arise...fml. But anyway, I think that's done. 
 
+Posthog analytics would be next for the webapp, here's where it started: https://github.com/Signal-K/client/commit/ef9a45dc63bb30d785cdf309625b6e2a119cb81a 
 
 ### Meetings & Conversations
 
@@ -103,8 +117,7 @@ color default
 
 
 ### Ideas & Brainstorming
-![[Pasted image 20251126143720.png]]
-@MRKT Space
+Would be ideal if I could tag tickets/tasks in-line here in Obsidian.
 
 
 
