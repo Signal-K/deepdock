@@ -13,51 +13,50 @@ icon: lucide//layout-dashboard
 
 ```button
 name ➕ Create
-type prepend template
+type append template
 action Create-Task
 templater true
 class inline
 ```
 ```button
 name 📋 Organize
-type prepend template
+type append template
 action Organize-Daily
 templater true
 class inline
 ```
 ```button
 name 🆕 Sprint
-type prepend template
+type append template
 action New-Sprint
 templater true
 class inline
 ```
 ```button
 name 🧠 Analyze
-type prepend template
+type append template
 action Weekly-Analysis
 templater true
 class inline
 ```
 ```button
 name 📦 Archive Wk
-type prepend template
+type append template
 action Archive-Week
 templater true
 class inline
 ```
 ```button
 name 📅 Archive
-type prepend template
+type append template
 action Archive-Daily
 templater true
 class inline
 ```
 
-
 ```button
 name 🔄 Reset
-type prepend template
+type append template
 action Reset-Dashboard
 templater true
 class inline

@@ -20,6 +20,27 @@ module.exports = async function(tp, appContext) {
     );
     if (!priority) return;
     
+    // Prompt for due date
+    const dueDateInput = await tp.system.prompt("Due date (t=today, to=tomorrow, or press Enter for none):");
+    
+    let dueDate = '';
+    let startDate = '';
+    const today = tp.date.now("YYYY-MM-DD");
+    
+    if (dueDateInput) {
+        const input = dueDateInput.toLowerCase().trim();
+        if (input === 't') {
+            dueDate = ` 📅 ${today}`;
+            startDate = ` 🛫 ${today}`;
+        } else if (input === 'to') {
+            const tomorrow = tp.date.now("YYYY-MM-DD", 1);
+            dueDate = ` 📅 ${tomorrow}`;
+            startDate = ` 🛫 ${today}`;
+        }
+    }
+    
+    const createdDate = ` ➕ ${today}`;
+    
     // Generate unique ID
     function generateId() {
         const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -34,7 +55,7 @@ module.exports = async function(tp, appContext) {
     
     // Create task with appropriate tags and ID
     const priorityEmoji = priority === 'high' ? '⏫' : priority === 'medium' ? '🔼' : '🔽';
-    const fullTask = `- [ ] ${taskText} ${priorityEmoji} 🆔 ${taskId}`;
+    const fullTask = `- [ ] ${taskText} 🆔 ${taskId}${dueDate}${startDate}${createdDate} ${priorityEmoji}`;
     
     // Add to project file
     const projectPath = `content/_Tasks/Projects/${project}.md`;

@@ -19,7 +19,7 @@ banner: media/Pasted image 20251128081956.png
 
 ### ⏫ High Priority
 
-- [ ] Set up automatic web scrapers for images - things to do ⏫ - maybe turn this into an API
+- [ ] Set up automatic web scrapers for images - things to do ⏫ - maybe turn this into an API || https://github.com/Signal-K/client/issues/114
 
 ### 🔼 Medium Priority
 
@@ -82,3 +82,4 @@ SORT file.name ASC
 - [x] Try out Rhys's first landing page change suggestion 🆔 00o6wr ⏫ ✅ 2025-11-24
 - [ ] Possibly add a mailing list or other way to get in touch with interested users? ⏫ 🆔 0witks
 - [x] Move playable game to a new route for better analytics 🆔 1zb151 ⏫ 📅 2025-11-29 ✅ 2025-11-29
+- [ ] Add posthog analytics to determine what users are doing in the early-game ⏫ 🆔 vencvt

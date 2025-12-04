@@ -11,7 +11,6 @@ icon: lucide//layout-dashboard
 
 ## 🚀 Quick Actions
 
-
 ```button
 name ➕ Create
 type prepend template
@@ -55,6 +54,7 @@ templater true
 class inline
 ```
 
+
 ```button
 name 🔄 Reset
 type prepend template
@@ -96,20 +96,10 @@ breakpoints:
 > **Tip:** Just dump everything here. Click "Organize Daily Notes" button to auto-organize.
 
 ### Quick Thoughts
-An idea I did just have is should we have the playable version of #Star-Sailors web be based on a different link so I can more clearly differentiate between visitors & players?
-This could have been really useful for when we did have that period where we got a little bit of attention...but I think I'm going to do this anyway.
-Was going to check with Rhys first but I genuinely can't think of a downside to this. So....into the task bucket it goes!
-
-(not sure if I've discussed this here yet) -> is the anon user feature harming my growth ability?
-Is the graduation process [to a full account] not working? Or confusing?
-
-I'm also taking a look into some other vercel insights to see if there's anywhere I can improve things, e.g. speed/first load time.
-> Nothing to report, really. So far, seems okayish.
+A nice UI:
+![[Pasted image 20251130135854.png]]
 
 
-Update: I actually am starting to regret deciding to do this new rerouting change because I've spent the last ~90 minutes dealing with the speed/load issues that arise...fml. But anyway, I think that's done. 
-
-Posthog analytics would be next for the webapp, here's where it started: https://github.com/Signal-K/client/commit/ef9a45dc63bb30d785cdf309625b6e2a119cb81a 
 
 ### Meetings & Conversations
 
@@ -117,8 +107,8 @@ Posthog analytics would be next for the webapp, here's where it started: https:/
 
 
 ### Ideas & Brainstorming
-Would be ideal if I could tag tickets/tasks in-line here in Obsidian.
 
+![[IMG_0810.jpeg]]
 
 
 ---

@@ -16,7 +16,7 @@ TABLE WITHOUT ID
 	Incomplete,
 	Complete,
 	Total
-FROM "_Sprints"
+FROM "content/_Tasks/Projects"
 FLATTEN file.tasks as task
 WHERE task
 FLATTEN 
@@ -50,35 +50,18 @@ SORT Project ASC
 
 ```dataview
 TASK
-FROM "_Sprints/Active"
-WHERE !completed
-AND (
-	contains(text, "#star-sailors") OR 
-	contains(text, "#SS") OR 
-	contains(text, "#telescope") OR 
-	contains(text, "#satellite") OR 
-	contains(text, "#rover") OR
-	contains(text, "#classification") OR
-	contains(text, "#TELESCOPE") OR
-	contains(text, "#SATELLITE") OR
-	contains(text, "#ROVER")
-)
+FROM "content/_Tasks/Projects"
+WHERE file.name = "star-sailors"
+AND !completed
 ```
 
-### All Sprints
+### All Tasks
 
 ```dataview
 TASK
-FROM "_Sprints"
-WHERE !completed
-AND (
-	contains(text, "#star-sailors") OR 
-	contains(text, "#SS") OR 
-	contains(text, "#telescope") OR 
-	contains(text, "#satellite") OR 
-	contains(text, "#rover") OR
-	contains(text, "#classification")
-)
+FROM "content/_Tasks/Projects"
+WHERE file.name = "star-sailors"
+AND !completed
 LIMIT 50
 ```
 
@@ -88,27 +71,18 @@ LIMIT 50
 
 ```dataview
 TASK
-FROM "_Sprints/Active"
-WHERE !completed
-AND (
-	contains(text, "#bumble") OR 
-	contains(text, "#BUMBLE") OR 
-	contains(text, "#bee") OR
-	contains(text, "#SOIL")
-)
+FROM "content/_Tasks/Projects"
+WHERE file.name = "bumble"
+AND !completed
 ```
 
-### All Sprints
+### All Tasks
 
 ```dataview
 TASK
-FROM "_Sprints"
-WHERE !completed
-AND (
-	contains(text, "#bumble") OR 
-	contains(text, "#BUMBLE") OR 
-	contains(text, "#bee")
-)
+FROM "content/_Tasks/Projects"
+WHERE file.name = "bumble"
+AND !completed
 LIMIT 50
 ```
 
@@ -116,9 +90,9 @@ LIMIT 50
 
 ```dataview
 TASK
-FROM "_Sprints"
-WHERE !completed
-AND contains(text, "#roving")
+FROM "content/_Tasks/Projects"
+WHERE file.name = "roving"
+AND !completed
 ```
 
 ## Station-198
@@ -127,18 +101,18 @@ AND contains(text, "#roving")
 
 ```dataview
 TASK
-FROM "_Sprints/Active"
-WHERE !completed
-AND contains(text, "#station")
+FROM "content/_Tasks/Projects"
+WHERE file.name = "station-198"
+AND !completed
 ```
 
-### All Sprints
+### All Tasks
 
 ```dataview
 TASK
-FROM "_Sprints"
-WHERE !completed
-AND contains(text, "#station")
+FROM "content/_Tasks/Projects"
+WHERE file.name = "station-198"
+AND !completed
 LIMIT 50
 ```
 
@@ -146,17 +120,9 @@ LIMIT 50
 
 ```dataview
 TASK
-FROM "_Sprints"
-WHERE !completed
-AND (
-	contains(text, "#backend") OR
-	contains(text, "#infrastructure") OR
-	contains(text, "#database") OR
-	contains(text, "#api")
-)
-AND !contains(text, "#star-sailors")
-AND !contains(text, "#bumble")
-AND !contains(text, "#station")
+FROM "content/_Tasks/Projects"
+WHERE file.name = "general"
+AND !completed
 LIMIT 50
 ```
 

@@ -95,3 +95,11 @@ SORT file.name ASC
 - [ ] Extract/convert seeds 🔽 🆔 2lqie4
 - [x] Start documenting building/construction system 🆔 hh1yl1 ⏫ ✅ 2025-11-28
 - [ ] If there are orders the user hasn't seen, add an unread counter/icon to the shop button 🔽 🆔 oyev3a
+- [ ] Create complete map of blocks, including different soil variants 🔽 🆔 sig4ls
+- [ ] Update track block to be series of tracks (rather than a building-type interface) 🔽 🆔 uocg06
+- [x] Add initial buildings & blocks/elements to Landscape scene for Bumble #Landscape #Scene #Elements #Blocks 🆔 8lf812 🔼 ✅ 2025-12-03
+- [x] Enable zooming in on bee classification image 🔼 🆔 2rb8p4 ^ ![[Pasted image 20251204121058.png || 200]] ✅ 2025-12-04
+
+- [x] Shovel & harvest buttons/functionality to be merged 🆔 d6l241 🔼 ✅ 2025-12-03
+- [ ] Add water tank with dynamic fill texture to landscape scene 🔼 🆔 35jyjy
+- [ ] Add config file for bee rules 🆔 89y004 📅 2025-12-04 🛫 2025-12-04 ➕ 2025-12-04 🔼
