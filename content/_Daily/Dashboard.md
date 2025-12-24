@@ -13,55 +13,60 @@ icon: lucide//layout-dashboard
 
 ```button
 name ➕ Create
-type prepend template
+type append template
 action Create-Task
 templater true
 class inline
 ```
 ```button
 name 📋 Organize
-type prepend template
+type append template
 action Organize-Daily
 templater true
 class inline
 ```
 ```button
 name 🆕 Sprint
-type prepend template
+type append template
 action New-Sprint
 templater true
 class inline
 ```
 ```button
 name 🧠 Analyze
-type prepend template
+type append template
 action Weekly-Analysis
 templater true
 class inline
 ```
 ```button
 name 📦 Archive Wk
-type prepend template
+type append template
 action Archive-Week
 templater true
 class inline
 ```
 ```button
 name 📅 Archive
-type prepend template
+type append template
 action Archive-Daily
 templater true
 class inline
 ```
 
-
 ```button
 name 🔄 Reset
-type prepend template
+type append template
 action Reset-Dashboard
 templater true
 class inline
 ```
+
+
+
+
+
+
 ```button
 name 📊 Projects
 type link
@@ -77,7 +82,7 @@ class inline
 path: content/_Daily
 query: 'path:content/_Daily/'
 recursive: false
-limit: 7
+limit: 4
 sort: desc
 sortBy: mtime
 fontSize: 8pt
@@ -96,10 +101,9 @@ breakpoints:
 > **Tip:** Just dump everything here. Click "Organize Daily Notes" button to auto-organize.
 
 ### Quick Thoughts
-A nice UI:
-![[Pasted image 20251130135854.png]]
+Today is the day that I finally decide how to organise the notes in the dashboard directory.
 
-
+Controls also need to be designed for mobile #Godot builds.
 
 ### Meetings & Conversations
 
@@ -107,8 +111,67 @@ A nice UI:
 
 
 ### Ideas & Brainstorming
+Current projects:
+* Star Sailors (web) - patches
+* "" - #product-hunt - almost finished
+* Bumble
+* "Crashlandings"
+* Coral
 
-![[IMG_0810.jpeg]]
+Segments for everything:
+**STAR SAILORS** (Project)
+Product Hunt Launch Segment:
+1. Wrap-up Product Hunt launch (story)
+This would include the following tasks:
+* Sending out emails to everyone
+* Saving all links related to launch
+* Closing tabs, setting up development log page on `scroobl.es` for the emails. Maybe getting a newsletter together (Substack)
+
+When it comes to Substack, I'll probably have to post from my phone for now.
+
+Also, sometimes stories will be part of multiple segments or projects:
+
+**CRASHLANDINGS** (Project)
+Initial infrastructure segment (also relates to BUMBLE project):
+1. Add Supabase login & data to template
+	1. Guest accounts
+	2. Seeing your data
+2. Godot full-screen
+	1. Easy close/main menu swipe
+	2. Check controls that work
+3. General - finish current tutorial series
+
+**BUMBLE** (Project)
+Initial setup segment - goal here is to have a mobile app & web app (installable as a PWA, while we're waiting for app store approval) where users can plant crops
+1. Get data (story)
+	1. Initially manually getting pollinator images
+	2. Simple web scraping script
+2. Update page flow to add vertical & side scrolling:
+	1. Hide city/town page
+	2. Add vertical scrolling
+	3. Add expand/expansion page to bottom (final) page for hive/plot areas
+3. Update hive pages to look like real hives
+	1. Figure out a design template
+4. Allow users to expand plots & hives
+	1. Expand page shows current level & available perks (e.g. expansions)
+	2. If the user has an available perk, they can create a new page - this is saved for the user
+	3. User can also increase number of plots per page (each page is referred to as a "Greenhouse" (maybe a better name for that exists...somewhere??))
+Then in general I need to look at methods for getting bees to pollinate - what is the consistency?
+
+**CORAL** (Project)
+1. New repo built on #godot-rn template
+2. Start drawing assets
+
+
+General:
+* [x] Back up/archive bin/bloat data in Obsidian #Obsidian #Archive 🆔 swby1n ✅ 2025-12-24
+
+![[Pasted image 20251223103625.png]]
+![[Pasted image 20251223104005.png]]
+![[Pasted image 20251223104016.png]]
+![[Pasted image 20251223104027.png]]![[Pasted image 20251223104034.png]]
+
+
 
 
 ---
@@ -119,8 +182,10 @@ A nice UI:
 
 ```dataview
 TASK
+FROM ""
 WHERE !completed 
   AND (contains(text, "⏫") OR contains(text, "#p1") OR contains(text, "#high-priority") OR contains(text, "🔥"))
+  AND file.frontmatter.isNext = true
 SORT file.name ASC
 LIMIT 5
 ```
@@ -142,64 +207,3 @@ SORT file.name ASC
 
 ---
 
-## ➕ Quick Task Inbox
-
-> **Create tasks here**, then click "Organize Daily Notes" button to route them automatically.
-> 
-> **Priority markers:** 
-> - ⏫ High priority (P1)
-> - 🔼 Medium priority (P2-P3)  
-> - 🔽 Low priority (P4-P5)
-> 
-> **Project detection** (add these keywords):
-> - `star-sailors`, `telescope`, `satellite` → Star Sailors
-> - `bumble`, `bee`, `pollinator` → Bumble
-> - `roving` → Roving
-> - `station`, `station-198` → Station 198
-
-### Tasks to Route
-
-- [ ] 
-
-
-
-
----
-
-## 📊 Quick Stats
-
-```dataview
-TABLE WITHOUT ID
-  length(file.tasks) as "Total Tasks",
-  length(filter(file.tasks, (t) => !t.completed)) as "Incomplete",
-  length(filter(file.tasks, (t) => t.completed)) as "Completed"
-FROM "content/_Sprints/Active"
-```
-
----
-
-## 📝 Recent Sprint Activity
-
-```dataview
-TABLE WITHOUT ID
-  file.link as "Sprint",
-  file.mtime as "Last Modified"
-FROM "content/_Sprints/Active"
-SORT file.mtime DESC
-LIMIT 3
-```
-
----
-
-## 🔗 Quick Links
-
-- [[_Tasks/Current-Sprint|Current Sprint Tasks]]
-- [[_Tasks/All-Tasks|All Tasks]]
-- [[_Tasks/By-Project|Tasks by Project]]
-- [[_Sprints/Active/SSG-295|Active Sprint: SSG-295]]
-- [[_Inbox/README|Inbox]]
-
----
-
-*Dashboard buttons powered by [Buttons](https://github.com/shabegom/buttons) and [Templater](https://github.com/SilentVoid13/Templater) plugins*  
-*High-priority tasks use: ⏫, #p1, or #high-priority*

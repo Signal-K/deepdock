@@ -61,6 +61,13 @@ action Reset-Dashboard
 templater true
 class inline
 ```
+
+
+
+
+
+
+
 ```button
 name 📊 Projects
 type link
@@ -76,7 +83,7 @@ class inline
 path: content/_Daily
 query: 'path:content/_Daily/'
 recursive: false
-limit: 7
+limit: 4
 sort: desc
 sortBy: mtime
 fontSize: 8pt
@@ -117,8 +124,10 @@ breakpoints:
 
 ```dataview
 TASK
+FROM ""
 WHERE !completed 
   AND (contains(text, "⏫") OR contains(text, "#p1") OR contains(text, "#high-priority") OR contains(text, "🔥"))
+  AND file.frontmatter.isNext = true
 SORT file.name ASC
 LIMIT 5
 ```
@@ -140,64 +149,3 @@ SORT file.name ASC
 
 ---
 
-## ➕ Quick Task Inbox
-
-> **Create tasks here**, then click "Organize Daily Notes" button to route them automatically.
-> 
-> **Priority markers:** 
-> - ⏫ High priority (P1)
-> - 🔼 Medium priority (P2-P3)  
-> - 🔽 Low priority (P4-P5)
-> 
-> **Project detection** (add these keywords):
-> - `star-sailors`, `telescope`, `satellite` → Star Sailors
-> - `bumble`, `bee`, `pollinator` → Bumble
-> - `roving` → Roving
-> - `station`, `station-198` → Station 198
-
-### Tasks to Route
-
-- [ ] 
-
-
-
-
----
-
-## 📊 Quick Stats
-
-```dataview
-TABLE WITHOUT ID
-  length(file.tasks) as "Total Tasks",
-  length(filter(file.tasks, (t) => !t.completed)) as "Incomplete",
-  length(filter(file.tasks, (t) => t.completed)) as "Completed"
-FROM "content/_Sprints/Active"
-```
-
----
-
-## 📝 Recent Sprint Activity
-
-```dataview
-TABLE WITHOUT ID
-  file.link as "Sprint",
-  file.mtime as "Last Modified"
-FROM "content/_Sprints/Active"
-SORT file.mtime DESC
-LIMIT 3
-```
-
----
-
-## 🔗 Quick Links
-
-- [[_Tasks/Current-Sprint|Current Sprint Tasks]]
-- [[_Tasks/All-Tasks|All Tasks]]
-- [[_Tasks/By-Project|Tasks by Project]]
-- [[_Sprints/Active/SSG-295|Active Sprint: SSG-295]]
-- [[_Inbox/README|Inbox]]
-
----
-
-*Dashboard buttons powered by [Buttons](https://github.com/shabegom/buttons) and [Templater](https://github.com/SilentVoid13/Templater) plugins*  
-*High-priority tasks use: ⏫, #p1, or #high-priority*

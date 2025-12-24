@@ -1,0 +1,224 @@
+source: _Tasks/Star-Sailors/Stories
+filter:
+  segment: "V2 Complete"
+views:
+  - type: cards
+    name: Stories
+    sort:
+      - property: priority
+        direction: DESC
+      - property: status
+        direction: ASC
+    image: note.banner
+    imageAspectRatio: 0.6
+  - type: table
+    name: All Tasks
+    source: tasks
+    filters:
+      and:
+        - file.path ^= "_Tasks/Star-Sailors/"
+        - contains(text, "V2 Complete")
+- [x] Update telescope deploy layout to be responsive & more like the current satellite deploy layout - #DEPLOY-15 ✅ 2025-10-29
+
+## ✅ CLASSIFICATION MECHANICS
+
+- [x] One-click classification (save image annotation & post) - #CLASSIFICATION-1 ✅ 2025-09-27
+- [x] Next-scene should show DD output based on `classificationConfiguration` - #CLASSIFICATION-2 ✅ 2025-09-29
+- [x] Fix annotation label height - #CLASSIFICATION-3 ✅ 2025-10-02
+- [x] `classificationConfiguration` to include parent for all Linked_Anomalies - #CLASSIFICATION-4 ✅ 2025-10-17
+- [x] Satellite page to show user's progress - #CLASSIFICATIONS-5 ✅ 2025-10-17
+- [x] Update Next scene to show parent/children - #CLASSIFICATIONS-6 ✅ 2025-10-29
+- [x] Add new classification link to dynamic route ✅ 2025-09-22
+
+## ✅ AI4MARS / ROVER PROJECT
+
+- [x] If there are already routes for the user, redirect them from the rover deploy page - #AI4Mars-1 ✅ 2025-09-16
+- [x] Get waypoints imposed on main rover viewport - #AI4Mars-2 ✅ 2025-09-16
+- [x] Show current rover position #AI4Mars-3 ✅ 2025-09-16
+- [x] Better-looking topographic map? #AI4Mars-4 ✅ 2025-09-18
+- [x] Automatic deleting of routes end of week (unless they're young) #AI4Mars-5 ✅ 2025-09-16
+- [x] New table for tool_interactions - #AI4Mars-6 ✅ 2025-09-16
+- [x] Refuelling & base waypoints ✅ 2025-09-22
+- [x] Show anomaly popup ✅ 2025-09-18
+- [x] Add anomaly classification link ✅ 2025-09-18
+- [x] Redirect to rover viewport ✅ 2025-09-22
+- [x] Rover starts travelling again ✅ 2025-09-18
+- [x] AI4M classifications aren't having a `classificationtype` value saved - #AI4Mars-12 ✅ 2025-10-14
+- [x] Initial React Native/Expo setup - #AI4Mars-13 ✅ 2025-10-21
+- [x] Integration of 3d models - #AI4Mars-14 ✅ 2025-10-21
+- [x] Simple animation & scene in the Inventory Viewport - #AI4Mars-15 ✅ 2025-10-24
+- [x] New inventory table, delete deposits (or "drain" them) - #AI4Mars-16 ✅ 2025-10-26
+- [x] Update Step2 in next scene for rover to redirect back to the rover viewport ✅ 2025-10-14
+- [x] Reduce size of rover in gameplay scene #ROVER-1 ✅ 2025-10-22
+
+## ✅ TELESCOPE PROJECTS
+
+- [x] Update telescope viewport classification link (for DMP/AA) - #TELESCOPE-1 ✅ 2025-09-27
+- [x] Update object of interest anomaly component to look more like a star/dust pool for new projects #TELESCOPE-2 ✅ 2025-09-29
+- [x] Separate `TelescopeViewportRange.tsx` - #TELESCOPE-3 ✅ 2025-10-16
+
+## ✅ DISK DETECTIVE
+
+- [x] New classification component & route for Disk-Detective - #DISKDETECTIVE-1 ✅ 2025-09-29
+- [x] Update Disk-Detective component to have dynamic slide numbers - #DISKDETECTIVE-2 ✅ 2025-09-29
+
+## ✅ ACTIVE ASTEROIDS
+
+- [x] Link ActiveAsteroids Classify component to Telescope Viewport - #ACTIVE-1 ✅ 2025-09-30
+- [x] Fix layout of ActiveAsteroids classification component - #ACTIVE-2 ✅ 2025-10-02
+
+## ✅ RESEARCH & UPGRADES
+
+- [x] Show stardust balance in header - #RESEARCH-1 ✅ 2025-10-03
+- [x] Show one available upgrade in header - #RESEARCH-2 ✅ 2025-10-04
+- [x] New research blocks ✅ 2025-09-13
+- [x] Some items are automatically "researched" and don't incur a Stardust penalty ✅ 2025-09-13
+- [x] Allow users to research `findMinerals` #RESEARCH-7 ✅ 2025-10-14
+- [x] Allow users to research P-4 + CoM mining #RESEARCH-8 ✅ 2025-10-15
+- [x] For some reason, after some time, tech that has already been researched are appearing again in the "Available" section - #RESEARCH-9 ✅ 2025-10-21
+- [x] Add a research item to unlock new `lightcurve` types - #RESEARCH-11 ✅ 2025-10-26
+- [x] Allow users to use stardust for research items ✅ 2025-09-20
+- [x] New research block ✅ 2025-09-13
+- [x] Deploy satellite page reads from research stats for user ✅ 2025-09-13
+- [x] Research tree to show optional extras ✅ 2025-09-13
+- [x] Integration into flow for satellite deploy page ✅ 2025-09-13
+
+## ✅ MINERAL DEPOSITS
+
+- [x] Allow rovers to find deposits on planets (Mars) in the AI4Mars project - #DEPOSITS-2 ✅ 2025-10-14
+- [x] If users have the mechanic unlocked, create deposits - #DEPOSITS-3 ✅ 2025-10-14
+- [x] Update `mineralDeposits` table structure - #DEPOSITS-4 ✅ 2025-10-14
+- [x] Rover viewport to show waypoints' deposits - #DEPOSITS-5 ✅ 2025-10-14
+- [x] A new inventory page to show users their deposits, including a viewport #DEPOSITS-6 ✅ 2025-10-17
+- [x] New inventory page for mineral deposits #DEPOSITS-7 ✅ 2025-10-15
+- [x] Show indicator of planet availability for P-4/com deposit finding - #DEPOSITS-8 ✅ 2025-10-17
+- [x] Classifications have a random chance to generate deposits #DEPOSITS-10 ✅ 2025-10-19
+
+## ✅ SATELLITE MISSIONS
+
+- [x] Change deployed satellite layout to be based around orbiting planet perspective - #SATELLITE-1 ✅ 2025-10-29
+
+## ✅ PLANETARY SURVEYOR
+
+- [x] Add more context to the planetary Surveyor mission viewport #SURVEYOR-1 ✅ 2025-10-17
+- [x] Make the lightcurve graph in the Surveyor mission more prominent - #SURVEYOR-2 ✅ 2025-10-18
+- [x] Auto-deleting & other bug fixes in first Surveyor mission - #SURVEYOR-3 ✅ 2025-10-18
+
+## ✅ CLOUDSPOTTING
+
+- [x] If user makes a cloud classification, it should also point to the planet #CLOUDSPOTTING-1 ✅ 2025-10-18
+- [x] Fix Cloudspotting on Mars - #CLOUDSPOTTING-2 ✅ 2025-10-17
+- [x] Fix JVH + JVH tutorial - #CLOUDSPOTTING-3 ✅ 2025-10-17
+- [x] JVH - make sure it works ✅ 2025-10-17
+
+## ✅ SUNSPOT PROJECT
+
+- [x] New sunspot anomalies - #SUNSPOTS-1 ✅ 2025-10-31
+- [x] Start migrating solar component - #SUNSPOTS-2 ✅ 2025-10-31
+
+## ✅ NGTS INTEGRATION
+
+- [x] Download anomalies & add to both providers - #NGTS-1 ✅ 2025-10-26
+- [x] New classification component - #NGTS - #NGTS-2 ✅ 2025-10-26
+
+## ✅ ACHIEVEMENTS & MILESTONES
+
+- [x] Allow user to pick the focus mission/achievement in the ActivityHeader - #ACHIVEMENTS-1 ✅ 2025-10-29
+- [x] Component that determines the "most complete" planet in the user's collection - #ACHIEVEMENTS-2 ✅ 2025-10-29
+- [x] Update planet completion mechanic to be based on planet type & temperature #ACHIEVEMENTS-3 ✅ 2025-10-30
+- [x] Achievements section & badges #ACHIEVEMENTS-4 ✅ 2025-10-30
+- [x] Allow user to browse different Milestones - #ACHIEVEMENTS-5 ✅ 2025-10-30
+
+## ✅ LAYOUT & UI
+
+- [x] GameNavbar component is behind the classification modals - #LAYOUT-1 ✅ 2025-09-27
+- [x] Satellite deploy page always is in "dark mode" - #LAYOUT-2 ✅ 2025-09-27
+- [x] Begin to integrate tabbed architecture/layout on index route - #LAYOUT-3 ✅ 2025-10-31
+
+## ✅ VIEWPORTS
+
+- [x] Telescope viewport - all anomalies are just being rendered as "anomaly" object - #VIEWPORT-1 ✅ 2025-09-27
+- [x] Simple viewport window & access to inventory page from index route - #VIEWPORT-2 ✅ 2025-10-19
+- [x] Satellite deploy viewport experiences overflows - #VIEWPORT-3 ✅ 2025-10-24
+
+## ✅ INBOX/CONSENSUS
+
+- [x] Imbox component that shows comments & votes on your post - #INBOX-1 ✅ 2025-10-21
+- [x] Re-add RecentDiscoveries into imbox - #INBOX-2 ✅ 2025-10-21
+- [x] Add a third tab to show other users' discoveries - #INBOX-3 ✅ 2025-10-21
+- [x] Adding textures to imbox / inventory viewports - #INBOX-4 ✅ 2025-10-27
+
+## ✅ BUMBLE BEE MINIGAME
+
+- [x] Create new bumble bucket - #BUMBLE-1 ✅ 2025-09-26
+- [x] Allow bee classification & pollination to occur - #POLLINATE-2 ✅ 2025-10-15
+- [x] Creating almanac - #ALMANAC-1 ✅ 2025-10-16
+- [x] Make almanac a new page with consistent styling & layout/dimensions - #ALMANAC-2 ✅ 2025-10-20
+- [x] Make all plots in-line (3 * 2 alignment) - #SOIL-2 ✅ 2025-10-28
+- [x] Block in SS web to invite users to Bumble #NPS-2 ✅ 2025-10-19
+
+## ✅ LANDING PAGE
+
+- [x] Send out initial new layout for quick feedback - #LANDING-1 ✅ 2025-09-16
+- [x] Play button in landing navigation bar doesn't work - #LANDING-2 ✅ 2025-10-13
+
+## ✅ NPS & FEEDBACK
+
+- [x] NPS popping up straight after user signs up - #NPS-1 ✅ 2025-09-25
+- [x] Add Userjot link - #FEEDBACK-1 ✅ 2025-10-19
+
+## ✅ DATABASE & INFRASTRUCTURE
+
+- [x] Push new anomalies to cloud Supabase instance ✅ 2025-09-13
+- [x] Anomalies content to include exofop prefix e.g. KOI ✅ 2025-09-13
+- [x] Update how new exoplanet anomalies are named ✅ 2025-09-12
+- [x] Allow users to select the project ✅ 2025-09-13
+- [x] New classification route ✅ 2025-09-13
+- [x] Update `upload.py` to add to both providers - #DATABASE-1 ✅ 2025-10-26
+
+## ✅ TOOLS & UTILITIES
+
+- [x] Move `satelliteCount` in ToolCard component to a global useData function #TOOLS-1 ✅ 2025-10-21
+
+## ✅ PLANET TYPE CLASSIFICATION
+
+- [x] Filter/blocker based on planet-type (planet radius) ✅ 2025-09-19
+- [x] Maybe an `i` button for each stat that shows info on the source ✅ 2025-10-27
+
+## ✅ FRONTEND IMPROVEMENTS
+
+- [x] Design classification window for AI4M ✅ 2025-10-29
+- [x] Progressive battery drain for rovers on routes ✅ 2025-10-29
+- [x] Add toggle back to telescope section to show discoveries/linkeds ✅ 2025-10-29
+- [x] Improve method of identifying weathersatellite/automaton/tool missions ✅ 2025-10-29
+- [x] Mobile-friendly sidebar ✅ 2025-10-29
+- [x] Function to identify if a route has been classified ✅ 2025-10-29
+- [x] Add notification subscription button to the navbar ✅ 2025-10-29
+- [x] Fix sidebar issues on mobile ✅ 2025-10-29
+- [x] "Next step"/mission info & tutorial access in Sidebar ✅ 2025-10-29
+
+## ✅ ADMINISTRATION
+
+- [x] Setup Sprint board #Frontend #SSG-281 #Todo ✅ 2025-08-26
+- [x] Automated ticket tag creation in Kanban boards ✅ 2025-08-26
+
+## ✅ ADDITIONAL FEATURES
+
+- [x] Show findings (generate) ✅ 2025-10-20
+- [x] Improve the "your discoveries" feature ✅ 2025-10-20
+- [x] Can users do meteorological studies without having discovered planets? ✅ 2025-09-27
+
+---
+
+**Segment Notes:**
+
+This segment documents the complete V2 development cycle for Star Sailors (August-October 2025). The platform successfully launched with:
+
+- **Multiple Classification Projects:** Planet Hunters, Disk Detective, AI4Mars, Active Asteroids, Cloudspotting, NGTS lightcurves, Sunspots
+- **Real Astronomical Data Integration:** TIC/KOI datasets, NGTS lightcurves, exoplanet data
+- **Citizen Science Mechanics:** One-click classification, achievements system, milestones tracking
+- **Research & Progression:** Stardust economy, tech tree, mineral deposits, inventory management
+- **Mobile Integration:** React Native/Expo setup for future mobile apps
+- **Bumble Integration:** Bee classification minigame, almanac system, plot management
+
+**Total Tasks Completed:** 158 tasks across 4 months of development

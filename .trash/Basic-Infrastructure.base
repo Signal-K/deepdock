@@ -1,0 +1,12 @@
+source: _Tasks/Godot-Mars/Stories
+filters:
+  and:
+    - segment = "Basic Infrastructure"
+views:
+  - type: cards
+    name: Basic Infrastructure Stories
+    sort:
+      - property: priority
+        direction: DESC
+      - property: status
+        direction: ASC

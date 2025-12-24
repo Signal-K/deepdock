@@ -6,13 +6,11 @@ This Quartz vault has been comprehensively reorganized for multi-project managem
 
 ## 🚀 Quick Start
 
-**New here?** → Read **[MIGRATION_SUMMARY.md](MIGRATION_SUMMARY.md)** for complete overview!
+**New here?** → Read **[VAULT_DOCUMENTATION.md](VAULT_DOCUMENTATION.md)** for complete guide!
 
-### Essential Documents
-1. **[README_REORGANIZATION.md](README_REORGANIZATION.md)** - What's been done, how to use it
-2. **[WORKFLOW_GUIDE.md](WORKFLOW_GUIDE.md)** - Complete workflow documentation
-3. **[MIGRATION_CHECKLIST.md](MIGRATION_CHECKLIST.md)** - Step-by-step migration guide
-4. **[STRUCTURE_VISUALIZATION.md](STRUCTURE_VISUALIZATION.md)** - Visual diagrams
+### Quick Overview
+
+This vault supports fast capture during work and flexible organization later. All documentation has been consolidated into one comprehensive guide.
 
 ### Quick Commands
 ```bash

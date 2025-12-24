@@ -7,6 +7,7 @@ tags:
   - marketing
 created: 2025-11-20
 status: in-progress
+sticker: lucide//figma
 ---
 
 # 🚀 Product Hunt 1st Launch Prep
@@ -33,7 +34,7 @@ status: in-progress
 ^ It's definitely customer acquisition
 
 **Target Metrics:**
-- Upvotes target: 15
+- Upvotes target: 30
 - Comments target: 5
 - Website traffic goal: 30
 - Signups/conversions goal: 5
@@ -41,8 +42,8 @@ status: in-progress
 
 ### Launch Timing
 
-- [ ] Choose launch day: _______________
-- [ ] Choose launch time (recommended: 12:01am PST for full 24hr cycle)
+- [x] Choose launch day: Saturday 20 December ✅ 2025-12-17
+- [x] Choose launch time (recommended: 12:01am PST for full 24hr cycle) ✅ 2025-12-17 -16:00 my time
 
 So I think we'll do a Saturday, starting PST
 
@@ -55,7 +56,7 @@ So I think we'll do a Saturday, starting PST
 ### Required Content
 
 **Product URL**
-- [ ] Primary landing page ready
+- [x] Primary landing page ready ✅ 2025-12-17
 -starsailors.space (obviously)
 
 **Product Name** (no emojis, just the name)
@@ -81,16 +82,11 @@ Character count: _____/500
 ```
 
 **Launch Tags** (choose up to 3)
-- [ ] Tag 1: _______________
-- [ ] Tag 2: _______________
-- [ ] Tag 3: _______________
 
 ### Visual Assets
 
 **Thumbnail** (required - 240x240, under 3MB)
 - [ ] Design thumbnail
-- [ ] If GIF: ensure first frame works as static image
-- [ ] No strobing effects or quick cuts
 - [ ] File size under 3MB
 - [ ] File location: _______________
 
@@ -115,9 +111,7 @@ Character count: _____/500
 ### Product Details
 
 **Pricing**
-- [ ] Free
-- [ ] Paid
-- [ ] Paid (with free trial/plan)
+- [x] Free ✅ 2025-12-15
 
 **Promo Code** (optional - for PH community)
 - Offer description: _______________
@@ -135,16 +129,6 @@ Character count: _____/500
 
 ### Team & Credits
 
-**Makers** (need PH usernames)
-- [ ] Maker 1: _______________ (username: _______________)
-- [ ] Maker 2: _______________ (username: _______________)
-- [ ] Maker 3: _______________ (username: _______________)
-- [ ] Maker 4: _______________ (username: _______________)
-
-**Shoutouts** (max 3 - tools that helped build the product)
-- [ ] Tool 1: _______________
-- [ ] Tool 2: _______________
-- [ ] Tool 3: _______________
 
 ## 💬 First Comment (CRITICAL - 70% of top products have this)
 
@@ -173,12 +157,7 @@ Draft:
 
 ```
 
-**Tone guidelines:**
-- [ ] Humble and helpful (not marketing-speak)
-- [ ] Simple language
-- [ ] Highlight who it's for
-- [ ] Use emojis sparingly (as bullet points)
-- [ ] Ask for FEEDBACK (never ask for upvotes)
+
 
 ## 📣 Promotion Strategy
 
@@ -220,35 +199,13 @@ Draft:
 
 ## ⚠️ Guidelines & Rules
 
-### DO NOT:
-- [ ] ❌ Pay anyone to hunt or promote
-- [ ] ❌ Use bots or spam
-- [ ] ❌ Run giveaways for upvotes
-- [ ] ❌ Ask people to upvote (ask for feedback instead)
-- [ ] ❌ Use company/brand account (only personal)
-- [ ] ❌ Create fake accounts
-- [ ] ❌ Use marketing-speak or gimmicky language
-
-### DO:
-- [ ] ✅ Self-hunt (79% of featured posts are self-hunted)
-- [ ] ✅ Focus on authentic engagement
-- [ ] ✅ Be humble and helpful
-- [ ] ✅ Engage with comments all day
-- [ ] ✅ Provide value to community
-- [ ] ✅ Use personal accounts only
-- [ ] ✅ Follow community guidelines
 
 ## 📊 Launch Day Plan
 
 ### Team Assignments
 
 **Who's doing what:**
-- Community management (PH comments): _______________
-- Social media: _______________
-- Email outreach: _______________
-- Press coordination: _______________
-- Analytics tracking: _______________
-
+Obviously I'm doing ~~everything~~ 99% 
 ### Hour-by-Hour Plan
 
 **12:01am PST (Launch)**

@@ -1,0 +1,21 @@
+source: _Tasks/Godot-Mars/Stories
+filters:
+  and:
+    - segment = "Advanced Systems"
+views:
+  - type: cards
+    name: Stories
+    sort:
+      - property: priority
+        direction: DESC
+      - property: status
+        direction: ASC
+    image: note.banner
+    imageAspectRatio: 0.6
+  - type: table
+    name: All Tasks
+    filters:
+      and:
+        - file.path ^= "_Tasks/Godot-Mars/"
+        - contains(text, "Advanced Systems")
+    source: tasks

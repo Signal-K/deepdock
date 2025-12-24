@@ -1,0 +1,12 @@
+source: _Tasks/Star-Sailors/Stories
+filters:
+  and:
+    - segment = "v2.1 Bug Fixes & Patches"
+views:
+  - type: cards
+    name: v2.1 Bug Fixes & Patches Stories
+    sort:
+      - property: priority
+        direction: DESC
+      - property: status
+        direction: ASC
