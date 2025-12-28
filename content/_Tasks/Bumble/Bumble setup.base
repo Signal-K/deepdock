@@ -5,4 +5,7 @@ views:
       and:
         - Project == ["Bumble"]
         - type == "story"
+    order:
+      - file.name
+      - status
     image: note.banner

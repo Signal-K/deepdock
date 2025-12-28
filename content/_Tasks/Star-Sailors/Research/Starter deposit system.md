@@ -7,9 +7,9 @@ tags:
   - Research
 ---
 The first step will be adding a research item so that users can unlock additional features or events when they send their automatons out to locations. 
-
-*  [ ] Allow satellites to find deposits on planets in the #Planet4 project - #DEPOSITS-1
 * [x] Allow rovers to find deposits on planets (Mars) in the #AI4Mars project - #DEPOSITS-2 ✅ 2025-10-14
+
+[[Post-PH launch wrapup]]
 
 See [[SSG-292]]
 

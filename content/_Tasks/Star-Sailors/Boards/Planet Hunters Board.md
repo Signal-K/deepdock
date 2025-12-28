@@ -10,13 +10,12 @@ kanban-plugin: board
 
 ## Selected
 
-- [ ] Function to fetch .fits files from TIC/Exofop, convert to image with annotations/descriptions, upload to sb bucket #Supabase #Cron #Exofop #PLanetHunters #Data-Population #SSG-281 #SSG-396 #SSP-100
-- [ ] Web scraping tool to get spectroscopy files #Exofop #Data-Population #SSG-281 #SSG-397 #SSP-101
+[[Post-PH launch wrapup]]
 
 
 ## In Progress
 
-- [ ] Displaying spectroscopy spectral absorption points #SSG-281 #SSG-398 #SSP-102
+[[Post-PH launch wrapup]]
 
 
 ## Done

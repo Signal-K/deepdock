@@ -17,11 +17,11 @@ source: "Physical Notes (2025-12-15)"
 ## Tasks
 
 ### High Priority
-- [ ] ⏫ Establish universal color coding legend for all projects #design-system #organization #color-coding #p1 #physical-notes
+- [x] ⏫ Establish universal color coding legend for all projects #design-system #organization #color-coding #p1 #physical-notes
 
 ### Medium Priority
-- [ ] 🔼 Create standardized arrow/flow notation system #design-system #documentation #workflows #p2 #physical-notes
-- [ ] 🔼 Document sketch-to-digital translation process #documentation #design-process #workflow #p2 #physical-notes
+- [x] 🔼 Create standardized arrow/flow notation system #design-system #documentation #workflows #p2 #physical-notes
+- [x] 🔼 Document sketch-to-digital translation process #documentation #design-process #workflow #p2 #physical-notes
 
 ### Standard Priority
 - [ ] Implement physical note digitization workflow #organization #note-taking #digital-transformation #physical-notes

@@ -12,4 +12,4 @@ Related files:
 [[18 December Rhys sync]]
 
 Tasks:
-*  [ ] Cover image/branding for Star Sailors 🆔 mjszbb 📅 2025-12-18 🛫 2025-12-18 ⏫ 
+* [x] Cover image/branding for Star Sailors 🆔 mjszbb 📅 2025-12-18 🛫 2025-12-18 ⏫

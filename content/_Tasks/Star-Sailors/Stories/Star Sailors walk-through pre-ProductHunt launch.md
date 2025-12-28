@@ -54,4 +54,70 @@ So pretty simple OOO for Dev:
 6. Click on anomaly of your choice
 
 
-* [ ]  Figure out why Posthog analytics aren't working in prod 🆔 809v6f 
+[[Post-PH launch wrapup]]
+
+### 🚩 Actionable Tasks (Generated 2025-12-28)
+
+- [ ] 🆔 ss-walkthrough-01 #StarSailors #Demo #ProductHunt #Launch #BugFixes #ContentReview  
+  **Review and clarify realistic vs fantasy elements in the game for demo clarity.**  
+  Start: 2025-12-28  
+  Due: 2026-01-05
+- [ ] 🆔 ss-walkthrough-02 #StarSailors #Demo #ProductHunt #Launch #Content  
+  **Prepare and organize all content and writing for the Product Hunt launch.**  
+  Start: 2025-12-28  
+  Due: 2026-01-07
+- [ ] 🆔 ss-walkthrough-03 #StarSailors #Demo #ProductHunt #Launch #BugFixes  
+  **Investigate and fix Posthog analytics issues before launch.**  
+  Start: 2025-12-28  
+  Due: 2026-01-10
+- [ ] 🆔 ss-walkthrough-04 #StarSailors #Demo #ProductHunt #Launch #UX  
+  **Review and improve mobile view/UI for the walkthrough.**  
+  Start: 2025-12-28  
+  Due: 2026-01-12
+- [ ] 🆔 ss-walkthrough-05 #StarSailors #Demo #ProductHunt #Launch #Checklist  
+  **Create and follow a launch checklist for the demo, including user feedback review.**  
+  Start: 2025-12-28  
+  Due: 2026-01-15
+
+### 🕒 10-Minute Granular Tasks (2025-12-28)
+
+- [ ] 🆔 ss-walkthrough-01a #StarSailors #Demo #Content  
+  **List all realistic and fantasy elements in the game.**  
+  Start: 2025-12-28  
+  Due: 2026-01-05
+- [ ] 🆔 ss-walkthrough-01b #StarSailors #Demo #Content  
+  **Write 1-sentence clarification for each element.**  
+  Start: 2025-12-28  
+  Due: 2026-01-05
+- [ ] 🆔 ss-walkthrough-02a #StarSailors #Demo #Content  
+  **List all content and writing needed for launch.**  
+  Start: 2025-12-28  
+  Due: 2026-01-07
+- [ ] 🆔 ss-walkthrough-02b #StarSailors #Demo #Content  
+  **Draft 1 piece of launch content.**  
+  Start: 2025-12-28  
+  Due: 2026-01-07
+- [ ] 🆔 ss-walkthrough-03a #StarSailors #Demo #BugFixes  
+  **List all analytics issues in Posthog.**  
+  Start: 2025-12-28  
+  Due: 2026-01-10
+- [ ] 🆔 ss-walkthrough-03b #StarSailors #Demo #BugFixes  
+  **Write test case for analytics fix.**  
+  Start: 2025-12-28  
+  Due: 2026-01-10
+- [ ] 🆔 ss-walkthrough-04a #StarSailors #Demo #UX  
+  **List mobile UI issues for walkthrough.**  
+  Start: 2025-12-28  
+  Due: 2026-01-12
+- [ ] 🆔 ss-walkthrough-04b #StarSailors #Demo #UX  
+  **Sketch improved mobile UI for walkthrough.**  
+  Start: 2025-12-28  
+  Due: 2026-01-12
+- [ ] 🆔 ss-walkthrough-05a #StarSailors #Demo #Checklist  
+  **Draft launch checklist for demo.**  
+  Start: 2025-12-28  
+  Due: 2026-01-15
+- [ ] 🆔 ss-walkthrough-05b #StarSailors #Demo #Checklist  
+  **Review user feedback and add to checklist.**  
+  Start: 2025-12-28  
+  Due: 2026-01-15

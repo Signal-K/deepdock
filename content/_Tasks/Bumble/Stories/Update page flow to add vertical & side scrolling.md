@@ -10,10 +10,10 @@ Project:
 projects:
   - Bumble
 banner: content/Media/Pasted image 20251002171456.png
+status: completed
 ---
 Individual tickets:
 
 * [x] Hide city/town page #Bumble #Pages 🆔 i6whia 📅 2025-12-23 ✅ 2025-12-23
-* [ ] Add vertical scrolling #Bumble #Navigation 🆔 s1t51a 📅 2025-12-23 
-* [ ] Add expand/expansion page to bottom (final) page for hive/plot areas #Bumble #Navigation #Controls 🆔 y4995h 📅 2025-12-23 
-
+* [x] Add vertical scrolling #Bumble #Navigation 🆔 s1t51a 📅 2025-12-23 ✅ 2025-12-24
+* [x] Add expand/expansion page to bottom (final) page for hive/plot areas #Bumble #Navigation #Controls 🆔 y4995h 📅 2025-12-23 ✅ 2025-12-24
