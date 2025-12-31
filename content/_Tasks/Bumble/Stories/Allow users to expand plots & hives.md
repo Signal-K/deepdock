@@ -12,6 +12,7 @@ story: Allow users to expand plots & hives
 status:
   - in-progress
 segment: Initial Bumble Setup/Refactor
+sticker: lucide//filter
 ---
 
  
@@ -19,90 +20,61 @@ segment: Initial Bumble Setup/Refactor
 2. If the user has an available perk, they can create a new page - this is saved for the user
 3. User can also increase number of plots per page (each page is referred to as a "Greenhouse" (maybe a better name for that exists...somewhere??))
 
-* [ ] test task
 
 ### 🚩 Actionable Tasks (Generated 2025-12-28)
 
-- [ ] 🆔 bumble-expansion-01 #Bumble #Hive #Greenhouse #Farming #Expansion #Progression  
+- [x] #Bumble #Greenhouse #UI #Layout #2025-12-30 🆔 9x2j4p
+	**Consistent height and width for all plot pages**
+	Start: 2025-12-30
+	Due: 2025-12-30
+	
+- [x] #Bumble #Greenhouse #Soil #ID #2025-12-30 🆔 7qk8vn
+	**Each soil plot has a unique numerical id**
+	Start: 2025-12-30
+	Due: 2025-12-30
+	
+- [x] #Bumble #Greenhouse #UI #Bug #2025-12-30 🆔 4b6wzq
+	**Bug: Remove duplicate down arrow button**
+	Start: 2025-12-30
+	Due: 2025-12-30
+- [x]  #Bumble #Greenhouse #UI #Bug #2025-12-30 🆔 ctbgk8 ✅ 2025-12-30
+	**Bug: Sprites other than wheat not showing**
+	Start: 2025-12-30
+	Due: 2025-12-30
+	
+- [x]  #Bumble #Hive #Greenhouse #Farming #Expansion #Progression #2025-12-29 🆔 tnag47 ✅ 2025-12-29
   **Define and document the perks available for plot/greenhouse expansion.**  
   Start: 2025-12-28  
   Due: 2026-01-05
-- [ ] 🆔 bumble-expansion-02 #Bumble #Hive #Greenhouse #Farming #Expansion #UX  
+Fairly straightforward - users will get one new plot region at level 3, another new region at level 7, etc.
+I think limiting the level upgrades to level 7 for the first demo would suffice for even any potential power users.
+
+* [x] Remove Godot build from Bumble codebase #2025-12-29 🆔 lbfdbn ✅ 2025-12-29
+
+- [x]  #Bumble #Hive #Greenhouse #Farming #Expansion #UX #2025-12-29 🆔 wyf429 ✅ 2025-12-29
   **Implement UI to show current level and available perks for each greenhouse.**  
   Start: 2025-12-28  
   Due: 2026-01-07
-- [ ] 🆔 bumble-expansion-03 #Bumble #Hive #Greenhouse #Farming #Expansion #Progression  
+Scope - we'll show the level number in the header, this will then be clickable to show perks and total experience points & breakdown.
+When the user levels up, we'll see a dedicated animation page.
+
+
+- [x]  #Bumble #Hive #Greenhouse #Farming #Expansion #Progression #2025-12-29 🆔 3ca1qw ✅ 2025-12-29
   **Develop logic to allow users to create a new greenhouse page when a perk is available.**  
   Start: 2025-12-28  
   Due: 2026-01-10
-- [ ] 🆔 bumble-expansion-04 #Bumble #Greenhouse #Farming #UX  
+We'll say that a new plot region costs 20, then 50, then 100 coins. And they obviously can't be added UNTIL the user has unlocked the perk by virtue of reaching a new level.
+
+
+- [x]  #Bumble #Greenhouse #Farming #UX #2025-12-29 🆔 l8nkin ✅ 2025-12-30
   **Enable increasing the number of plots per greenhouse and persist user changes.**  
   Start: 2025-12-28  
   Due: 2026-01-12
-- [ ] 🆔 bumble-expansion-05 #Bumble #Greenhouse #Naming #UX  
-  **Research and propose alternative names for 'Greenhouse' to improve thematic fit.**  
-  Start: 2025-12-28  
-  Due: 2026-01-08
+Just need to make sure that all the above functionality is saved to local storage
 
-### 🕒 10-Minute Granular Tasks (2025-12-28)
 
-- [ ] 🆔 bumble-expansion-06a #Bumble #Hive #Pollination #Code  
-  **Write function to get all plots in all greenhouses.**  
+- [x]  #Bumble #Hive #Greenhouse #Farming #Expansion #Progression 🆔 sthx3g ✅ 2025-12-29 
+  **Define and document the perks available for plot/greenhouse expansion.**  
   Start: 2025-12-28  
-  Due: 2026-01-10
-- [ ] 🆔 bumble-expansion-06b #Bumble #Hive #Pollination #Code  
-  **Update bee pollination logic to iterate over all plots.**  
-  Start: 2025-12-28  
-  Due: 2026-01-10
-- [ ] 🆔 bumble-expansion-06c #Bumble #Hive #Pollination #Test  
-  **Test pollination on a new plot in a new greenhouse.**  
-  Start: 2025-12-28  
-  Due: 2026-01-10
-- [ ] 🆔 bumble-expansion-07a #Bumble #Navigation #UI  
-  **Sketch navigation UI for switching greenhouses.**  
-  Start: 2025-12-28  
-  Due: 2026-01-10
-- [ ] 🆔 bumble-expansion-07b #Bumble #Navigation #UI  
-  **Implement navigation button for next/previous greenhouse.**  
-  Start: 2025-12-28  
-  Due: 2026-01-10
-- [ ] 🆔 bumble-expansion-07c #Bumble #Navigation #Test  
-  **Test navigation between 3+ greenhouses.**  
-  Start: 2025-12-28  
-  Due: 2026-01-10
-- [ ] 🆔 bumble-expansion-08a #Bumble #Leveling #XP #Logic  
-  **Write function to check user XP and level.**  
-  Start: 2025-12-28  
-  Due: 2026-01-12
-- [ ] 🆔 bumble-expansion-08b #Bumble #Leveling #XP #Logic  
-  **Add XP/level check to plot/greenhouse unlock logic.**  
-  Start: 2025-12-28  
-  Due: 2026-01-12
-- [ ] 🆔 bumble-expansion-09a #Bumble #Leveling #XP #UI  
-  **Design XP/level display for UI.**  
-  Start: 2025-12-28  
-  Due: 2026-01-12
-- [ ] 🆔 bumble-expansion-09b #Bumble #Leveling #XP #UI  
-  **Implement XP/level display in UI.**  
-  Start: 2025-12-28  
-  Due: 2026-01-12
-- [ ] 🆔 bumble-expansion-10a #Bumble #Assets #Layout #Design  
-  **Sketch layout for expanded greenhouses.**  
-  Start: 2025-12-28  
-  Due: 2026-01-14
-- [ ] 🆔 bumble-expansion-10b #Bumble #Assets #Layout #Design  
-  **Draw plot arrangement options.**  
-  Start: 2025-12-28  
-  Due: 2026-01-14
-- [ ] 🆔 bumble-expansion-11a #Bumble #Worldbuilding #Rules #Docs  
-  **Write doc section: coin cost for new plot.**  
-  Start: 2025-12-28  
-  Due: 2026-01-15
-- [ ] 🆔 bumble-expansion-11b #Bumble #Worldbuilding #Rules #Docs  
-  **Write doc section: XP/level requirements for expansion.**  
-  Start: 2025-12-28  
-  Due: 2026-01-15
-- [ ] 🆔 bumble-expansion-11c #Bumble #Worldbuilding #Rules #Docs  
-  **Write doc section: narrative context for farm expansion.**  
-  Start: 2025-12-28  
-  Due: 2026-01-15
+  Due: 2026-01-05
+

@@ -42,6 +42,10 @@ templater true
 class inline
 ```
 
+
+
+
+
 ```button
 name 📊 Projects
 type link
@@ -52,31 +56,30 @@ class inline
 ---
 
 
+## 🗓️ Today's Focus Tasks
+
 ```dataviewjs
-// Get all in-progress stories
-const allStories = dv.pages('"content/_Tasks"').where(p => {
-  const fm = p.file.frontmatter || {};
-  const type = fm.type ?? "";
-  const status = fm.status ?? [];
-  const isInProgress = Array.isArray(status) ? status.includes("in-progress") : (status === "in-progress");
-  return type === "story" && isInProgress;
-});
-// Stories with tasks
-const pages = allStories.filter(p => Array.isArray(p.file.tasks) && p.file.tasks.length > 0);
-
-dv.header(3, "🧩 In-Progress Story Tasks");
-if (pages.length === 0) {
-  dv.paragraph("No in-progress story tasks.");
-} else {
-  pages.forEach(p => {
-    const tasks = p.file.tasks.filter(t => !t.checked);
-    if (tasks.length > 0) {
-      dv.header(4, p.file.link);
-      dv.taskList(tasks, false);
+const today = dv.date("today").toFormat("yyyy-MM-dd");
+let tasks = [];
+for (let page of dv.pages('"content/_Tasks"')) {
+  if (page.file && page.file.tasks) {
+    for (let t of page.file.tasks) {
+      if (t.text.includes(`#${today}`)) {
+        tasks.push(t);
+      }
     }
-  });
+  }
 }
+if (tasks.length === 0) {
+  dv.paragraph('No tasks tagged for today.');
+} else {
+  dv.taskList(tasks, false);
+}
+```
 
+## 🧩 In-Progress Story Tasks
+
+```dataviewjs
 // Stories in progress with no tasks
 const withTasks = new Set(pages.map(p => p.file.path));
 const noTaskStories = allStories.filter(p => !withTasks.has(p.file.path));
@@ -113,14 +116,23 @@ breakpoints:
 ## �📥 Today's Notes Dump
 
 ### Quick Thoughts
-Something I want to do is to get Copilot to propose everything I should do this week during the "drawing periods".
+There are some notes from [[2025-12-29]] that I need to review.
 
-I'm still finishing up organising the tasks, which will help organise my days.
-The pens will make a comeback tomorrow!
+Currently for #Bumble I've decided to use the Wheat assets/sprites for everything. I still need to determine the list of crops we're going to start with.
+Seasonal crops or skins for crops...could be an idea.
+Won't do anything on the tutorial for Bumble until we get some testers - see [[Tutorial interface - check with other testers for feedback]]
+I think I'm also going to need to get feedback on the timing - [[Finalise timing for crops & growth]]. Until I get someone else on this, I don't think I'm going to be able to come up with an objectively good user experience here. Worst case scenario, I can brainstorm "with" gpt.
 
-Once I have the tasks organised, I'm going to conduct some research into a cross-platform clone of SuperLocal
+So I think I've got today's tasks for #Bumble all organised. 
+I might create a new branch for the repo now...
 
+Still not going to do anything on #Star-Sailors-web, not even any research. Ideally meet with Fred and Rhys, discuss results of #ProductHunt launch, then determine newsletter vs mass email...etc. 
 
+Like I said in [[2025-12-29]], I'm not going to do anything on #Coral project for now, but probably this weekend I'll need to organise the stories for it.
+
+Crashlandings will probably be what I focus on when I get back to the office, that should be fun.
+
+[and that's today's preview done, I think]. 
 
 ### Meetings & Conversations
 

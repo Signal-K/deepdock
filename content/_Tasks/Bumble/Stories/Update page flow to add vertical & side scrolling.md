@@ -11,6 +11,7 @@ projects:
   - Bumble
 banner: content/Media/Pasted image 20251002171456.png
 status: completed
+sticker: lucide//scroll
 ---
 Individual tickets:
 

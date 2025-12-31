@@ -43,6 +43,11 @@ class inline
 ```
 
 
+
+
+
+
+
 ```button
 name 📊 Projects
 type link
@@ -52,33 +57,38 @@ class inline
 
 ---
 
+
+## 🗓️ Today's Focus Tasks
+
+```dataviewjs
+const today = dv.date("today").toFormat("yyyy-MM-dd");
+let tasks = [];
+let debug = [];
+for (let page of dv.pages('"content/_Tasks"')) {
+  if (page.file && page.file.tasks) {
+    for (let t of page.file.tasks) {
+      if (t.text.includes(`#${today}`)) {
+        tasks.push(t);
+        debug.push(`${page.file.name}: ${t.text}`);
+      }
+    }
+  }
+}
+if (tasks.length === 0) {
+  dv.paragraph('No tasks tagged for today.');
+} else {
+  dv.taskList(tasks, false);
+}
+// Debug output:
+if (debug.length > 0) {
+  dv.header(4, 'Debug: Tasks found for today');
+  debug.forEach(d => dv.paragraph(d));
+}
+```
+
 ## 🧩 In-Progress Story Tasks
 
 ```dataviewjs
-// Get all in-progress stories
-const allStories = dv.pages('"content/_Tasks"').where(p => {
-  const fm = p.file.frontmatter || {};
-  const type = fm.type ?? "";
-  const status = fm.status ?? [];
-  const isInProgress = Array.isArray(status) ? status.includes("in-progress") : (status === "in-progress");
-  return type === "story" && isInProgress;
-});
-// Stories with tasks
-const pages = allStories.filter(p => Array.isArray(p.file.tasks) && p.file.tasks.length > 0);
-
-dv.header(3, "🧩 In-Progress Story Tasks");
-if (pages.length === 0) {
-  dv.paragraph("No in-progress story tasks.");
-} else {
-  pages.forEach(p => {
-    const tasks = p.file.tasks.filter(t => !t.checked);
-    if (tasks.length > 0) {
-      dv.header(4, p.file.link);
-      dv.taskList(tasks, false);
-    }
-  });
-}
-
 // Stories in progress with no tasks
 const withTasks = new Set(pages.map(p => p.file.path));
 const noTaskStories = allStories.filter(p => !withTasks.has(p.file.path));

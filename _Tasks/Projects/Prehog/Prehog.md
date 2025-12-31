@@ -1,0 +1,1 @@
+A new project idea around NPS & feedback management. A pre-cursor to Posthog, if you will.
