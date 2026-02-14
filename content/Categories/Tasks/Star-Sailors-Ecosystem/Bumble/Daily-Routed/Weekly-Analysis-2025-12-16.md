@@ -1,0 +1,540 @@
+---
+icon: lucide//list-checks
+---
+
+# Tasks Routed from Weekly-Analysis-2025-12-16.md
+
+## Tasks from Weekly-Analysis-2025-12-16.md
+Source: [[content/Operations/Daily/Recovered/Weekly-Analysis-2025-12-16.md|Weekly-Analysis-2025-12-16.md]]
+
+- [ ] to do
+- [ ] to do
+- [ ] To do
+- [ ] To do
+- [ ] to do
+- [ ] to do
+- [ ] Figure out optimal platform for asset & media (inc. audio) generation/creation. Can pump out projects consistently ⏫
+- [ ] Figure out if we can fluidly go from a planet orbit to a surface scene in Godot (spherical surface) 🔽
+- [ ] Show created/painted planet in next scene?
+- [ ] Add some sort of API tool or plugin so updates can be sent directly to the "Updates" tab
+- [ ] Plus, updating the telescope structure route to show the viewport....
+- [ ] Show created/painted planet in next scene?
+- [ ] Add some sort of API tool or plugin so updates can be sent directly to the "Updates" tab
+- [ ] Plus, updating the telescope structure route to show the viewport....
+- [ ] Function to fetch .fits files from TIC/Exofop, convert to image with annotations/descriptions, upload to sb bucket #Supabase #Cron #Exofop #PLanetHunters #Data-Population #SSG-281 #SSG-396 #SSP-100
+- [ ] Web scraping tool to get spectroscopy files #Exofop #Data-Population #SSG-281 #SSG-397 #SSP-101
+- [ ] Displaying spectroscopy spectral absorption points #SSG-281 #SSG-398 #SSP-102
+- [ ] Minigame ideas #SSG-281 #SSF-25
+- [ ] Minigame extension ideas #SSG-281 #SSF-27
+- [ ] Anomaly animation in viewport....later #SSG-281 #SSF-4
+- [ ] [[Update Telescope viewport to show classifications in viewport, and only fetch from linked_anomalies (strucutre page and viewport) linked_anomalies Telescope Viewport SSG-281 SSF-5]]
+- [ ] Planet Generator control unlock... #SSG-281 #SSF-10
+- [ ] Component that shows the progression of your rover on different planets #Rovers #AI4Mars #Automatons #SSG-281 #SSF-11
+- [ ] Add DiskDetective back #SSG-281 #SSF-14
+- [ ] Sidebar to show tool/automaton/structure numbers based on researched values (unlocked by user) #Research #Stardust #Sidebar #SSG-286 #SSF-36
+- [ ] Add an animation to show that we're moving to the classification process #Onboarding #Layout #SSG-281 #SSF-22
+- [ ] Don't show classified anomalies in viewport sections #Viewport #Database #Sections #SSG-281 #SSF-23
+- [ ] Ability to open a classification or anomaly in a focused view in the telescope #Telescope #Database #anomalies #anomalyid #classification #SSG-286 #SSF-38
+- [ ] When a planet has been painted, it should have its 3js version in the deploy scenes #SSG-286 #SSF-46
+- [ ] Classification component & page/route for AI4M JIRA:SSM-258 #SSM-258 #AI4Mars #Classify #SSG-281 #SSF-9
+- [ ] Reduce classification window height for mobile #Layout #Classify #SSG-281 #SSF-20
+- [ ] Asset ideas #SSG-281 #SSF-28
+- [ ] Component that shows "skill progression" in the research section #SSG-281 #SSF-2
+- [ ] {showDeployment} overlay to be resized #Telescope #Layout #Deploy #SSG-286 #SSF-41
+- [ ] Classifications can point to other classifications
+- [ ] Unlocking of active asteroids #Progress #Unlocking #Missions #ActiveAsteroids #DailyMinorPlanet #Telescope #SSG-286 #SSF-42
+- [ ] Visualiser for planet/weather inspector in satellite viewport #Satellite #Viewports #Generator #SSG-286 #SSF-43
+- [ ] Fix sunspot info text in viewport - is not laid out well on mobile #Sunspots #Layout #Tutorial #Viewport #SSG-281 #SSF-21
+- [ ] [[Allow sections to be opened in pages (expansion) Section Viewport SSG-281 SSF-6]]
+- [ ] [[Should the content in the (i) button in viewports go above the button if a viewport hasn't been deployed this week Viewport Structures Tutorial SSG-281 SSF-7]]
+- [ ] [[Sun in sunspots section becomes its own component; becomes spotty after classifications are added that week. Sunspots Anomalies 3js SSG-281 SSF-8]]
+- [ ] New deploy card & layout (modelled off telescope deploy page) for satellite deploy, allowing user to choose project/mission #Satellite #Viewport #Deploy #SSG-286 #SSF-39
+- [ ] Sidebar ideas - research, notifications, to-do #SSG-286-1 #Onboarding #Tutorial #Sidebar #Components #Layout #SSG-281 #SSF-24
+- [ ] Combine the button reach in sidebar and header menu #Layout #Components #SSG-281 #SSF-29
+- [ ] Replace click & drag with a d-pad for Telescope Deployment scene #SSG-286-1 #Telescope #Deploy #Layout #SSG-281 #SSF-19
+- [ ] Allow user to choose satellite deployment type #Satellite #Missions #Viewport #Deploy #SSG-286 #SSF-40
+- [ ] Update research page layout #Research #Layout #SSG-286-3 #SSF-35
+- [ ] [[Fix ActivityHeader component for mobile SSG-281 SSF-1]]
+- [ ] Stardust in sidebar #Stardust #Sidebar #SSG-286 #SSF-34
+- [ ] Remove section text #Sections #SSG-286-1 #SSG-281 #SSF-30
+- [ ] to do
+- [ ] to do
+- [ ] To do
+- [ ] To do
+- [ ] to do
+- [ ] to do
+- [ ] Figure out optimal platform for asset & media (inc. audio) generation/creation. Can pump out projects consistently ⏫
+- [ ] Figure out if we can fluidly go from a planet orbit to a surface scene in Godot (spherical surface) 🔽
+- [ ] Show created/painted planet in next scene?
+- [ ] Add some sort of API tool or plugin so updates can be sent directly to the "Updates" tab
+- [ ] Plus, updating the telescope structure route to show the viewport....
+- [ ] Show created/painted planet in next scene?
+- [ ] Add some sort of API tool or plugin so updates can be sent directly to the "Updates" tab
+- [ ] Plus, updating the telescope structure route to show the viewport....
+- [ ] Function to fetch .fits files from TIC/Exofop, convert to image with annotations/descriptions, upload to sb bucket #Supabase #Cron #Exofop #PLanetHunters #Data-Population #SSG-281 #SSG-396 #SSP-100
+- [ ] Web scraping tool to get spectroscopy files #Exofop #Data-Population #SSG-281 #SSG-397 #SSP-101
+- [ ] Displaying spectroscopy spectral absorption points #SSG-281 #SSG-398 #SSP-102
+- [ ] Minigame ideas #SSG-281 #SSF-25
+- [ ] Minigame extension ideas #SSG-281 #SSF-27
+- [ ] Anomaly animation in viewport....later #SSG-281 #SSF-4
+- [ ] [[Update Telescope viewport to show classifications in viewport, and only fetch from linked_anomalies (strucutre page and viewport) linked_anomalies Telescope Viewport SSG-281 SSF-5]]
+- [ ] Planet Generator control unlock... #SSG-281 #SSF-10
+- [ ] Component that shows the progression of your rover on different planets #Rovers #AI4Mars #Automatons #SSG-281 #SSF-11
+- [ ] Add DiskDetective back #SSG-281 #SSF-14
+- [ ] Sidebar to show tool/automaton/structure numbers based on researched values (unlocked by user) #Research #Stardust #Sidebar #SSG-286 #SSF-36
+- [ ] Add an animation to show that we're moving to the classification process #Onboarding #Layout #SSG-281 #SSF-22
+- [ ] Don't show classified anomalies in viewport sections #Viewport #Database #Sections #SSG-281 #SSF-23
+- [ ] Ability to open a classification or anomaly in a focused view in the telescope #Telescope #Database #anomalies #anomalyid #classification #SSG-286 #SSF-38
+- [ ] When a planet has been painted, it should have its 3js version in the deploy scenes #SSG-286 #SSF-46
+- [ ] Classification component & page/route for AI4M JIRA:SSM-258 #SSM-258 #AI4Mars #Classify #SSG-281 #SSF-9
+- [ ] Reduce classification window height for mobile #Layout #Classify #SSG-281 #SSF-20
+- [ ] Asset ideas #SSG-281 #SSF-28
+- [ ] Component that shows "skill progression" in the research section #SSG-281 #SSF-2
+- [ ] {showDeployment} overlay to be resized #Telescope #Layout #Deploy #SSG-286 #SSF-41
+- [ ] Classifications can point to other classifications
+- [ ] Unlocking of active asteroids #Progress #Unlocking #Missions #ActiveAsteroids #DailyMinorPlanet #Telescope #SSG-286 #SSF-42
+- [ ] Visualiser for planet/weather inspector in satellite viewport #Satellite #Viewports #Generator #SSG-286 #SSF-43
+- [ ] Fix sunspot info text in viewport - is not laid out well on mobile #Sunspots #Layout #Tutorial #Viewport #SSG-281 #SSF-21
+- [ ] [[Allow sections to be opened in pages (expansion) Section Viewport SSG-281 SSF-6]]
+- [ ] [[Should the content in the (i) button in viewports go above the button if a viewport hasn't been deployed this week Viewport Structures Tutorial SSG-281 SSF-7]]
+- [ ] [[Sun in sunspots section becomes its own component; becomes spotty after classifications are added that week. Sunspots Anomalies 3js SSG-281 SSF-8]]
+- [ ] New deploy card & layout (modelled off telescope deploy page) for satellite deploy, allowing user to choose project/mission #Satellite #Viewport #Deploy #SSG-286 #SSF-39
+- [ ] Sidebar ideas - research, notifications, to-do #SSG-286-1 #Onboarding #Tutorial #Sidebar #Components #Layout #SSG-281 #SSF-24
+- [ ] Combine the button reach in sidebar and header menu #Layout #Components #SSG-281 #SSF-29
+- [ ] Replace click & drag with a d-pad for Telescope Deployment scene #SSG-286-1 #Telescope #Deploy #Layout #SSG-281 #SSF-19
+- [ ] Allow user to choose satellite deployment type #Satellite #Missions #Viewport #Deploy #SSG-286 #SSF-40
+- [ ] Update research page layout #Research #Layout #SSG-286-3 #SSF-35
+- [ ] [[Fix ActivityHeader component for mobile SSG-281 SSF-1]]
+- [ ] Stardust in sidebar #Stardust #Sidebar #SSG-286 #SSF-34
+- [ ] Remove section text #Sections #SSG-286-1 #SSG-281 #SSF-30
+- [ ] Initialise sidebar #SSG-286-1 #Sidebar #Layout #SSG-281 #SSF-31
+- [ ] New inventory page for user's classifications #Inventory #Classifications #Sidebar #SSG-286-3 #Research #Milestones #SSG-281 #SSF-32
+- [ ] Add readable dialogue to notifications in sidebar #Notifications #Linked_Anomalies #Sidebar #SSG-286 #SSF-44
+- [ ] Rearrange section buttons #Layout #Sections #SSG-281 #SSF-18
+- [ ] Add a minimal section configuration #SSG-281 #SSF-13
+- [ ] Service to log notifications sent #SSG-281 #SSB-1
+- [ ] Service to delete notifications sent at the end of the week (Saturday 23:59 AEST) #SSG-281 #SSB-2
+- [ ] Update Sunspot unlock method to send notification to user  JIRA:SSM-254 #SSM-254 #Sunspots #Notifications #SSG-281 #SSB-3
+- [ ] Scraper to download all Jira logs... #SSG-281 #SSA-2
+- [ ] [🧺🎨 ↝ [SSG-283 SSG-281 SSG-282 SSM-257]: New telescope section that links in with](https://github.com/Signal-K/client/commit/cec3e56869791b941fea8d85b3ff2f241dd0bf17) by Gizmotronn on 2025-08-19T05:03:56Z #SSG-281 #SSA-3
+- [ ] [🎍🎢 ↝ [SSG-281]: Go function that identifies relevant commits](https://github.com/Signal-K/deepdock/commit/57ef8aa229983a45030d187c431bc8344df637aa) by Gizmotronn on 2025-08-26T10:17:41Z #SSG-281 #SSA-4
+- [ ] [🦌🥗 ↝ [SSG-281]: Vercel config updated](https://github.com/Signal-K/deepdock/commit/14fc18eae4511c93b5d57ad76de71770e15cfafe) by Gizmotronn on 2025-08-17T14:09:24Z #SSG-281 #SSA-5
+- [ ] [🚍🫐 ↝ [SSG-281]: Finally, a new board](https://github.com/Signal-K/deepdock/commit/b1d18ed7ad757bc6e921827b8e33b97888c5e108) by Gizmotronn on 2025-08-20T14:06:05Z #SSG-281 #SSA-6
+- [ ] [👓🎯 ↝ [SSA-1]: Preventing multiple kanban boards being affected with git commit tagging cron job](https://github.com/Signal-K/deepdock/commit/de9d37781b015b47efd95431a17f6bd160d49c7f) by Gizmotronn on 2022-11-20T12:48:14Z
+- [ ] [💾👟 ↝ [SSA-1]: Automatic tagging for tasks in Obsidian](https://github.com/Signal-K/deepdock/commit/38a41f7e1287841f887a8bfc724bafa8dcae9a27) by Gizmotronn on 2022-11-19T12:01:48Z
+- [ ] Allow satellites to find deposits on planets in the #Planet4 project - #DEPOSITS-1
+- [ ] Create content strategy values ⏫ 🆔 59i69h ➕ 2025-12-15 🛫 2025-12-15 📅 2025-12-15 📋 v2.1 Bug Fixes & Patches
+- [ ] Possibly add a mailing list or other way to get in touch with interested users? ⏫ 🆔 0witks 📋 v2.1 Bug Fixes & Patches 📖 Allow users to navigate easily
+- [ ] Set up automatic web scrapers for images - things to do 🆔 web001 📋 v2.1 Bug Fixes & Patches 📖 Provide fast and responsive experience 🔽
+- [ ] 🔥 Rhys: Review V2 release - ensure everything works, is clear, and responsive
+- [ ] 🔥 Write out top 3 most interesting features
+- [ ] 🔥 Determine complete value offer (learning about space + citizen science + 1 more)
+- [ ] Make badge/announcement at top more prominent (change to pale yellow)
+- [ ] Make start buttons more prominent
+- [ ] Add subtle background design to hero section (dots, grid, or semi-transparent image)
+- [ ] Adjust hero section content to guide eyes to start button
+- [ ] Plan and create launch video (consider asking Dev for help)
+- [ ] Schedule meeting with Rhys and Kriswanto about PH launch
+- [ ] Investigate why users reaching Linked_Anomalies aren't converting to permanent
+- [ ] Determine if anon user feature is harming growth
+- [ ] Evaluate if graduation process is working or confusing
+- [ ] Consider separate playable version link to differentiate visitors vs players
+- [ ] Investigate Vercel insights for speed/first load time improvements
+- [ ] Complete Posthog analytics integration
+- [ ] Resolve performance issue shown in screenshot
+- [ ] Set up conversion funnel tracking
+- [ ] Decide on writing topics (discuss with Fred)
+- [ ] Set up Substack for writing
+- [ ] Configure cross-posting to Farcaster & Twitter
+- [ ] Add comments to Quartz site (consider utteranc.es)
+- [ ] 🔥 Define value proposition for classification ecosystem approach
+- [ ] Design data flow architecture from Star Sailors to other projects
+- [ ] Implement standalone vs. integrated experience options
+- [ ] Create unified user experience across multiple projects
+- [ ] Build cross-project mission integration system
+- [ ] Task description #PROJECT #COMPONENT #TICKET-ID
+- [ ] Create tilemap for spiders & clouds 🆔 3f48kt 📅 2025-12-13 🛫 2025-12-12 ➕ 2025-12-12 📋 Basic Infrastructure 📖 Allow users to explore diverse Martian terrain 🔼
+- [ ] Create ice/crater texture 🆔 qbe09x 📅 2025-12-13 🛫 2025-12-12 ➕ 2025-12-12 📋 Basic Infrastructure 📖 Allow users to explore diverse Martian terrain 🔼
+- [ ] Implement surface + exposed bedrock
+- [ ] Add boulders and fragmented rocks
+- [ ] Create ancient lake bed segments at crater bottoms
+- [ ] Add clays in bedrock at crater rims
+- [ ] Implement sulfates and carbonates
+- [ ] Create younger, smoother, flatter terrain material
+- [ ] Implement dirt & sand plains
+- [ ] Add soil layers
+- [ ] Thick layers of ice + dust mixed together
+- [ ] Soil implementation at poles
+- [ ] Exposed cliff faces
+- [ ] Ore & raw minerals spawning system
+- [ ] Soil + fine dust cover
+- [ ] Underground water ice at subsurface (for spawning)
+- [ ] Soil/regolith layer
+- [ ] Crust layer
+- [ ] Mantle layer
+- [ ] Different materials per region
+- [ ] CO2 clouds in higher latitude areas
+- [ ] CO2 clouds in canyons
+- [ ] Player spawning in these areas
+- [ ] Different weather per biome
+- [ ] UV variations per biome
+- [ ] Ice at crater bottoms
+- [ ] Elevated crater rims
+- [ ] Boulder placement system
+- [ ] Dedicated configurations per arena
+- [ ] Spiders spawn from grosmith in Southern hemisphere
+- [ ] Integration with terrain system
+- [ ] Implement 3-region spawning system (Northern/Southern hemispheres + third area)
+- [ ] Create CO2 vs H2O cloud differentiation
+- [ ] Build user-contributed weather identification system
+- [ ] Optimize weather performance for multiple cloud systems
+- [ ] Design weather impact on construction/survival mechanics
+- [ ] What is "grosmith"? (spawner type, structure, environmental feature?)
+- [ ] Spider behavior patterns
+- [ ] Combat mechanics
+- [ ] Relationship to other game systems
+- [ ] [[content/Categories/Projects/Godot-Mars/Terrain#Terrain System]] Implement basic terrain system
+- [ ] [[content/Categories/Projects/Godot-Mars/Terrain#Crater Generation]] Develop crater generation algorithm
+- [ ] Function to merge daily notes if not much content 🔼 🆔 e0t4ot
+- [ ] Allow tasks to be assigned to segments 🆔 v7decy 📅 2025-12-15 🛫 2025-12-15 ➕ 2025-12-15 🔽
+- [ ] Quick add tag app 🆔 73gsqf 📅 2025-12-09 🛫 2025-12-08 ➕ 2025-12-08 🔽
+- [ ] Create project groups (so projects don't live on for ever, better organisation of tasks) 🆔 hbbioq 📅 2025-12-09 🛫 2025-12-08 ➕ 2025-12-08 🔽
+- [ ] ⏫ Design workflow system with color-coded legend #bumble #design-system #p1 #page-76
+- [ ] ⏫ Implement ticket tracking system (RED category) #bumble #tickets #p1 #page-76
+- [ ] 🔼 Create writing workflow integration (RED category) #bumble #writing #content-management #p2 #page-76
+- [ ] 🔼 Develop casualty/error handling system #bumble #error-handling #system-design #p2 #page-76
+- [ ] 🔼 Design divider/separator UI components (BLUE category) #bumble #ui-components #design #p2 #page-76
+- [ ] Create brain/cloud processing architecture diagram #bumble #architecture #data-processing #page-76
+- [ ] Map connection flows between system components #bumble #system-architecture #workflow #page-76
+- [ ] Godot scene takes basic params and user values from Expo
+- [ ] Add virtual/on-screen controls in Godot that work in RN
+- [ ] Detect if user is using mobile environment
+- [ ] Harvesting in Godot (implement mechanics)
+- [ ] Getting Expo version of Bumble "dockerized"
+- [ ] Nectar development in RN (honey refineries/automations)
+- [ ] 🔼 📅 2025-11-10 🆔 c57qdy Godot scene takes basic params and user values from Expo #godot #integration
+- [ ] Add virtual/on-screen controls in Godot that work in RN, if it detects user is using application in a mobile environment #Controls #Godot
+- [ ] Implement harvesting mechanics in Godot
+- [ ] Develop nectar system in RN (honey refineries/automations)
+- [ ] Determine what happens when nectar is full (honey harvesting with glass bottles?)
+- [ ] Design clean and minimal classification UI that matches agricultural texture/style
+- [ ] Overhaul text/background pages - current version looks bad
+- [ ] Create additional sprites: player character, trees, flowers
+- [ ] Create identical layout scenes with different colors for different biomes
+- [ ] Build data dictionary for crop-nectar relationships
+- [ ] Implement orders/puzzle game mechanic
+- [ ] Develop water replenishment system (hourly or weather-based)
+- [ ] Create upgradeable water tank system for hive screen
+- [ ] Implement "income" collection system when returning to game
+- [ ] Create script to remove guest accounts locally that are >1 day old
+- [ ] Implement guest account merge with existing account feature
+- [ ] Implement sophisticated hive population system (3-10 bee capacity)
+- [ ] Create bee growth rate system (one bee per day progression)
+- [ ] Build honey production pipeline (nectar collection → storage → processing)
+- [ ] Add bee specialization system (collection, production, soldier types)
+- [ ] Implement classification reward system (new bees or yield bonuses)
+- [ ] Design plot expansion upgrade system
+- [ ] Create inventory upgrade levels (10 → 50 → 100 slots)
+- [ ] Implement crafting recipe unlocks at Level 5
+- [ ] Build XP and leveling system with balanced progression curve
+- [ ] Add hydroponics progression path
+- [ ] Implement power, water, and material management
+- [ ] Create advanced solar supply system
+- [ ] Build offline value display systems
+- [ ] Add material diversification (multiple input/output types)
+- [ ] Create grid-based second mission structure
+- [ ] Implement base building with crafting integration
+- [ ] Add resource collection and processing mechanics
+- [ ] Build crafting recipe system for grid mission
+- [ ] Document game loop for distribution feedback
+- [ ] Write up classification UI integration approach
+- [ ] We should have a list of fulfilled orders and show the user their affinity level 🔼 🆔 ar9ynm 📋 Advanced Features 📖 Allow users to progress and unlock new features
+- [ ] Add config file for bee rules 🆔 89y004 🔼 ➕ 2025-12-04 🛫 2025-12-04 📅 2025-12-04 📋 Core Gameplay 📖 Allow users to manage their bee colonies
+- [ ] Allow users to upgrade their water tanks 🔽 🆔 nax6x2 📋 Core Gameplay 📖 Allow users to manage their bee colonies
+- [ ] Setup XP amounts for different actions 🆔 z7v4s3 🔼 📋 Core Gameplay 📖 Create a global XP area
+- [ ] Update track block to be series of tracks (rather than a building-type interface) 🔽 🆔 uocg06
+- [ ] Crops should have varying grow rates
+- [ ] Bees will collect pollen & produce nectar over the day 🆔 h9k2m7 ⏫ 📋 Core Gameplay 📖 Allow different crops to produce different honey
+- [ ] Add full sprite sheets for all crops 🆔 p5tmm8 📅 2025-12-05 ⏫ 📋 Core Gameplay 📖 Allow users to cultivate and harvest crops
+- [ ] Documentation around hotbar component for reusability 🆔 d4ynby 📋 Core Gameplay 📖 Allow users to cultivate and harvest crops 🔽
+- [ ] Add a night time texture/gradient or overlay 🔽 🆔 x3w7k6 📋 Core Gameplay 📖 Allow users to cultivate and harvest crops
+- [ ] If there are orders the user hasn't seen, add an unread counter/icon to the shop button 🔽 🆔 oyev3a 📋 Core Gameplay 📖 Allow users to cultivate and harvest crops
+- [ ] Create complete map of blocks, including different soil variants 🔽 🆔 sig4ls 📋 Core Gameplay 📖 Allow users to cultivate and harvest crops
+- [ ] Analyze each image for:
+- [ ] [Priority] Task description #project #category #page-X #physical-notes
+- [ ] ⏫ Task #project #category #p1 #page-X
+- [ ] 🔼 Task #project #category #p2 #page-X
+- [ ] Task #project #category #page-X
+- [ ] Remove duplicate tasks from "Ideas & Brainstorming" section
+- [ ] Remove moved tasks from "Quick Task Inbox"
+- [ ] Add reference to physical notes in "Ideas & Brainstorming": `**Physical Notes:** See [[Physical-Notes/YYYY-MM-DD|Today's Physical Notes]] - Tasks moved to project files`
+- [ ] Ensure "Today's Physical Notes" section shows current date's notes
+- [ ] Physical notes file created with proper frontmatter
+- [ ] All tasks extracted and categorized
+- [ ] Project-specific tasks moved to appropriate files
+- [ ] Cross-references established (bidirectional links)
+- [ ] Page numbers tagged on all relevant tasks
+- [ ] Dashboard updated (duplicates removed, references added)
+- [ ] Proper priority markers applied
+- [ ] Project keywords tagged for auto-routing
+- [ ] Dashboard shows today's physical notes section
+- [ ] No duplicate tasks between dashboard and project files
+- [ ] All task files reference source physical notes
+- [ ] Physical notes file links to destination task files
+- [ ] Tags are consistent and complete
+- [ ] ⏫ Establish universal color coding legend for all projects #design-system #organization #color-coding #p1 #physical-notes
+- [ ] 🔼 Create standardized arrow/flow notation system #design-system #documentation #workflows #p2 #physical-notes
+- [ ] 🔼 Document sketch-to-digital translation process #documentation #design-process #workflow #p2 #physical-notes
+- [ ] Implement physical note digitization workflow #organization #note-taking #digital-transformation #physical-notes
+- [ ] Fix telescope viewport bug ⏫
+- [ ] Design bee pollination mechanic 🔼
+- [ ] Research roving gameplay 🔽
+- [ ] High priority task ⏫
+- [ ] Medium priority task 🔼
+- [ ] Low priority task 🔽
+- [ ] Fix telescope (routes to Star Sailors)
+- [ ] Design bee mechanic (routes to Bumble)
+- [ ] Add roving feature (routes to Roving)
+- [ ] Update station UI (routes to Station 198)
+- [ ] Implement moon phase system for Bumble ⏫
+- [ ] Fix telescope viewport pagination 🔼
+- [ ] Research color palette options 🔽
+- [ ] Task description #PROJECT #COMPONENT #TICKET-ID
+- [ ] Some sort of 'live popup' (like the iPhone's Dynamic Island) that shows classifications available for voting & commenting. This will probably be some sort of #Countdown widget that I will work to implement next sprint (the final sprint!)
+- [ ] New layout for #Next scene
+- [ ] If a planet has a confirmed type, filter the linked_anomalies cloud types for the #Weather mission - #DEPLOY-13
+- [ ] Improve smoothness of loading transition for 3d scenes in #Roving - #LOAD-1
+- [ ] Overhaul telescope deployment UI, especially for mobile
+- [ ] Add sidebar/bottom bar layout, upgraded, with main colour scheme for telescope viewport
+- [ ] Mineral deposits count to be moved to a global `useData` fetch function #DEPOSITS-9
+- [ ] Add upgrade animations to research cards #UI-Polish
+- [ ] Implement calibration upgrade to allow multi-focus telescope #Telescope-Expansion
+- [ ] Expand rover routes beyond Mars (foundation for Automaton expansion) #Research-Loop
+- [ ] Add calibration mechanic (Planetary / Stellar focus) #Telescope-Expansion
+- [ ] First classification achievement modal + Stardust reward #User-Progress
+- [ ] Weekly mission placeholder card in ActivityHeader #User-Progress
+- [ ] Satellite viewport base layout & margin fixes #UI-Polish
+- [ ] Header transition animations between locations #UI-Polish
+- [ ] Upgrade: Add extra satellite per deployment (#Increase-Satellite-Count) #Research-Loop
+- [ ] Check how satellite upgrade works again #Satellite #Research
+- [ ] Upgrade: Extend rover waypoint count (#Automaton-Module) #Research-Loop
+- [ ] Add placeholder “Spectroscopy” & “Metallicity” data missions - info on what each thing is for/will be for #Research-Loop
+- [ ] Post-sprint: sidebar for deployment viewports #Sidebar #Viewport #SSG-291
+- [ ] Variable Stars deployment & classification #Telescope-Expansion
+- [ ] Add sprites for grass #SPRITES-1 #Bumble
+- [ ] Allow users to plant grass
+- [ ] Allow spectroscopy/exofop API data to be browsed in deploy view - #RESEARCH-5 #Telescope #Satellite #Deploy #Research #Spectroscopy
+- [ ] Figure out Superwasp deployment #VARIABLE-1 #Variable #Deploy #Tutorial #Telescope ![[Pasted image 20251011191159.png]] ![[Pasted image 20251011130522.png]] #star #Projects #Telescope #SUPERWASP
+- [ ] Fix deploy layout on mobile #Mobile #Deploy #DEPLOY-9
+- [ ] Probably one of the two variable star projects will be integrated, maybe two. I think that after this sprint, we should work on adding more stars (and maybe a connection to discovered planets) of different project types (e.g. finding new systems, cataloguing stellar behaviour, etc) and also build out a second phase for the AI4M project.
+- [ ] P4 & AI4M should probably be the priority. Additionally, the second phase should probably enhance the first chapter, rather than be bolted after it - just so the first phase isn't 4+ photo classification tasks.
+- [ ] The new technology types can probably complement these sorts of projects. E.g. digging up samples. Users could work on identifying samples and set up community mining schemes.
+- [ ] Push Notifications: First, make sure that they don't send notifications for different users, on different devices.
+- [ ] I removed a lot of content here: https://github.com/Signal-K/client/commit/3dcaa173c3140d81f00d5dba8e59a0a885c80ab0#diff-a5cee41e7a442c6ce12779bdefa79877b4cfc3b6c87e42eb95ae932d31623ebf. #Deleted #Components
+- [ ] Media
+- [ ] ![[DEB88795-4F14-4B2E-A0B5-349F35B1B872_1_105_c.jpeg]]
+- [ ] Sidebars with info
+- [ ] Dialogue for right sidebar
+- [ ] Get more data points from Zooniverse (probably something required for all projects, TBH) - #Planet4-1
+- [ ] All viewports should have the same base, and have sidebars/bottom panels (responsiveness )
+- [ ] next scene should show info about anomaly, classification effect on parent/anomaly object
+- [ ] Perhaps a confirmation popup after?
+- [ ] Allowing for KOI entries to be extracted
+- [ ] Allow tasks #Frontend #SSG-281  to be shown in multiple boards #Frontend #SSG-281 #In-Progress
+- [ ] Setup Sprint board #Frontend #SSG-281 #Todo
+- [ ] Allow tasks #Frontend #SSG-281  to be shown in multiple boards #Frontend #SSG-281 #In-Progress
+- [ ] New automaton icons #SSG-281 SSG-295 SSG-352
+- [ ] New structure icons #SSG-281 SSG-296 SSG-353
+- [ ] Update surveyor process so it's more than just a comment interface #SSG-281 SSG-297 SSG-354
+- [ ] Navigation route for posts, with filter & feed #SSG-281 SSG-298 SSG-355
+- [ ] Fix global styling configuration #SSG-281 SSG-299 SSG-356
+- [ ] Anything else to do with notifications #SSG-281 SSG-300 SSG-357
+- [ ] Separate API function for notifications & research schema #SSG-281 SSG-301 SSG-358
+- [ ] Allow users to subscribe to notifications on multiple devices (heavy backlog) #SSG-281 SSG-302 SSG-359
+- [ ] Take the hexagon animations from #BiodomeStation into other structure headers - plus the 'ready to build' #SSG-281 SSG-303 SSG-360
+- [ ] Spectroscopy project for SSC-112 #SSG-281 SSG-304 SSG-361
+- [ ] LocationPicker to group discovery types together based on location type --?? #SSG-281 SSG-305 SSG-362
+- [ ] Events from asteroids? Navigation... #SSG-281 SSG-306 SSG-363
+- [ ] Milestones to work across multiple missions in a project #Milestones #Projects #Missions #Classifications #SSG-281 SSG-307 SSG-364
+- [ ] Updating Research page to reflect the new modal design #SSG-281 SSG-308 SSG-365
+- [ ] Fix width of modals for annotation-classifications on mobile #SSG-281 SSG-309 SSG-366
+- [ ] Discuss voting/consensus & secondary mission ideas with Dave #SSG-281 SSG-310 SSG-367
+- [ ] Not all milestones can be seen on mobile #Bug #Layout #Mobile #Milestones #Navigation #SSG-281 SSG-311 SSG-368
+- [ ] Create milestone for any sort of surveyor or voting/consensus contribution #Consensus #Surveyor #Comments #Voting #Milestones #SSG-281 SSG-312 SSG-369
+- [ ] Add community milestones back and emphasise them, maybe with the end of week scene #Milestones #SSG-281 SSG-313 SSG-370
+- [ ] Initialising Are We Alone project JIRA:SSP-99 #AreWeAlone #Astronomer #Missions #Data-Population #SSG-281 SSG-314 SSG-371
+- [ ] Full import facilities for new pgen #PlanetGenerator #classificationConfiguration #SSG-281 SSG-315 SSG-372
+- [ ] Milestones not being counted as completed in mobile nav #Bug #Mobile #Milestones #Navigation #SSG-281 SSG-316 SSG-373
+- [ ] Each classification or comment needs to provide someth #SSG-281 SSG-317 SSG-374
+- [ ] - [x] Deploy page #Deploy #Page #Structures #Checkbacks JIRA:SSM-190 #SSG-281 SSG-320 SSG-377
+- [ ] Show created/painted planet in next scene?
+- [ ] Add some sort of API tool or plugin so updates can be sent directly to the "Updates" tab
+- [ ] Plus, updating the telescope structure route to show the viewport....
+- [ ] Set up auto-tagging of tasks and content in vault manuscript
+- [ ] Determine the breeding pattern in relation to nectar quantity in hives and classification events
+- [ ] Choose launch day: _______________
+- [ ] Choose launch time (recommended: 12:01am PST for full 24hr cycle)
+- [ ] Primary landing page ready
+- [ ] Tag 1: _______________
+- [ ] Tag 2: _______________
+- [ ] Tag 3: _______________
+- [ ] Design thumbnail
+- [ ] If GIF: ensure first frame works as static image
+- [ ] No strobing effects or quick cuts
+- [ ] File size under 3MB
+- [ ] File location: _______________
+- [ ] Image 1: _______________
+- [ ] Image 2: _______________
+- [ ] Image 3: _______________
+- [ ] Image 4: _______________
+- [ ] Image 5: _______________
+- [ ] Order finalized
+- [ ] Create demo video (Loom, etc.)
+- [ ] Upload to YouTube (NOT private)
+- [ ] Get full URL (not shortened)
+- [ ] Build demo using: Arcade / Storylane / Hexus / Supademo / Layerpath / ScreenSpace
+- [ ] App Store: _______________
+- [ ] Google Play: _______________
+- [ ] GitHub: _______________
+- [ ] Other: _______________
+- [ ] Maker 1: _______________ (username: _______________)
+- [ ] Maker 2: _______________ (username: _______________)
+- [ ] Maker 3: _______________ (username: _______________)
+- [ ] Maker 4: _______________ (username: _______________)
+- [ ] Tool 1: _______________
+- [ ] Tool 2: _______________
+- [ ] Tool 3: _______________
+- [ ] Humble and helpful (not marketing-speak)
+- [ ] Simple language
+- [ ] Highlight who it's for
+- [ ] Use emojis sparingly (as bullet points)
+- [ ] Ask for FEEDBACK (never ask for upvotes)
+- [ ] Tease launch on social media (X, LinkedIn, etc.)
+- [ ] Email existing users/community
+- [ ] Reach out to early supporters
+- [ ] Build Product Hunt coming soon page
+- [ ] Drive pre-launch followers
+- [ ] Email list
+- [ ] X/Twitter
+- [ ] LinkedIn
+- [ ] Discord/Slack communities
+- [ ] Newsletter
+- [ ] Blog post
+- [ ] Other: _______________
+- [ ] List of supporters to notify: _______________
+- [ ] Draft personal message (no copy-paste spam)
+- [ ] Schedule send times
+- [ ] X launch thread draft
+- [ ] LinkedIn post draft
+- [ ] Instagram/TikTok (if relevant)
+- [ ] Schedule posts
+- [ ] Monitor PH comments all day
+- [ ] Respond authentically to all feedback
+- [ ] Thank supporters
+- [ ] Answer questions promptly
+- [ ] ✅ Self-hunt (79% of featured posts are self-hunted)
+- [ ] ✅ Focus on authentic engagement
+- [ ] ✅ Be humble and helpful
+- [ ] ✅ Engage with comments all day
+- [ ] ✅ Provide value to community
+- [ ] ✅ Use personal accounts only
+- [ ] ✅ Follow community guidelines
+- [ ] Confirm post is live
+- [ ] Post first comment
+- [ ] Share launch link with team
+- [ ] _______________
+- [ ] _______________
+- [ ] _______________
+- [ ] _______________
+- [ ] _______________
+- [ ] _______________
+- [ ] _______________
+- [ ] _______________
+- [ ] _______________
+- [ ] Thank everyone who engaged
+- [ ] Respond to all comments
+- [ ] Share results with team
+- [ ] Document lessons learned
+- [ ] Follow up with interested users
+- [ ] Implement quick feedback wins
+- [ ] Share launch story on blog
+- [ ] Thank supporters publicly
+- [ ] Analyze metrics vs goals
+- [ ] Plan improvements based on feedback
+- [ ] Consider follow-up launch for major updates
+- [ ] Build relationships with engaged users
+- [ ] All content finalized and reviewed
+- [ ] Team briefed and ready
+- [ ] Launch scheduled in PH
+- [ ] Social posts scheduled
+- [ ] Email drafts ready
+- [ ] Analytics tracking set up
+- [ ] Product stable and tested
+- [ ] Team online and ready
+- [ ] Final product check
+- [ ] Celebration plans ready 🎉
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] Add virtual/on-screen controls in Godot, that work in RN, if it detects user is using application in a mobile environment #Controls #Godot
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] 🔼 📅 2025-11-10 🆔 c57qdy Godot scene takes basic params and user values from Expo.
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] ---
+- [ ] Implement expandable grid system with multiple plot types
+- [ ] Create weather effects system affecting different plants
+- [ ] Design seasonal transition mechanics
+- [ ] Build megalodon defensive system
+- [ ] Create telegraph/communication mission structure
+- [ ] Implement life support system requirements
+- [ ] Build solar panel array mechanics
+- [ ] Design progressive system unlocking
+- [ ] Design coral classification interface
+- [ ] Create coral region integration with Bumble
+- [ ] Implement fishing brambles system
+- [ ] Task 1 #project-name
+- [ ] Task 2 #project-name
+- [ ] Task description #project-name #tag
+- [ ] Task from notes
+- [ ] Notification permissions
+- [ ] Allow users to react to updates?
+- [ ] New docker container for SwiftAuth provider
+- [ ] Update sync provider to get all entries periodically
+- [ ] Track & log user behaviour - go?
+- [ ] List of things "Liam" wants to see
+- [ ] Add to calendar
+- [ ] Caching of data in Swift storage (json format)
+- [ ] Go for launch/launch status
+- [ ] Agency
+- [ ] Launchpad
+- [ ] Back Button, Add (to playlist), alert/add to calendar
+- [ ] Quick stats - launch status, x'th launch, launch # of the year
+- [ ] Agency name, link button, follow/following
+- [ ] Blurb - date, time (location + launch pad)
+- [ ] Full countdown
+- [ ] All updates, with time ago
+- [ ] Mission info - government/commerical, name, bio, launch attempt #
+- [ ] Webcasts - language, video
+- [ ] Timeline - prop load, stage load, liftoff, meco, etc
+- [ ] Launchpad info - maps, country, city
+- [ ] Rocket info - name, key stats, provider
+- [ ] Vehicle - serial number
+- [ ] Photos
+- [ ] Review ideas without tasks and create new tasks
+- [ ] Follow up on incomplete tasks
+- [ ] Update project priorities based on this analysis
+
+## Backlinks
+- [[content/Operations/Daily/Recovered/Weekly-Analysis-2025-12-16.md|Source Daily Note]]

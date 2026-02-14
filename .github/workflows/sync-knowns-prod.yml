@@ -1,0 +1,51 @@
+name: Sync Knowns to Supabase
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: Apply changes to production
+        required: true
+        default: true
+        type: boolean
+  schedule:
+    - cron: '*/30 * * * *'
+
+jobs:
+  sync-knowns:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync (dry-run)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.apply == false }}
+        env:
+          KNOWNS_SYNC_CONFIG: knowns-prod-sync.config.json
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          KNOWNS_SYNC_GITHUB_TOKEN: ${{ secrets.KNOWNS_SYNC_GITHUB_TOKEN }}
+        run: node .obsidian/scripts/sync-knowns-supabase.cjs
+
+      - name: Sync (apply)
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.apply == true }}
+        env:
+          KNOWNS_SYNC_CONFIG: knowns-prod-sync.config.json
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          KNOWNS_SYNC_GITHUB_TOKEN: ${{ secrets.KNOWNS_SYNC_GITHUB_TOKEN }}
+        run: node .obsidian/scripts/sync-knowns-supabase.cjs --apply

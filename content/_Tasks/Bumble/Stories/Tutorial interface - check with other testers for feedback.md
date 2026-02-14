@@ -1,1 +1,0 @@
-This is dependant on getting the first testers.

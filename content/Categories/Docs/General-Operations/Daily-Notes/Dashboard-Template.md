@@ -1,0 +1,29 @@
+---
+icon: lucide//file-text
+---
+
+# Docs Routed from Dashboard-Template.md
+
+## From Dashboard-Template.md (📅 recent)
+Source: [[content/Operations/Daily/Active/Dashboard-Template.md|Dashboard-Template.md]]
+
+```note-gallery
+path: content/Operations/Daily/Active
+query: 'path:content/Operations/Daily/Active/'
+recursive: false
+limit: 4
+sort: desc
+sortBy: mtime
+fontSize: 8pt
+showTitle: true
+breakpoints:
+  default: 4
+  1500: 3
+  1000: 2
+  700: 1
+```
+
+---
+
+## Backlinks
+- [[content/Operations/Daily/Active/Dashboard-Template.md|Source Daily Note]]

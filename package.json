@@ -17,7 +17,11 @@
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx --test",
-    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
+    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
+    "knowns:sync:prod:dry": "node .obsidian/scripts/sync-knowns-prod.cjs",
+    "knowns:sync:prod": "node .obsidian/scripts/sync-knowns-prod.cjs --apply",
+    "knowns:sync:supabase:dry": "node .obsidian/scripts/sync-knowns-supabase.cjs",
+    "knowns:sync:supabase": "node .obsidian/scripts/sync-knowns-supabase.cjs --apply"
   },
   "engines": {
     "npm": ">=10.8.0",

@@ -1,0 +1,12 @@
+{
+  "apiBaseUrl": "https://tui-hj07ggwpf-signal-k.vercel.app",
+  "requestTimeoutMs": 15000,
+  "projects": [
+    {
+      "name": "Planet Hunters Experiment 1",
+      "key": "PLANET_HUNTERS_EXPERIMENT_1",
+      "tasksDir": "/Users/scroobz/Navigation/Native/planet-hunters-experiment-1/.knowns/tasks",
+      "deleteMissing": true
+    }
+  ]
+}

@@ -8,4 +8,7 @@ views:
     order:
       - file.name
       - status
+    sort:
+      - property: status
+        direction: DESC
     image: note.banner
