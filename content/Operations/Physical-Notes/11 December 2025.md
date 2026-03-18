@@ -81,4 +81,4 @@ Two terrain view sketches showing:
 **Different biomes will have different weather, uvs, etc**
 
 ## Routed Notes
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Godot-Mars-Archive/Captured-Notes/11 December 2025.md|Routed: Godot-Mars-Archive Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Godot-Mars-Archive/Captured-Notes/11 December 2025.md|Routed: Godot-Mars-Archive Docs Capture]]

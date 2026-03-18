@@ -16,4 +16,4 @@ Scope:
 4. Run through my ideas/content (starting points) for Star Sailors
 
 ## Routed Notes
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/18 December Rhys sync.md|Routed: Star-Sailors-Web Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/18 December Rhys sync.md|Routed: Star-Sailors-Web Docs Capture]]

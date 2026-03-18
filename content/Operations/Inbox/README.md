@@ -33,5 +33,5 @@ When you're ready to organize:
 *This folder's contents are not published to Quartz.*
 
 ## Routed Notes
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/README.md|Routed: Star-Sailors-Web Docs Capture]]
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Bumble/Captured-Notes/README.md|Routed: Bumble Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/README.md|Routed: Star-Sailors-Web Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Bumble/Captured-Notes/README.md|Routed: Bumble Docs Capture]]

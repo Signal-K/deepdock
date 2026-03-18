@@ -135,5 +135,5 @@ breakpoints:
 ---
 
 ## Routed Notes
-- [[content/Categories/Ideas/Star-Sailors-Ecosystem/Bumble/Daily-Insights/Dashboard.md|Routed: Bumble Ideas]]
+- [[content/Categories/Projects/Star-Sailors/Ideas/Star-Sailors-Ecosystem/Bumble/Daily-Insights/Dashboard.md|Routed: Bumble Ideas]]
 - [[content/Categories/Docs/General-Operations/Daily-Notes/Dashboard.md|Routed: General-Operations Docs]]

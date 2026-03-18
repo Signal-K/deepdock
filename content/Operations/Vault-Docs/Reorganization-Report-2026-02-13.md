@@ -37,9 +37,9 @@ icon: lucide//workflow
 - New canonical root: `content/Categories/<Category>/<Project...>`
 
 ## Routed Notes
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Star-Sailors-Web Docs Capture]]
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Bumble/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Bumble Docs Capture]]
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Click-A-Coral/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Click-A-Coral Docs Capture]]
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Godot-Mars-Archive/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Godot-Mars-Archive Docs Capture]]
-- [[content/Categories/Docs/Weathr/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Weathr Docs Capture]]
-- [[content/Categories/Docs/Prehog/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Prehog Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Star-Sailors-Web Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Bumble/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Bumble Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Click-A-Coral/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Click-A-Coral Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Godot-Mars-Archive/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Godot-Mars-Archive Docs Capture]]
+- [[content/Categories/Projects/Other-Projects/Docs/Weathr/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Weathr Docs Capture]]
+- [[content/Categories/Projects/Other-Projects/Docs/Prehog/Captured-Notes/Reorganization-Report-2026-02-13.md|Routed: Prehog Docs Capture]]

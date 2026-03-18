@@ -12,6 +12,20 @@ const PROJECTS = [
   ["Prehog", "prehog", "#prehog"],
 ];
 
+function generateTaskId(existingContent) {
+  const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+  for (let attempt = 0; attempt < 64; attempt += 1) {
+    let id = "";
+    for (let i = 0; i < 6; i += 1) {
+      id += chars[Math.floor(Math.random() * chars.length)];
+    }
+    if (!existingContent.includes(`🆔 ${id}`)) {
+      return id;
+    }
+  }
+  return `${Date.now().toString(36).slice(-6)}`;
+}
+
 module.exports = async function (tp, appContext) {
   const app = appContext || this.app || tp.app;
   const file = app.workspace.getActiveFile();
@@ -45,8 +59,12 @@ module.exports = async function (tp, appContext) {
   if (!priority) return;
 
   const dateTag = file.basename.match(/^\d{4}-\d{2}-\d{2}$/) ? `#${file.basename}` : "";
+  const today = tp.date.now("YYYY-MM-DD");
+  const taskId = generateTaskId(content);
   const priorityEmoji = priority === "high" ? "⏫" : priority === "medium" ? "🔼" : "🔽";
-  const taskLine = `- [ ] ${taskText} ${priorityEmoji} ${project[2]} ${dateTag}`.replace(/\s+/g, " ").trim();
+  const taskLine = `- [ ] ${taskText} ${priorityEmoji} 🆔 ${taskId} ➕ ${today} ${project[2]} ${dateTag}`
+    .replace(/\s+/g, " ")
+    .trim();
 
   let nextContent = content;
   const sectionHeader = `## Project: ${project[0]}`;

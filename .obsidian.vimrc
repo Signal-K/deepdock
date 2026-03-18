@@ -47,3 +47,6 @@ nmap <Space>v :splitVertical<CR>
 " Search files
 exmap seachFiles obcommand global-search:open
 nmap <Space>sf :searchFiles<CR>
+
+" Jump to the first project env link in the current note, then follow it
+nmap E /private\/project-env\/<CR>0f[l:followLinkUnderCursor<CR>

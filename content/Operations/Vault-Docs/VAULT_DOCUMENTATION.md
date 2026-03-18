@@ -491,9 +491,9 @@ This vault is designed for:
 The key principle: **Write freely, organize later, automate everything possible.**
 
 ## Routed Notes
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/VAULT_DOCUMENTATION.md|Routed: Star-Sailors-Web Docs Capture]]
-- [[content/Categories/Tasks/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Tasks/VAULT_DOCUMENTATION.md|Routed: Star-Sailors-Web Tasks Capture]]
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Bumble/Captured-Notes/VAULT_DOCUMENTATION.md|Routed: Bumble Docs Capture]]
-- [[content/Categories/Tasks/Star-Sailors-Ecosystem/Bumble/Captured-Tasks/VAULT_DOCUMENTATION.md|Routed: Bumble Tasks Capture]]
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Godot-Mars-Archive/Captured-Notes/VAULT_DOCUMENTATION.md|Routed: Godot-Mars-Archive Docs Capture]]
-- [[content/Categories/Tasks/Star-Sailors-Ecosystem/Godot-Mars-Archive/Captured-Tasks/VAULT_DOCUMENTATION.md|Routed: Godot-Mars-Archive Tasks Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/VAULT_DOCUMENTATION.md|Routed: Star-Sailors-Web Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Tasks/VAULT_DOCUMENTATION.md|Routed: Star-Sailors-Web Tasks Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Bumble/Captured-Notes/VAULT_DOCUMENTATION.md|Routed: Bumble Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Bumble/Captured-Tasks/VAULT_DOCUMENTATION.md|Routed: Bumble Tasks Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Godot-Mars-Archive/Captured-Notes/VAULT_DOCUMENTATION.md|Routed: Godot-Mars-Archive Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Godot-Mars-Archive/Captured-Tasks/VAULT_DOCUMENTATION.md|Routed: Godot-Mars-Archive Tasks Capture]]

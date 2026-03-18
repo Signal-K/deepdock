@@ -69,6 +69,7 @@ class inline
 > TASK
 > FROM "content"
 > WHERE !completed
+> SORT choice(lower(default(status, "")) = "todo", 0, choice(regexmatch("^in[ -]?progress$", lower(default(status, ""))), 1, 2)) ASC
 > SORT choice(due, due, file.mtime) ASC
 > LIMIT 12
 > ```

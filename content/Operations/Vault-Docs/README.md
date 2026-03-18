@@ -68,5 +68,5 @@ Folders prefixed with `_` are private (excluded from Quartz publishing).
 </p>
 
 ## Routed Notes
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/README.md|Routed: Star-Sailors-Web Docs Capture]]
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Bumble/Captured-Notes/README.md|Routed: Bumble Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/README.md|Routed: Star-Sailors-Web Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Bumble/Captured-Notes/README.md|Routed: Bumble Docs Capture]]

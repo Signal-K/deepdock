@@ -47,7 +47,7 @@ I think the spacesuit & background might need some touch-ups but I can't see any
 [[Product-Hunt-Launch]]
 
 ## Routed Notes
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/Product Hunt Launch Meeting with Matt.md|Routed: Star-Sailors-Web Docs Capture]]
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Bumble/Captured-Notes/Product Hunt Launch Meeting with Matt.md|Routed: Bumble Docs Capture]]
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Click-A-Coral/Captured-Notes/Product Hunt Launch Meeting with Matt.md|Routed: Click-A-Coral Docs Capture]]
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Godot-Mars-Archive/Captured-Notes/Product Hunt Launch Meeting with Matt.md|Routed: Godot-Mars-Archive Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/Product Hunt Launch Meeting with Matt.md|Routed: Star-Sailors-Web Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Bumble/Captured-Notes/Product Hunt Launch Meeting with Matt.md|Routed: Bumble Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Click-A-Coral/Captured-Notes/Product Hunt Launch Meeting with Matt.md|Routed: Click-A-Coral Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Godot-Mars-Archive/Captured-Notes/Product Hunt Launch Meeting with Matt.md|Routed: Godot-Mars-Archive Docs Capture]]

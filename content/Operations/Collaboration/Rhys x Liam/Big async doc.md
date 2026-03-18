@@ -19,4 +19,4 @@ I'm thinking that everyone that will be contributing to SS this month (whether c
 Rhys - not sure if you remember, but you got a lot of people back in late 2023 trying out the original #Star-Sailors-web client and we got a fair few classifications. Who were these people, do you still know them....what do you think about me sending out a mass email to everyone who's ever signed up across both versions...asking for feedback? Mentioning the bonuses/reward prizes??
 
 ## Routed Notes
-- [[content/Categories/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/Big async doc.md|Routed: Star-Sailors-Web Docs Capture]]
+- [[content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web/Captured-Notes/Big async doc.md|Routed: Star-Sailors-Web Docs Capture]]

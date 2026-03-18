@@ -283,4 +283,4 @@ Obviously I'm doing ~~everything~~ 99%
 ## Notes & Ideas
 
 ## Routed Notes
-- [[content/Categories/Tasks/Star-Sailors-Ecosystem/Star-Sailors-Web/Daily-Routed/Product Hunt 1st Launch Prep.md|Routed: Star-Sailors-Web Tasks]]
+- [[content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Star-Sailors-Web/Daily-Routed/Product Hunt 1st Launch Prep.md|Routed: Star-Sailors-Web Tasks]]

@@ -7,6 +7,6 @@ icon: lucide//clipboard-list
 
 | Project | Notes |
 |---|---:|
-| [[content/Categories/Specs/Star-Sailors-Ecosystem/Godot-Mars-Archive/index|Star-Sailors-Ecosystem/Godot-Mars-Archive]] | 4 |
-| [[content/Categories/Specs/Star-Sailors-Ecosystem/Godot-Mars-Archive/Generation/index|Star-Sailors-Ecosystem/Godot-Mars-Archive/Generation]] | 1 |
-| [[content/Categories/Specs/Weathr/index|Weathr]] | 1 |
+| [[content/Categories/Projects/Star-Sailors/Specs/Star-Sailors-Ecosystem/Godot-Mars-Archive/index|Star-Sailors-Ecosystem/Godot-Mars-Archive]] | 4 |
+| [[content/Categories/Projects/Star-Sailors/Specs/Star-Sailors-Ecosystem/Godot-Mars-Archive/Generation/index|Star-Sailors-Ecosystem/Godot-Mars-Archive/Generation]] | 1 |
+| [[content/Categories/Projects/Other-Projects/Specs/Weathr/index|Weathr]] | 1 |

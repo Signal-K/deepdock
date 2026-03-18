@@ -6,12 +6,7 @@ cssclasses:
 ---
 
 <div style="display: flex; justify-content: center; padding: 80px 0 40px 0"><pre style ="font-family: monospace; margin: 0; line-height: 1; display: inline-block; color: #8A5CF6; background: none; border: none;">
- ██████╗ ██████╗ ███████╗██╗██████╗ ██╗ █████╗ ███╗   ██╗
-██╔═══██╗██╔══██╗██╔════╝██║██╔══██╗██║██╔══██╗████╗  ██║
-██║   ██║██████╔╝███████╗██║██║  ██║██║███████║██╔██╗ ██║
-██║   ██║██╔══██╗╚════██║██║██║  ██║██║██╔══██║██║╚██╗██║
-╚██████╔╝██████╔╝███████║██║██████╔╝██║██║  ██║██║ ╚████║
- ╚═════╝ ╚═════╝ ╚══════╝╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+
 </pre></div>
 
 ##   Commands
@@ -83,7 +78,3 @@ FROM "" WHERE file.name != this.file.name
 SORT file.mtime DESC 
 LIMIT 5
 ```
-
-<div style="text-align: center; padding: 20px 0; color: #727169; font-size: 0.9em; opacity: 0.8; letter-spacing: 1px; font-style: italic;">
-  [󱐋 One tool for one thing.]
-</div>

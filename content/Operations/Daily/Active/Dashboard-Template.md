@@ -72,43 +72,43 @@ class inline
 const map = {
   "star-sailors-web": {
     label: "Star Sailors Web (2.1-3.0)",
-    taskRoot: "content/Categories/Tasks/Star-Sailors-Ecosystem/Star-Sailors-Web",
-    docsRoot: "content/Categories/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web",
+    taskRoot: "content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Star-Sailors-Web",
+    docsRoot: "content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Star-Sailors-Web",
   },
   "experiment1": {
     label: "Experiment1",
-    taskRoot: "content/Categories/Tasks/Star-Sailors-Ecosystem/Experiment1",
-    docsRoot: "content/Categories/Docs/Star-Sailors-Ecosystem/Experiment1",
+    taskRoot: "content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Experiment1",
+    docsRoot: "content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Experiment1",
   },
   "bumble": {
     label: "Bumble",
-    taskRoot: "content/Categories/Tasks/Star-Sailors-Ecosystem/Bumble",
-    docsRoot: "content/Categories/Docs/Star-Sailors-Ecosystem/Bumble",
+    taskRoot: "content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Bumble",
+    docsRoot: "content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Bumble",
   },
   "click-a-coral": {
     label: "Click-A-Coral",
-    taskRoot: "content/Categories/Tasks/Star-Sailors-Ecosystem/Click-A-Coral",
-    docsRoot: "content/Categories/Docs/Star-Sailors-Ecosystem/Click-A-Coral",
+    taskRoot: "content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Click-A-Coral",
+    docsRoot: "content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Click-A-Coral",
   },
   "godot-mars-archive": {
     label: "Godot-Mars-Archive",
-    taskRoot: "content/Categories/Tasks/Star-Sailors-Ecosystem/Godot-Mars-Archive",
-    docsRoot: "content/Categories/Docs/Star-Sailors-Ecosystem/Godot-Mars-Archive",
+    taskRoot: "content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Godot-Mars-Archive",
+    docsRoot: "content/Categories/Projects/Star-Sailors/Docs/Star-Sailors-Ecosystem/Godot-Mars-Archive",
   },
   "weathr": {
     label: "Weathr",
-    taskRoot: "content/Categories/Tasks/Weathr",
-    docsRoot: "content/Categories/Docs/Weathr",
+    taskRoot: "content/Categories/Projects/Other-Projects/Tasks/Weathr",
+    docsRoot: "content/Categories/Projects/Other-Projects/Docs/Weathr",
   },
   "map-app": {
     label: "Map App",
     taskRoot: "content/Categories/Tasks/Map-App",
-    docsRoot: "content/Categories/Docs/Map-App",
+    docsRoot: "content/Categories/Projects/Other-Projects/Docs/Map-App",
   },
   "prehog": {
     label: "Prehog",
     taskRoot: "content/Categories/Tasks/Prehog",
-    docsRoot: "content/Categories/Docs/Prehog",
+    docsRoot: "content/Categories/Projects/Other-Projects/Docs/Prehog",
   },
 };
 
@@ -131,6 +131,18 @@ if (!active.length) {
     }
 
     if (tasks.length) {
+      const statusRank = (task) => {
+        const status = String(task.status ?? "").toLowerCase();
+        if (status === "todo") return 0;
+        if (status === "in-progress" || status === "in progress") return 1;
+        return 2;
+      };
+      tasks.sort((a, b) => {
+        const rankDiff = statusRank(a) - statusRank(b);
+        if (rankDiff !== 0) return rankDiff;
+        return String(a.text ?? "").localeCompare(String(b.text ?? ""));
+      });
+
       dv.paragraph("Open tasks:");
       dv.taskList(tasks.slice(0, 12), false);
     } else {

@@ -3187,14 +3187,14 @@ icon: lucide//brain
 *Powered by Ollama (Local AI)*
 
 ## Routed Notes
-- [[content/Categories/Ideas/Star-Sailors-Ecosystem/Star-Sailors-Web/Daily-Insights/Weekly-Analysis-2025-12-16.md|Routed: Star-Sailors-Web Ideas]]
+- [[content/Categories/Projects/Star-Sailors/Ideas/Star-Sailors-Ecosystem/Star-Sailors-Web/Daily-Insights/Weekly-Analysis-2025-12-16.md|Routed: Star-Sailors-Web Ideas]]
 
-- [[content/Categories/Ideas/Star-Sailors-Ecosystem/Bumble/Daily-Insights/Weekly-Analysis-2025-12-16.md|Routed: Bumble Ideas]]
+- [[content/Categories/Projects/Star-Sailors/Ideas/Star-Sailors-Ecosystem/Bumble/Daily-Insights/Weekly-Analysis-2025-12-16.md|Routed: Bumble Ideas]]
 
-- [[content/Categories/Ideas/Star-Sailors-Ecosystem/Click-A-Coral/Daily-Insights/Weekly-Analysis-2025-12-16.md|Routed: Click-A-Coral Ideas]]
+- [[content/Categories/Projects/Star-Sailors/Ideas/Star-Sailors-Ecosystem/Click-A-Coral/Daily-Insights/Weekly-Analysis-2025-12-16.md|Routed: Click-A-Coral Ideas]]
 
-- [[content/Categories/Ideas/Star-Sailors-Ecosystem/Godot-Mars-Archive/Daily-Insights/Weekly-Analysis-2025-12-16.md|Routed: Godot-Mars-Archive Ideas]]
-- [[content/Categories/Tasks/Star-Sailors-Ecosystem/Star-Sailors-Web/Daily-Routed/Weekly-Analysis-2025-12-16.md|Routed: Star-Sailors-Web Tasks]]
-- [[content/Categories/Tasks/Star-Sailors-Ecosystem/Bumble/Daily-Routed/Weekly-Analysis-2025-12-16.md|Routed: Bumble Tasks]]
-- [[content/Categories/Tasks/Star-Sailors-Ecosystem/Click-A-Coral/Daily-Routed/Weekly-Analysis-2025-12-16.md|Routed: Click-A-Coral Tasks]]
-- [[content/Categories/Tasks/Star-Sailors-Ecosystem/Godot-Mars-Archive/Daily-Routed/Weekly-Analysis-2025-12-16.md|Routed: Godot-Mars-Archive Tasks]]
+- [[content/Categories/Projects/Star-Sailors/Ideas/Star-Sailors-Ecosystem/Godot-Mars-Archive/Daily-Insights/Weekly-Analysis-2025-12-16.md|Routed: Godot-Mars-Archive Ideas]]
+- [[content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Star-Sailors-Web/Daily-Routed/Weekly-Analysis-2025-12-16.md|Routed: Star-Sailors-Web Tasks]]
+- [[content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Bumble/Daily-Routed/Weekly-Analysis-2025-12-16.md|Routed: Bumble Tasks]]
+- [[content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Click-A-Coral/Daily-Routed/Weekly-Analysis-2025-12-16.md|Routed: Click-A-Coral Tasks]]
+- [[content/Categories/Projects/Star-Sailors/Tasks/Star-Sailors-Ecosystem/Godot-Mars-Archive/Daily-Routed/Weekly-Analysis-2025-12-16.md|Routed: Godot-Mars-Archive Tasks]]
