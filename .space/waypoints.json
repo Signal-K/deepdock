@@ -1,1 +1,16 @@
-[{"sticker":"lucide//flask-round","name":"Experiments","paths":["spaces://#planethunters-experiment1","content/Categories/Ideas/Experiment1"]},{"sticker":"ui//spaces","name":"Today","paths":["content/Operations/Daily/Active/Dashboard.md"]}]
+[
+  {"sticker":"ui//spaces","name":"Today","paths":["content/Operations/Daily/Active/Dashboard.md"]},
+  {"sticker":"lucide//layout-dashboard","name":"Projects","paths":["content/Projects/index.md"]},
+  {"sticker":"lucide//rocket","name":"Star Sailors","paths":["content/Projects/Star-Sailors"]},
+  {"sticker":"lucide//fish","name":"Coral","paths":["content/Projects/Coral"]},
+  {"sticker":"lucide//flask-round","name":"Experiment 1","paths":["content/Projects/Experiment1","spaces://#planethunters-experiment1"]},
+  {"sticker":"lucide//anchor","name":"Saily","paths":["content/Projects/Saily"]},
+  {"sticker":"lucide//bug","name":"Bumble","paths":["content/Projects/Bumble"]},
+  {"sticker":"lucide//archive","name":"Godot Mars","paths":["content/Projects/Godot-Mars"]},
+  {"sticker":"lucide//file-text","name":"All Specs","paths":["content/Projects/Star-Sailors/Specs","content/Projects/Coral/Specs","content/Projects/Experiment1/Specs","content/Projects/Saily/Specs","content/Projects/Bumble/Specs"]},
+  {"sticker":"lucide//check-square","name":"All Tasks","paths":["content/Projects/Star-Sailors/Tasks","content/Projects/Coral/Tasks","content/Projects/Experiment1/Tasks","content/Projects/Saily/Tasks","content/Projects/Bumble/Tasks"]},
+  {"sticker":"lucide//lightbulb","name":"All Ideas","paths":["content/Projects/Star-Sailors/Ideas","content/Projects/Coral/Ideas","content/Projects/Experiment1/Ideas","content/Projects/Saily/Ideas","content/Projects/Bumble/Ideas"]},
+  {"sticker":"lucide//inbox","name":"Inbox","paths":["content/Operations/Inbox"]},
+  {"sticker":"lucide//notebook","name":"Physical Notes","paths":["content/Operations/Physical-Notes"]},
+  {"sticker":"lucide//settings","name":"Operations","paths":["content/Operations"]}
+]

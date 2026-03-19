@@ -1,0 +1,97 @@
+---
+type: daily-tasks
+date: 
+project: Star-Sailors
+tags: [daily-tasks, star-sailors, archive]
+icon: lucide//calendar-check
+---
+# Tasks Routed from Product Hunt 1st Launch Prep.md
+
+## Tasks from Product Hunt 1st Launch Prep.md
+Source: [[Operations/Daily/Active/Product Hunt 1st Launch Prep.md|Product Hunt 1st Launch Prep.md]]
+
+- [x] Create Product Hunt personal account ✅ 2025-11-20
+- [x] Wait minimum 1 week before posting ability unlocked ✅ 2025-11-20
+- [x] Fill out profile (bio, website, Twitter link) ✅ 2025-11-20
+  - [x] Customer acquisition ✅ 2025-11-20
+- [x] Choose launch day: Saturday 20 December ✅ 2025-12-17
+- [x] Choose launch time (recommended: 12:01am PST for full 24hr cycle) ✅ 2025-12-17 -16:00 my time
+- [x] Primary landing page ready ✅ 2025-12-17
+- [x] Design thumbnail
+- [x] File size under 3MB
+- [x] File location: _______________
+- [x] Image 1: _______________
+- [x] Image 2: _______________
+- [x] Image 3: _______________
+- [x] Image 4: _______________
+- [x] Image 5: _______________
+- [x] Order finalized ✅ 2025-12-27
+- [x] Create demo video (Loom, etc.)
+- [x] Upload to YouTube (NOT private)
+- [x] Get full URL (not shortened)
+- [x] Build demo using: Arcade / Storylane / Hexus / Supademo / Layerpath / ScreenSpace
+- [x] Free ✅ 2025-12-15
+- [x] App Store: _______________
+- [x] Google Play: _______________
+- [x] GitHub: _______________
+- [x] Other: _______________
+- [x] Tease launch on social media (X, LinkedIn, etc.)
+- [x] Email existing users/community
+- [x] Reach out to early supporters
+- [x] Build Product Hunt coming soon page
+- [x] Drive pre-launch followers
+- [x] Email list
+- [x] X/Twitter
+- [x] LinkedIn
+- [x] Discord/Slack communities
+- [x] Newsletter
+- [x] Blog post
+- [x] Other: _______________
+- [x] List of supporters to notify: _______________
+- [x] Draft personal message (no copy-paste spam)
+- [x] Schedule send times
+- [x] X launch thread draft
+- [x] LinkedIn post draft
+- [x] Instagram/TikTok (if relevant)
+- [x] Schedule posts
+- [x] Monitor PH comments all day
+- [x] Respond authentically to all feedback
+- [x] Thank supporters
+- [x] Answer questions promptly
+- [x] Confirm post is live
+- [x] Post first comment
+- [x] Share launch link with team
+- [x] _______________
+- [x] _______________
+- [x] _______________
+- [x] _______________
+- [x] _______________
+- [x] _______________
+- [x] _______________
+- [x] _______________
+- [x] _______________
+- [x] Thank everyone who engaged
+- [x] Respond to all comments
+- [x] Share results with team
+- [x] Document lessons learned
+- [x] Follow up with interested users
+- [x] Implement quick feedback wins
+- [x] Share launch story on blog
+- [x] Thank supporters publicly
+- [x] Analyze metrics vs goals
+- [x] Plan improvements based on feedback
+- [x] Consider follow-up launch for major updates
+- [x] Build relationships with engaged users
+- [x] All content finalized and reviewed
+- [x] Team briefed and ready
+- [x] Launch scheduled in PH
+- [x] Social posts scheduled
+- [x] Email drafts ready
+- [x] Analytics tracking set up
+- [x] Product stable and tested
+- [x] Team online and ready
+- [x] Final product check
+- [x] Celebration plans ready 🎉
+
+## Backlinks
+- [[Operations/Daily/Active/Product Hunt 1st Launch Prep.md|Source Daily Note]]

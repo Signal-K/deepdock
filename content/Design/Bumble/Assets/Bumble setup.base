@@ -1,0 +1,14 @@
+views:
+  - type: cards
+    name: Table
+    filters:
+      and:
+        - Project == ["Bumble"]
+        - type == "story"
+    order:
+      - file.name
+      - status
+    sort:
+      - property: status
+        direction: DESC
+    image: note.banner

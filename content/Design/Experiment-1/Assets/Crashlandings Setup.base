@@ -1,0 +1,8 @@
+views:
+  - type: cards
+    name: Table
+    filters:
+      and:
+        - type == "story"
+        - Project.contains("Godot")
+    image: note.banner

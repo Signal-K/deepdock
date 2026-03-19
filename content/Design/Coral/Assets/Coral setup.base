@@ -1,0 +1,9 @@
+filters:
+  and:
+    - type == "story"
+    - Project.containsAny("Coral")
+    - segment == "Set up Coral project"
+views:
+  - type: cards
+    name: Card
+    image: note.banner
