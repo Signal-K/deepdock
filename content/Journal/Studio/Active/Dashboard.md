@@ -31,6 +31,7 @@ tags:
 | 🔄 Setup Context | `Shift-Command-D` |
 | ➕ Add Task | `Shift-Command-T` |
 | 🏷️ AutoTag + Route | `Shift-Command-R` |
+| 🍎 AI Route (Apple Intelligence) | `Shift-Command-A` |
 | 📂 Open Today's File | `Command-O` |
 
 ```button
@@ -54,6 +55,13 @@ name 🏷️ AutoTag + Route
 type append template
 action Organize-Daily
 templater true
+class inline
+```
+
+```button
+name 🍎 AI Route
+type link
+action shortcuts://run-shortcut?name=Navigate%20Daily%20Note
 class inline
 ```
 

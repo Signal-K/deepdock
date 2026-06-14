@@ -1,0 +1,59 @@
+services:
+  dashboard-api:
+    build: ./docker/dashboard-api
+    container_name: quartz-dashboard-api
+    ports:
+      - "3737:3737"
+    volumes:
+      # Full home dir so all project paths resolve correctly
+      - /Users/scroobz:/userhome:rw
+      # Projects list from vim dashboard
+      - /Users/scroobz/.vim/quartz-projects.json:/config/projects.json:ro
+    environment:
+      PORT: 3737
+      HOST_HOME: /Users/scroobz
+      CONTAINER_HOME: /userhome
+      PROJECTS_FILE: /config/projects.json
+    restart: unless-stopped
+    networks:
+      - dashboard
+
+  docs-sync:
+    build: ./docker/docs-sync
+    container_name: quartz-docs-sync
+    volumes:
+      # Full home dir so all project paths resolve correctly
+      - /Users/scroobz:/userhome:rw
+      # Config file for sync
+      - ./docs-sync.config.json:/config/docs-sync.config.json:ro
+    environment:
+      HOST_HOME: /Users/scroobz
+      CONTAINER_HOME: /userhome
+      CONFIG_FILE: /config/docs-sync.config.json
+    restart: unless-stopped
+    networks:
+      - dashboard
+
+  kanban:
+    build: /Users/scroobz/Navigation/Native/planet-hunters-experiment-1/kanban-go
+    container_name: quartz-kanban
+    ports:
+      - "4444:4444"
+    volumes:
+      # Persistent kanban data — local JSON store lives here
+      - /Users/scroobz/Navigation/Native/planet-hunters-experiment-1/kanban-go/kanban-data:/app/kanban-data:rw
+      # Attachments stored alongside kanban data
+      - /Users/scroobz/Navigation/Native/planet-hunters-experiment-1/kanban-go/kanban-data/attachments:/app/kanban-data/attachments:rw
+    environment:
+      PORT: 4444
+      BLOB_READ_WRITE_TOKEN: vercel_blob_rw_bzZrXPhYBPLz7lUp_diAsVTg8yaIYM67wvpuccyHoXTU1wT
+      KANBAN_DATA_DIR: /app/kanban-data
+      KANBAN_ATTACHMENTS_DIR: /app/kanban-data/attachments
+    restart: unless-stopped
+    networks:
+      - dashboard
+
+networks:
+  dashboard:
+    name: quartz-dashboard
+    driver: bridge

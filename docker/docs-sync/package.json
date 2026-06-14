@@ -1,0 +1,9 @@
+{
+  "name": "docs-sync",
+  "version": "1.0.0",
+  "main": "sync.js",
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "fs-extra": "^11.2.0"
+  }
+}

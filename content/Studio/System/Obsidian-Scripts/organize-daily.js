@@ -1,35 +1,39 @@
 // Contextual Organizer
 // Auto-tags tasks and routes project content from a daily dashboard to category folders.
 
+// Project registry — each entry maps to current vault folder names.
+// tasks   → content/Builds/<folder>/Tasks/
+// ideas   → content/Ideas/<folder>/
+// journal → content/Journal/<folder>/
 const PROJECTS = {
-  "star-sailors-web": {
-    label: "Star Sailors Web (2.1-3.0)",
-    tag: "#star-sailors-web",
-    path: "Star-Sailors-Ecosystem/Star-Sailors-Web",
+  "star-sailors": {
+    label: "Star Sailors",
+    tag: "#star-sailors",
+    folder: "Star-Sailors",
   },
-  experiment1: {
-    label: "Experiment1",
-    tag: "#experiment1",
-    path: "Star-Sailors-Ecosystem/Experiment1",
+  "experiment-1": {
+    label: "Experiment 1",
+    tag: "#experiment-1",
+    folder: "Experiment-1",
   },
   bumble: {
     label: "Bumble",
     tag: "#bumble",
-    path: "Star-Sailors-Ecosystem/Bumble",
+    folder: "Bumble",
   },
-  "click-a-coral": {
-    label: "Click-A-Coral",
-    tag: "#click-a-coral",
-    path: "Star-Sailors-Ecosystem/Click-A-Coral",
+  coral: {
+    label: "Coral",
+    tag: "#coral",
+    folder: "Coral",
   },
-  "godot-mars-archive": {
-    label: "Godot-Mars-Archive",
-    tag: "#godot-mars",
-    path: "Star-Sailors-Ecosystem/Godot-Mars-Archive",
+  saily: {
+    label: "Saily",
+    tag: "#saily",
+    folder: "Saily",
   },
-  weathr: { label: "Weathr", tag: "#weathr", path: "Weathr" },
-  "map-app": { label: "Map App", tag: "#map-app", path: "Map-App" },
-  prehog: { label: "Prehog", tag: "#prehog", path: "Prehog" },
+  weathr: { label: "Weathr", tag: "#weathr", folder: "Weathr" },
+  "map-app": { label: "Map App", tag: "#map-app", folder: "Map-App" },
+  prehog: { label: "Prehog", tag: "#prehog", folder: "Prehog" },
 };
 const TAG_TO_ID = Object.fromEntries(
   Object.entries(PROJECTS).map(([id, meta]) => [meta.tag.replace(/^#/, ""), id])
@@ -43,7 +47,7 @@ module.exports = async function (tp, appContext) {
     return;
   }
 
-  if (!file.path.startsWith("content/Operations/Daily/")) {
+  if (!file.path.startsWith("content/Journal/Studio/Active/")) {
     new Notice("⚠️ This command is intended for daily dashboard notes");
   }
 
@@ -84,7 +88,7 @@ module.exports = async function (tp, appContext) {
     }
 
     if (tasks.length) {
-      const taskTarget = `content/Categories/Tasks/${meta.path}/Daily-Routed/${dateTag}.md`;
+      const taskTarget = `content/Builds/${meta.folder}/Tasks/${dateTag}.md`;
       const taskBody = [
         `# Tasks Routed from ${dateTag}`,
         "",
@@ -103,20 +107,20 @@ module.exports = async function (tp, appContext) {
     if (decisions.length) docsBits.push("## Decisions", ...decisions, "");
 
     if (docsBits.length) {
-      const docsTarget = `content/Categories/Docs/${meta.path}/Daily-Notes/${dateTag}.md`;
+      const docsTarget = `content/Journal/${meta.folder}/${dateTag}.md`;
       const docsBody = [
-        `# Docs Routed from ${dateTag}`,
+        `# Notes Routed from ${dateTag}`,
         "",
         `Source: [[${srcPath}|${file.basename}]]`,
         "",
         ...docsBits,
       ].join("\n");
-      await upsertRoutedFile(app, docsTarget, `## Docs from ${meta.label}`, docsBody);
-      routedLinks.push(`- [[${docsTarget}|Routed: ${meta.label} Docs]]`);
+      await upsertRoutedFile(app, docsTarget, `## Notes from ${meta.label}`, docsBody);
+      routedLinks.push(`- [[${docsTarget}|Routed: ${meta.label} Notes]]`);
     }
 
     if (ideas.length) {
-      const ideasTarget = `content/Categories/Ideas/${meta.path}/Daily-Insights/${dateTag}.md`;
+      const ideasTarget = `content/Ideas/${meta.folder}/${dateTag}.md`;
       const ideasBody = [
         `# Ideas Routed from ${dateTag}`,
         "",
@@ -208,13 +212,13 @@ function inferProjectId(title, projectLines, activeIds = []) {
   }
 
   const key = title.toLowerCase();
-  if (key.includes("star sailors")) return "star-sailors-web";
-  if (key.includes("experiment1")) return "experiment1";
+  if (key.includes("star sailors") || key.includes("star-sailors")) return "star-sailors";
+  if (key.includes("experiment 1") || key.includes("experiment1") || key.includes("exp1")) return "experiment-1";
   if (key.includes("bumble")) return "bumble";
-  if (key.includes("click-a-coral")) return "click-a-coral";
-  if (key.includes("godot-mars")) return "godot-mars-archive";
+  if (key.includes("coral")) return "coral";
+  if (key.includes("saily")) return "saily";
   if (key.includes("weathr")) return "weathr";
-  if (key.includes("map app")) return "map-app";
+  if (key.includes("map app") || key.includes("map-app")) return "map-app";
   if (key.includes("prehog")) return "prehog";
   return null;
 }

@@ -4,6 +4,12 @@ endif
 let g:quartz_dashboard_force_reload = 0
 let g:loaded_quartz_dashboard = 1
 
+" Star Sailors Global Knowns
+" Primary task store: /Users/scroobz/Navigation/.knowns/tasks/
+" Per-project .knowns/ directories are now READ-ONLY archives.
+" All new tickets should be created in the parent store.
+" project: frontmatter field identifies source project.
+
 let s:projects_store = expand('~/.vim/quartz-projects.json')
 
 function! s:default_projects() abort
@@ -13,6 +19,7 @@ function! s:default_projects() abort
         \ {'title': 'Web', 'path': '/Users/scroobz/Navigation/client', 'parent': 'Star Sailors', 'color': '#9ece6a'},
         \ {'title': 'Bumble', 'path': '/Users/scroobz/Navigation/bee-garden', 'parent': 'Star Sailors', 'color': '#f7768e'},
         \ {'title': 'Post', 'path': '/Users/scroobz/Navigation/quartz', 'parent': '', 'color': '#bb9af7'},
+        \ {'title': 'All Projects', 'path': '/Users/scroobz/Navigation', 'parent': 'Star Sailors', 'color': '#F5C518', 'is_global': 1},
         \ ]
 endfunction
 
@@ -27,7 +34,23 @@ function! s:normalize_project(project) abort
         \ 'path': l:path,
         \ 'parent': trim(get(a:project, 'parent', '')),
         \ 'color': trim(get(a:project, 'color', '#dcd7ba')),
+        \ 'is_global': get(a:project, 'is_global', 0),
         \ }
+endfunction
+
+function! s:migrate_project(project) abort
+  let l:normalized = s:normalize_project(a:project)
+  if empty(l:normalized)
+    return {}
+  endif
+
+  let l:title_key = tolower(l:normalized.title)
+  let l:path_key = tolower(substitute(fnamemodify(l:normalized.path, ':p'), '/\+$', '', ''))
+  if l:title_key ==# 'scapes' || l:path_key =~# '/documents/notonce/scapes$'
+    let l:normalized.parent = 'Startups'
+  endif
+
+  return l:normalized
 endfunction
 
 function! s:save_projects() abort
@@ -42,14 +65,20 @@ endfunction
 
 function! s:init_projects() abort
   let l:projects = []
+  let l:loaded_from_store = 0
+  let l:store_changed = 0
   if filereadable(s:projects_store) && exists('*json_decode')
     try
       let l:decoded = json_decode(join(readfile(s:projects_store), "\n"))
       if type(l:decoded) == v:t_list
+        let l:loaded_from_store = 1
         for l:p in l:decoded
-          let l:n = s:normalize_project(l:p)
+          let l:n = s:migrate_project(l:p)
           if !empty(l:n)
             call add(l:projects, l:n)
+            if get(l:p, 'parent', '') !=# l:n.parent
+              let l:store_changed = 1
+            endif
           endif
         endfor
       endif
@@ -67,6 +96,9 @@ function! s:init_projects() abort
     endfor
   endif
   let g:quartz_projects = l:projects
+  if l:loaded_from_store && l:store_changed
+    call s:save_projects()
+  endif
 endfunction
 
 call s:init_projects()
@@ -575,6 +607,7 @@ function! s:extract_task_meta(file) abort
   let l:fm = l:lines[1 : l:end - 1]
   let l:title = ''
   let l:status = ''
+  let l:project = ''
   let l:i = 0
   while l:i < len(l:fm)
     let l:line = l:fm[l:i]
@@ -594,6 +627,8 @@ function! s:extract_task_meta(file) abort
       endif
     elseif l:line =~# '^status:\s*'
       let l:status = tolower(substitute(l:line, '^status:\s*', '', ''))
+    elseif l:line =~# '^project:\s*'
+      let l:project = trim(substitute(l:line, '^project:\s*', '', ''))
     endif
     let l:i += 1
   endwhile
@@ -609,7 +644,7 @@ function! s:extract_task_meta(file) abort
       return {}
     endif
   endif
-  return {'title': l:title, 'status': l:status, 'file': a:file}
+  return {'title': l:title, 'status': l:status, 'project': l:project, 'file': a:file}
 endfunction
 
 function! s:slugify_title(title) abort
@@ -978,8 +1013,10 @@ function! s:render_task_list_view(...) abort
         \ ''
         \ ]
 
+  let l:is_global = get(l:p, 'is_global', 0)
+  let l:col_header = l:is_global ? ' #   STATUS            PROJECT    TITLE' : ' #   STATUS            TITLE'
   call add(l:lines, '┌' . repeat('─', l:list_w) . '┐')
-  call add(l:lines, '│' . s:pad(' #   STATUS            TITLE', l:list_w) . '│')
+  call add(l:lines, '│' . s:pad(l:col_header, l:list_w) . '│')
   let l:header = s:task_list_header_label(l:query, l:mode)
   if !empty(l:header)
     call add(l:lines, '│' . s:pad(' ' . s:fit(l:header, l:list_w - 1), l:list_w) . '│')
@@ -1001,7 +1038,12 @@ function! s:render_task_list_view(...) abort
       let l:t = l:tasks[l:i]
       let l:idx = l:i + 1
       let l:status = s:status_label(get(l:t, 'status', ''))
-      let l:row = printf(' %2d  %-18s %s', l:idx, l:status, l:t.title)
+      if l:is_global
+        let l:proj_tag = strpart(get(l:t, 'project', ''), 0, 8)
+        let l:row = printf(' %2d  %-18s %-10s %s', l:idx, l:status, l:proj_tag, l:t.title)
+      else
+        let l:row = printf(' %2d  %-18s %s', l:idx, l:status, l:t.title)
+      endif
       call add(l:lines, '│' . s:pad(s:fit(l:row, l:list_w), l:list_w) . '│')
       let b:quartz_list_index[l:idx] = l:t
       if l:idx <= 9
@@ -1038,7 +1080,7 @@ function! s:render_task_list_view(...) abort
   nnoremap <silent><buffer> M :call <SID>migrate_project_legacy_tasks()<CR>:call <SID>render_task_list_view(get(b:, "quartz_task_query", ""), get(b:, "quartz_task_filter", "all"))<CR>
   nnoremap <silent><buffer> d :call <SID>render_docker_view()<CR>
   nnoremap <silent><buffer> j :call <SID>render_full_kanban_view()<CR>
-  nnoremap <silent><buffer> K :call <SID>render_knowns_kanban_view(0)<CR>
+  nnoremap <silent><buffer> K :call <SID>open_kanban_for_project()<CR>
   nnoremap <silent><buffer> , :call <SID>stop_running_knowns()<CR>
   nnoremap <silent><buffer> <CR> :call <SID>open_list_task_under_cursor()<CR>
   for l:i in range(1, 9)
@@ -1155,7 +1197,7 @@ function! s:render_full_kanban_view() abort
   nnoremap <silent><buffer> b :call <SID>render_dashboard()<CR>
   nnoremap <silent><buffer> r :call <SID>render_full_kanban_view()<CR>
   nnoremap <silent><buffer> d :call <SID>render_docker_view()<CR>
-  nnoremap <silent><buffer> K :call <SID>render_knowns_kanban_view(0)<CR>
+  nnoremap <silent><buffer> K :call <SID>open_kanban_for_project()<CR>
   nnoremap <silent><buffer> , :call <SID>stop_running_knowns()<CR>
   nnoremap <silent><buffer> <CR> :call <SID>open_task_detail_under_cursor()<CR>
   nnoremap <silent><buffer> O :call <SID>open_task_in_code_under_cursor()<CR>
@@ -1240,6 +1282,127 @@ function! s:render_knowns_kanban_view(...) abort
   nnoremap <silent><buffer> b :call <SID>render_dashboard()<CR>
   execute 'nnoremap <silent><buffer> r :call <SID>render_knowns_kanban_view(' . l:include_archived . ')<CR>'
   nnoremap <silent><buffer> a :call <SID>render_knowns_kanban_view(get(b:, "quartz_include_archived", 0) ? 0 : 1)<CR>
+  nnoremap <silent><buffer> <CR> :call <SID>open_task_detail_under_cursor()<CR>
+  nnoremap <silent><buffer> O :call <SID>open_task_in_code_under_cursor()<CR>
+  nnoremap <silent><buffer> <Tab> :call <SID>next_task_point(0)<CR>
+  nnoremap <silent><buffer> <S-Tab> :call <SID>next_task_point(1)<CR>
+  nnoremap <silent><buffer> ]t :call <SID>next_task_point(0)<CR>
+  nnoremap <silent><buffer> [t :call <SID>next_task_point(1)<CR>
+
+  call s:dashboard_highlight()
+endfunction
+
+function! s:global_tasks_kanban(include_archived) abort
+  let l:dir = '/Users/scroobz/Navigation/.knowns/tasks'
+  let l:todo = []
+  let l:inprog = []
+  let l:review = []
+  let l:done = []
+  if !isdirectory(l:dir)
+    return {'todo': l:todo, 'inprog': l:inprog, 'review': l:review, 'done': l:done}
+  endif
+  let l:files = globpath(l:dir, '*.md', 1, 1)
+  call sort(l:files, {a, b -> getftime(b) - getftime(a)})
+  for l:f in l:files
+    let l:m = s:extract_task_meta(l:f)
+    if empty(l:m)
+      continue
+    endif
+    " Exclude Bumble from global kanban
+    if get(l:m, 'project', '') ==# 'Bumble'
+      continue
+    endif
+    let l:s = tolower(l:m.status)
+    let l:proj = strpart(get(l:m, 'project', ''), 0, 8)
+    let l:display = {'title': '[' . l:proj . '] ' . l:m.title, 'status': l:m.status, 'project': l:m.project, 'file': l:m.file}
+    if index(['todo', 'backlog', 'open'], l:s) >= 0
+      call add(l:todo, l:display)
+    elseif index(['in-progress', 'doing', 'wip'], l:s) >= 0
+      call add(l:inprog, l:display)
+    elseif index(['in-review', 'in_review', 'inreview', 'blocked', 'on-hold'], l:s) >= 0
+      call add(l:review, l:display)
+    elseif index(['done', 'closed', 'completed'], l:s) >= 0
+      call add(l:done, l:display)
+    elseif a:include_archived && index(['archived', 'archive', 'obsolete', 'cancelled', 'canceled'], l:s) >= 0
+      call add(l:done, l:display)
+    endif
+  endfor
+  return {'todo': l:todo, 'inprog': l:inprog, 'review': l:review, 'done': l:done}
+endfunction
+
+function! s:render_global_kanban_view(...) abort
+  setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted
+  setlocal nomodifiable nowrap nonumber norelativenumber signcolumn=no
+  setlocal foldcolumn=0 nocursorline colorcolumn= nocursorcolumn
+  setlocal filetype=quartzdashboard
+  setlocal nospell
+  setlocal listchars=
+  setlocal fillchars=eob:\ 
+
+  let l:include_archived = (a:0 >= 1) ? a:1 : get(b:, 'quartz_include_archived', 0)
+  let l:tasks = s:global_tasks_kanban(l:include_archived)
+  let l:content_w = s:content_width()
+  let l:inner_w = max([130, l:content_w + 14])
+
+  let l:lines = [
+        \ '› Global Kanban — Star Sailors All Projects',
+        \ s:fit('󰌢 /Users/scroobz/Navigation/.knowns/tasks  |  archived: ' . (l:include_archived ? 'ON' : 'OFF'), l:inner_w),
+        \ ''
+        \ ]
+
+  let l:board_start_raw = len(l:lines) + 1
+  let l:board = s:kanban_board_lines_4(l:tasks, l:inner_w)
+  call extend(l:lines, l:board.lines)
+  call add(l:lines, '')
+  call add(l:lines, s:fit('G global  a toggle archived  ⇥/⇧⇥ or ]t/[t move tasks  <Enter> open detail  O open code', l:inner_w))
+  call add(l:lines, s:fit('r refresh  b back  q quit', l:inner_w))
+
+  let l:lines = s:panel_wrap(l:lines, l:inner_w)
+  let l:lines = s:center_lines(l:lines)
+  let l:panel_top = s:panel_top(len(l:lines))
+  let l:lines = repeat([''], l:panel_top) + l:lines
+
+  setlocal modifiable
+  call setline(1, l:lines)
+  setlocal nomodifiable
+  normal! gg
+
+  let b:quartz_view = 'globalkanban'
+  let b:quartz_include_archived = l:include_archived
+  let b:quartz_task_rows = {}
+  let b:quartz_task_points = []
+
+  for l:cell in l:board.cells
+    let l:raw_line = l:board_start_raw + 3 + l:cell.row
+    let l:wrapped_line = l:raw_line + 3
+    let l:final_line = l:panel_top + l:wrapped_line
+    if l:final_line < 1 || l:final_line > len(l:lines)
+      continue
+    endif
+    if !has_key(b:quartz_task_rows, l:final_line)
+      let b:quartz_task_rows[l:final_line] = {}
+    endif
+    let b:quartz_task_rows[l:final_line][l:cell.col] = l:cell.task
+
+    let l:line_text = l:lines[l:final_line - 1]
+    let l:seps = []
+    let l:pos = match(l:line_text, '│')
+    while l:pos >= 0
+      call add(l:seps, l:pos)
+      let l:pos = match(l:line_text, '│', l:pos + 1)
+    endwhile
+    if len(l:seps) >= l:cell.col + 1
+      let l:start_col = l:seps[l:cell.col - 1] + 2
+      call add(b:quartz_task_points, {'line': l:final_line, 'col': l:start_col, 'task': l:cell.task})
+    endif
+  endfor
+  call sort(b:quartz_task_points, {a,b -> (a.line == b.line ? a.col - b.col : a.line - b.line)})
+
+  nnoremap <silent><buffer> q :qa!<CR>
+  nnoremap <silent><buffer> b :call <SID>render_dashboard()<CR>
+  execute 'nnoremap <silent><buffer> r :call <SID>render_global_kanban_view(' . l:include_archived . ')<CR>'
+  nnoremap <silent><buffer> G :call <SID>render_global_kanban_view(get(b:, "quartz_include_archived", 0))<CR>
+  nnoremap <silent><buffer> a :call <SID>render_global_kanban_view(get(b:, "quartz_include_archived", 0) ? 0 : 1)<CR>
   nnoremap <silent><buffer> <CR> :call <SID>open_task_detail_under_cursor()<CR>
   nnoremap <silent><buffer> O :call <SID>open_task_in_code_under_cursor()<CR>
   nnoremap <silent><buffer> <Tab> :call <SID>next_task_point(0)<CR>
@@ -1781,11 +1944,12 @@ function! s:stop_knowns_pid(pid) abort
 endfunction
 
 function! s:stop_other_knowns() abort
+  let l:main = fnamemodify('/Users/scroobz/Navigation', ':p')
   let l:selected = fnamemodify(s:selected_project().path, ':p')
   for l:pid in s:knowns_listener_pids()
     let l:cwd_raw = s:pid_cwd(l:pid)
     let l:cwd = empty(l:cwd_raw) ? '' : fnamemodify(l:cwd_raw, ':p')
-    if empty(l:cwd) || l:cwd !=# l:selected
+    if empty(l:cwd) || (l:cwd !=# l:selected && l:cwd !=# l:main)
       call s:stop_knowns_pid(l:pid)
     endif
   endfor
@@ -1805,9 +1969,7 @@ function! s:stop_running_knowns() abort
 endfunction
 
 function! s:run_knowns_browser_safe() abort
-  call s:stop_other_knowns()
-  call s:run_project_bg('knowns browser --no-open')
-  sleep 300m
+  call system(expand('~/Navigation/quartz/utilities/run-knowns.sh'))
   call s:render_dashboard()
 endfunction
 
@@ -2289,7 +2451,7 @@ function! s:render_task_detail(task_file) abort
   nnoremap <silent><buffer> b :call <SID>render_dashboard()<CR>
   execute 'nnoremap <silent><buffer> r :call <SID>render_task_detail(' . string(a:task_file) . ')<CR>'
   nnoremap <silent><buffer> j :call <SID>render_full_kanban_view()<CR>
-  nnoremap <silent><buffer> K :call <SID>render_knowns_kanban_view(0)<CR>
+  nnoremap <silent><buffer> K :call <SID>open_kanban_for_project()<CR>
   nnoremap <silent><buffer> , :call <SID>stop_running_knowns()<CR>
   nnoremap <silent><buffer> <CR> :call <SID>open_task_in_code(b:quartz_task_file)<CR>
   nnoremap <silent><buffer> o :call <SID>open_task_in_code(b:quartz_task_file)<CR>
@@ -2919,11 +3081,10 @@ function! s:open_localhost() abort
 endfunction
 
 function! s:open_knowns_in_new_terminal_tab() abort
-  let l:p = s:selected_project()
   call s:stop_other_knowns()
 
   if executable('osascript')
-    let l:cmd = 'cd ' . shellescape(l:p.path) . ' && knowns browser --no-open'
+    let l:cmd = 'knowns browser --project ' . shellescape('/Users/scroobz/Navigation')
     let l:term_program = tolower($TERM_PROGRAM)
 
     if l:term_program =~# 'warp'
@@ -3098,7 +3259,7 @@ function! s:render_dashboard() abort
   call add(l:lines, '› Commands')
   call add(l:lines, s:fit("󰱼 f Search files  󰈞 o Open code  x Project env  󰙯 k Kanban(run headless)  󰎔 n New task  󰧮 r Refresh", l:content_w))
   call add(l:lines, s:fit('󰎔 P New vault page (task context)  󰐕 C New project', l:content_w))
-  call add(l:lines, s:fit('󰙯 j Full kanban  K Knowns board  󰡨 d Docker  󰖟 h Knowns(new tab)  󰖟 l Task list', l:content_w))
+  call add(l:lines, s:fit('󰙯 j Full kanban  K Knowns board  G Global kanban  󰡨 d Docker  󰖟 h Knowns(new tab)  󰖟 l Task list', l:content_w))
   call add(l:lines, s:fit(', Stop Knowns', l:content_w))
   call add(l:lines, s:fit('󰅚 q Quit', l:content_w))
   call add(l:lines, s:fit('⏎ task view  O open in code', l:content_w))
@@ -3158,6 +3319,14 @@ function! s:render_dashboard() abort
   call s:dashboard_highlight()
 endfunction
 
+function! s:open_kanban_for_project() abort
+  if get(s:selected_project(), 'is_global', 0)
+    call s:render_global_kanban_view(0)
+  else
+    call s:render_knowns_kanban_view(0)
+  endif
+endfunction
+
 function! s:bind_dashboard_keys() abort
   if &filetype !=# 'quartzdashboard'
     return
@@ -3174,7 +3343,8 @@ function! s:bind_dashboard_keys() abort
   nnoremap <silent><buffer> o :call <SID>run_project_bg('code .')<CR>:call <SID>render_dashboard()<CR>
   nnoremap <silent><buffer> k :call <SID>run_knowns_browser_safe()<CR>
   nnoremap <silent><buffer> j :call <SID>render_full_kanban_view()<CR>
-  nnoremap <silent><buffer> K :call <SID>render_knowns_kanban_view(0)<CR>
+  nnoremap <silent><buffer> K :call <SID>open_kanban_for_project()<CR>
+  nnoremap <silent><buffer> G :call <SID>render_global_kanban_view(0)<CR>
   nnoremap <silent><buffer> d :call <SID>render_docker_view()<CR>
   nnoremap <silent><buffer> n :call <SID>create_knowns_task()<CR>
   nnoremap <silent><buffer> P :call <SID>create_vault_task_with_mentions()<CR>
@@ -3193,22 +3363,22 @@ function! s:bind_dashboard_keys() abort
 endfunction
 
 function! s:dashboard_highlight() abort
-  highlight Normal guifg=#dcd7ba guibg=#1f2335 ctermfg=252 ctermbg=235
-  highlight EndOfBuffer guifg=#1f2335 guibg=#1f2335 ctermfg=235 ctermbg=235
-  highlight NonText guifg=#1f2335 guibg=#1f2335 ctermfg=235 ctermbg=235
+  highlight Normal guifg=#dcd7ba guibg=NONE ctermfg=252 ctermbg=NONE
+  highlight EndOfBuffer guifg=#1f2335 guibg=NONE ctermfg=235 ctermbg=NONE
+  highlight NonText guifg=#1f2335 guibg=NONE ctermfg=235 ctermbg=NONE
 
-  highlight QuartzDashDots guifg=#f7768e guibg=#1f2335 ctermfg=204 ctermbg=235
-  highlight QuartzDashAccent guifg=#8a5cf6 guibg=#1f2335 ctermfg=99 ctermbg=235
-  highlight QuartzDashHead guifg=#dbbc7f guibg=#1f2335 ctermfg=180 ctermbg=235
-  highlight QuartzDashMuted guifg=#8f95b3 guibg=#1f2335 ctermfg=103 ctermbg=235
-  highlight QuartzDashTodo guifg=#7dcfff guibg=#1f2335 ctermfg=117 ctermbg=235
-  highlight QuartzDashProg guifg=#f6c177 guibg=#1f2335 ctermfg=221 ctermbg=235
-  highlight QuartzDashReview guifg=#f7768e guibg=#1f2335 ctermfg=204 ctermbg=235
-  highlight QuartzDashRun guifg=#9ece6a guibg=#1f2335 ctermfg=114 ctermbg=235
-  highlight QuartzDashBorder guifg=#2f3652 guibg=#1f2335 ctermfg=60 ctermbg=235
-  highlight QuartzDashR2 guifg=#7aa2f7 guibg=#1f2335 ctermfg=111 ctermbg=235
-  highlight QuartzDashR2Detail guifg=#e5e9f0 guibg=#1f2335 ctermfg=255 ctermbg=235
-  highlight QuartzDashR2Eye guifg=#f7768e guibg=#1f2335 ctermfg=204 ctermbg=235
+  highlight QuartzDashDots guifg=#f7768e guibg=NONE ctermfg=204 ctermbg=NONE
+  highlight QuartzDashAccent guifg=#8a5cf6 guibg=NONE ctermfg=99 ctermbg=NONE
+  highlight QuartzDashHead guifg=#dbbc7f guibg=NONE ctermfg=180 ctermbg=NONE
+  highlight QuartzDashMuted guifg=#8f95b3 guibg=NONE ctermfg=103 ctermbg=NONE
+  highlight QuartzDashTodo guifg=#7dcfff guibg=NONE ctermfg=117 ctermbg=NONE
+  highlight QuartzDashProg guifg=#f6c177 guibg=NONE ctermfg=221 ctermbg=NONE
+  highlight QuartzDashReview guifg=#f7768e guibg=NONE ctermfg=204 ctermbg=NONE
+  highlight QuartzDashRun guifg=#9ece6a guibg=NONE ctermfg=114 ctermbg=NONE
+  highlight QuartzDashBorder guifg=#2f3652 guibg=NONE ctermfg=60 ctermbg=NONE
+  highlight QuartzDashR2 guifg=#7aa2f7 guibg=NONE ctermfg=111 ctermbg=NONE
+  highlight QuartzDashR2Detail guifg=#e5e9f0 guibg=NONE ctermfg=255 ctermbg=NONE
+  highlight QuartzDashR2Eye guifg=#f7768e guibg=NONE ctermfg=204 ctermbg=NONE
 
   if exists('+winhighlight')
     setlocal winhighlight=Normal:Normal,NormalNC:Normal,EndOfBuffer:EndOfBuffer
@@ -3242,7 +3412,7 @@ function! s:dashboard_highlight() abort
   for l:p in s:projects()
     let l:g = 'QuartzProject' . l:idx
     let l:hex = get(l:p, 'color', '#dcd7ba')
-    execute 'highlight ' . l:g . ' guifg=' . l:hex . ' guibg=#1f2335 ctermfg=252 ctermbg=235'
+    execute 'highlight ' . l:g . ' guifg=' . l:hex . ' guibg=NONE ctermfg=252 ctermbg=NONE'
     execute 'syntax match ' . l:g . ' /' . escape(l:p.title, '/\') . '/'
     let l:idx += 1
   endfor
@@ -3261,4 +3431,7 @@ augroup QuartzDashboard
   autocmd VimEnter * if argc() == 0 && &buftype ==# '' | call s:render_dashboard() | endif
   autocmd VimResized * if &filetype ==# 'quartzdashboard' | call s:render_dashboard() | endif
   autocmd FileType quartzdashboard call s:bind_dashboard_keys()
+  autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE
 augroup END
+
+highlight Normal guibg=NONE ctermbg=NONE

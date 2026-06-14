@@ -1,0 +1,29 @@
+{
+  "projects": [
+    {
+      "name": "Star Sailors Client",
+      "knownsDocsDir": "/Users/scroobz/Navigation/client/.knowns/docs",
+      "obsidianDocsDir": "/Users/scroobz/Navigation/quartz/content/Ideas/Star-Sailors/Docs"
+    },
+    {
+      "name": "Planet Hunters Experiment 1",
+      "knownsDocsDir": "/Users/scroobz/Navigation/Native/planet-hunters-experiment-1/.knowns/docs",
+      "obsidianDocsDir": "/Users/scroobz/Navigation/quartz/content/Ideas/Experiment-1/Docs"
+    },
+    {
+      "name": "Click-A-Coral",
+      "knownsDocsDir": "/Users/scroobz/Navigation/Coral/.knowns/docs",
+      "obsidianDocsDir": "/Users/scroobz/Navigation/quartz/content/Ideas/Coral/Docs"
+    },
+    {
+      "name": "Saily",
+      "knownsDocsDir": "/Users/scroobz/Navigation/saily/.knowns/docs",
+      "obsidianDocsDir": "/Users/scroobz/Navigation/quartz/content/Ideas/Saily/Docs"
+    },
+    {
+      "name": "Bumble",
+      "knownsDocsDir": "/Users/scroobz/Navigation/bee-garden/.knowns/docs",
+      "obsidianDocsDir": "/Users/scroobz/Navigation/quartz/content/Ideas/Bumble/Docs"
+    }
+  ]
+}

@@ -3,34 +3,46 @@
   "requestTimeoutMs": 15000,
   "projects": [
     {
+      "name": "Star Sailors — All Projects",
+      "key": "STAR_SAILORS_GLOBAL",
+      "tasksDir": "/Users/scroobz/Navigation/.knowns/tasks",
+      "deleteMissing": false,
+      "note": "Unified parent store — authoritative source. Per-project dirs below are read-only archives."
+    },
+    {
       "name": "Star Sailors Client",
       "key": "STAR_SAILORS_CLIENT",
       "tasksDir": "/Users/scroobz/Navigation/client/.knowns/tasks",
-      "deleteMissing": true
+      "deleteMissing": true,
+      "note": "READ-ONLY archive — do not sync new tickets from here"
     },
     {
       "name": "Planet Hunters Experiment 1",
       "key": "PLANET_HUNTERS_EXPERIMENT_1",
       "tasksDir": "/Users/scroobz/Navigation/Native/planet-hunters-experiment-1/.knowns/tasks",
-      "deleteMissing": true
+      "deleteMissing": true,
+      "note": "READ-ONLY archive — path may not exist"
     },
     {
       "name": "Click-A-Coral",
       "key": "CLICK_A_CORAL",
       "tasksDir": "/Users/scroobz/Navigation/Coral/.knowns/tasks",
-      "deleteMissing": true
+      "deleteMissing": true,
+      "note": "READ-ONLY archive — do not sync new tickets from here"
     },
     {
       "name": "Saily",
       "key": "SAILY",
       "tasksDir": "/Users/scroobz/Navigation/saily/.knowns/tasks",
-      "deleteMissing": true
+      "deleteMissing": true,
+      "note": "READ-ONLY archive — do not sync new tickets from here"
     },
     {
       "name": "Bumble",
       "key": "BUMBLE",
       "tasksDir": "/Users/scroobz/Navigation/bee-garden/.knowns/tasks",
-      "deleteMissing": true
+      "deleteMissing": true,
+      "note": "READ-ONLY archive — path may not exist (moved to Archive/bee-garden)"
     }
   ]
 }

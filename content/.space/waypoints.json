@@ -1,10 +1,82 @@
 [
-  {"sticker":"ui//spaces","name":"Today","paths":["Journal/Studio/Active/Dashboard.md"]},
-  {"sticker":"lucide//rocket","name":"Star Sailors","paths":["Mechanics/Star-Sailors","Design/Star-Sailors","Components/Star-Sailors","Ideas/Star-Sailors","Builds/Star-Sailors","Journal/Star-Sailors","Meetings/Star-Sailors","Physical/Star-Sailors"]},
-  {"sticker":"lucide//bug","name":"Bumble","paths":["Mechanics/Bumble","Design/Bumble","Components/Bumble","Ideas/Bumble","Builds/Bumble","Journal/Bumble","Meetings/Bumble","Physical/Bumble"]},
-  {"sticker":"lucide//fish","name":"Coral","paths":["Mechanics/Coral","Design/Coral","Components/Coral","Ideas/Coral","Builds/Coral","Journal/Coral","Meetings/Coral","Physical/Coral"]},
-  {"sticker":"lucide//flask-round","name":"Experiment 1","paths":["Mechanics/Experiment-1","Design/Experiment-1","Components/Experiment-1","Ideas/Experiment-1","Builds/Experiment-1","Journal/Experiment-1","Meetings/Experiment-1","Physical/Experiment-1"]},
-  {"sticker":"lucide//anchor","name":"Saily","paths":["Mechanics/Saily","Design/Saily","Components/Saily","Ideas/Saily","Builds/Saily","Journal/Saily","Meetings/Saily","Physical/Saily"]},
-  {"sticker":"lucide//folder","name":"Other Projects","paths":["Other"]},
-  {"sticker":"lucide//settings","name":"Studio","paths":["Studio"]}
+  {
+    "sticker": "ui//calendar",
+    "name": "Daily Dashboard",
+    "paths": ["Journal/Studio/Active"]
+  },
+  {
+    "sticker": "lucide//rocket",
+    "name": "Star Sailors",
+    "paths": [
+      "Mechanics/Star-Sailors",
+      "Components/Star-Sailors",
+      "Design/Star-Sailors",
+      "Builds/Star-Sailors",
+      "Ideas/Star-Sailors",
+      "Journal/Star-Sailors",
+      "Meetings/Star-Sailors",
+      "Physical/Star-Sailors"
+    ]
+  },
+  {
+    "sticker": "lucide//flask-round",
+    "name": "Experiment 1",
+    "paths": [
+      "Mechanics/Experiment-1",
+      "Components/Experiment-1",
+      "Design/Experiment-1",
+      "Builds/Experiment-1",
+      "Ideas/Experiment-1",
+      "Journal/Experiment-1",
+      "Meetings/Experiment-1",
+      "Physical/Experiment-1"
+    ]
+  },
+  {
+    "sticker": "lucide//bug",
+    "name": "Bumble",
+    "paths": [
+      "Mechanics/Bumble",
+      "Components/Bumble",
+      "Design/Bumble",
+      "Builds/Bumble",
+      "Ideas/Bumble",
+      "Journal/Bumble",
+      "Meetings/Bumble",
+      "Physical/Bumble"
+    ]
+  },
+  {
+    "sticker": "lucide//fish",
+    "name": "Coral",
+    "paths": [
+      "Mechanics/Coral",
+      "Components/Coral",
+      "Design/Coral",
+      "Builds/Coral",
+      "Ideas/Coral",
+      "Journal/Coral",
+      "Meetings/Coral",
+      "Physical/Coral"
+    ]
+  },
+  {
+    "sticker": "lucide//anchor",
+    "name": "Saily",
+    "paths": [
+      "Mechanics/Saily",
+      "Components/Saily",
+      "Design/Saily",
+      "Builds/Saily",
+      "Ideas/Saily",
+      "Journal/Saily",
+      "Meetings/Saily",
+      "Physical/Saily"
+    ]
+  },
+  {
+    "sticker": "lucide//folder-open",
+    "name": "Other Projects",
+    "paths": ["Other", "Studio"]
+  }
 ]
